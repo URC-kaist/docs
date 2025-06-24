@@ -34,6 +34,6 @@ Sensors publish data back to ROS2; a web dashboard connects via **rosbridge** (p
 ## NextSteps
 *Head to the sub‑pages below for full usage and developer details.*
 
-- [UserGuide]({{<ref"rover_user_guide.md">}})  
+- [User Guide]({{<ref"rover_user_guide.md">}})  
 - [Developer Docs]({{<ref"rover_developer.md">}})  
-- [APIReference]({{<ref"rover_api.md">}})  
+- [API Reference]({{<ref"rover_api.md">}})  
