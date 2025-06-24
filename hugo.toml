@@ -3,17 +3,6 @@ languageCode = 'en-us'
 title = 'MR2 KAIST'
 theme = 'hugo-book'
 
-[languages]
-  [languages.en]
-    languageName = 'English'
-    contentDir = 'content.en'
-    weight = 1
-
-  [languages.ko]
-    languageName = 'Korean'
-    contentDir = 'content.ko'
-    weight = 2
-
 [markup.goldmark.renderer]
   unsafe = true
 
