@@ -1,6 +1,6 @@
 baseURL = 'https://urc-kaist.github.io/docs'
 languageCode = 'en-us'
-title = 'MR2 KAIST'
+title = 'MR2 Documentation'
 theme = 'hugo-book'
 
 [markup.goldmark.renderer]

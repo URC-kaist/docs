@@ -1,16 +1,11 @@
 +++
 date = '2025-03-23T14:39:34+09:00'
 draft = false
-title = 'Welcome to MR2 URC KAIST'
+title = 'Welcome to MR2 URC KAIST Docs'
 +++
 
-# We are the MR2 KAIST Rover Team.
+Welcome to the **URC KAIST MR2 Documentation**! Here you’ll find all the guides, overviews, and technical write-ups for our rover project.
 
-{{< youtube vFc6jCAq6a0 >}}
+The primary purpose of this documentation is to provide a **central repository of information** that supports our team’s activities and growth. It covers everything from high-level policies and cultural guidelines to detailed technical procedures and onboarding instructions. 
 
-## What is URC?
-![URC](/images/urc.jpg)
-The University Rover Challenge (URC) is the world’s largest Mars rover competition, held annually in Utah, USA.
-Organized by NASA and the Mars Society, the competition challenges university students to design and build their own rovers to perform simulated Mars exploration missions.
-
-## Sponsors
+To contribute to this documentation, please follow the [contribution workflow]({{<ref "docs/documentation_guide.md" >}}).
