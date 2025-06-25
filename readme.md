@@ -1,37 +1,40 @@
 # URC KAIST Documentation / Website
 
-HUGO라는 툴 써서 만들었어여
+Hugo 도구를 이용하여 문서를 관리하고 웹사이트를 구축합니다.
 
-## 레포지토리 클론하기
+## 1. 레포지토리 복제
 ```bash
 git clone --recursive https://github.com/URC-kaist/urc-kaist.github.io.git
 ```
 
-## HUGO 설치하기
-이 [링크](https://gohugo.io/installation/) 따라하면 돼여
+## 2. Hugo 설치
+공식 설치 안내를 참조하시기 바랍니다: https://gohugo.io/installation/  
+- **macOS:**  
+  ```bash
+  brew install hugo
+  ```  
+- **Ubuntu (WSL 포함):**  
+  ```bash
+  sudo apt update
+  sudo apt install hugo
+  ```  
+- **Windows:**  
+  Windows 환경에서는 Chocolatey 혹은 Scoop 등의 패키지 관리자를 이용하시기 바랍니다.
 
-**세줄요약**
-1. MacOS면그냥 `brew install hugo` 
-2. 우분투(wsl)이면 `sudo apt install hugo` 
-3. 윈도우를 왜써여
+## 3. 문서 작성 및 배치
+1. `./content/` 디렉터리 아래에 원하는 위치에 `.md` 파일을 생성하십시오.  
+2. 디렉터리 구조가 곧 사이트의 URL 경로가 되므로, 필요한 만큼 하위 폴더를 구성할 수 있습니다.  
+3. 각 폴더의 요약 페이지를 작성하려면 해당 폴더에 `_index.md` 파일을 생성하십시오.
 
-## 문서는 어떻게 써여?
-`./content.en/`에는 영어 문서, `./content.kr/`에는 한국어 문서가 들어있어여. 
-새롭게 만들고 싶으면 원하는 위치에 `<파일 이름>.md` 파일을 만들면 돼여.
-보면 알겠지만 폴더 구조와 동일하게 문서가 홈페이지에 표시돼여.
-세부 폴더를 만들 수 있고, 각 폴더의 `_index.md` 파일에는 그 폴더 자체의 내용을 담을 수 있어여.
-
-각 문서 작성할 때 파일 이름은 영어로 동일하게, 파일 안에 문서 이름과 내용은 각각 한국어/영어로 해주면 돼여.
-
-각 문서의 시작에는 다음과 같이 메타데이터를 달아주세여
-
-```md
+### 문서 파일의 Front Matter
+모든 Markdown 파일 상단에 아래와 같은 메타데이터를 추가해야 합니다:
+```yaml
 ---
-title: "제목(한글 혹은 영어)"
-weight: 1 # 이건 폴더 순서인데, 적은게 더 먼저 나와여
-draft: false
-bookCollapseSection: true # 이거는 _index.md 에서 폴더를 접을 수 있는지 여부에여
+title: "문서 제목 (한글 또는 영어)"
+weight: 1           # 메뉴 내 정렬 순서 (작을수록 상단에 표시)
+draft: false        # true로 설정 시 사이트 빌드 시 제외
+bookCollapseSection: true  # _index.md에서 해당 섹션 접기 여부
 ---
 ```
 
-질문 있으면 저를 찾아주세여
+궁금하신 점이 있으시면 언제든지 문의해 주십시오.  
