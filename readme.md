@@ -1,4 +1,4 @@
-# URC KAIST Documentation / Website
+# URC KAIST Documentation
 
 Hugo 도구를 이용하여 문서를 관리하고 웹사이트를 구축합니다.
 
