@@ -1,4 +1,4 @@
-baseURL = 'https://urc-kaist.github.io/'
+baseURL = 'https://urc-kaist.github.io/docs'
 languageCode = 'en-us'
 title = 'MR2 KAIST'
 theme = 'hugo-book'
