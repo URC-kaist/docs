@@ -4,7 +4,7 @@ Hugo 도구를 이용하여 문서를 관리하고 웹사이트를 구축합니�
 
 ## 1. 레포지토리 복제
 ```bash
-git clone --recursive https://github.com/URC-kaist/urc-kaist.github.io.git
+git clone --recursive https://github.com/URC-kaist/docs.git
 ```
 
 ## 2. Hugo 설치
