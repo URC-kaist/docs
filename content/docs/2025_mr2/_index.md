@@ -2,6 +2,7 @@
 title: "2025 MR2"
 weight: 1
 draft: false
+bookCollapseSection: true
 ---
 # 2025 MR2
 
