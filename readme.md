@@ -14,10 +14,11 @@ git clone --recursive https://github.com/URC-kaist/docs.git
   brew install hugo
   ```  
 - **Ubuntu (WSL 포함):**  
-  ```bash
-  sudo apt update
-  sudo apt install hugo
-  ```  
+주의: apt 보다 [최신 release](https://github.com/gohugoio/hugo/releases/latest) 에서 받도록 합니다.
+extended와 withdeploy가 모두 들어간 패키지, 예를 들어
+`hugo_extended_withdeploy_0.157.0_linux-amd64.deb`
+등을 설치 바랍니다.
+
 - **Windows:**  
   Windows 환경에서는 Chocolatey 혹은 Scoop 등의 패키지 관리자를 이용하시기 바랍니다.
 

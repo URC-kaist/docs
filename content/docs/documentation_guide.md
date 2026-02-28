@@ -33,7 +33,7 @@ See the [official installation guide](https://gohugo.io/installation/). The site
 | Platform | Command |
 |----------|---------|
 | **macOS** | `brew install hugo` |
-| **Ubuntu / Debian / WSL** | `sudo apt update && sudo apt install hugo` |
+| **Ubuntu / Debian / WSL** | dpkg [latest release](https://github.com/gohugoio/hugo/releases/latest) |
 | **Windows** | `choco install hugo` (Chocolatey) or `scoop install hugo` (Scoop) |
 
 Verify the installation:
