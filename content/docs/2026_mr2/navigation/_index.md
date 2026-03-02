@@ -1,10 +1,14 @@
 ---
 title: "Navigation"
+linkTitle: "Navigation"
 weight: 2
 draft: false
-bookCollapseSection: true
 ---
 
-# Navigation
+# Autonomous Navigation
 
-_In construction. Guidance, localization, and autonomy plans for 2026 will be collected here._
+- [Introduction]({{< ref "docs/2026_mr2/navigation/introduction.md" >}})
+    - [Sensor Fusion]({{< ref "docs/2026_mr2/navigation/sensor_fusion.md" >}})
+    - [Maps]({{< ref "docs/2026_mr2/navigation/maps.md" >}})
+    - [Traversability Pipeline]({{< ref "docs/2026_mr2/navigation/traversability_pipeline.md" >}})
+    - [Mission Master and Vision]({{< ref "docs/2026_mr2/navigation/mission_master_and_vision.md" >}})
