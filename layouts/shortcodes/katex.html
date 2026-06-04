@@ -1,0 +1,37 @@
+{{- $display := false -}}
+{{- with .Get "display" -}}
+  {{- $display = eq . "true" -}}
+{{- end -}}
+{{- $id := printf "katex-%d" .Ordinal -}}
+{{- if not (.Page.Store.Get "hasKatexAssets") -}}
+  {{- .Page.Store.Set "hasKatexAssets" true -}}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-sN8yx1wq84n7qJXc3KLEtFqVFD9RzQd68WQ7AQtbnJXQh0S1Jk3CiC1TToJjHh3N" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1MZu6ADomyXk8EogbLDBsPU5rkXF/dtZZxL1Pceg6x" crossorigin="anonymous"></script>
+{{- end -}}
+{{- if $display -}}
+<div id="{{ $id }}" class="katex-display"><code>{{ .Inner | htmlEscape }}</code></div>
+{{- else -}}
+<span id="{{ $id }}" class="katex-inline"><code>{{ .Inner | htmlEscape }}</code></span>
+{{- end -}}
+<script>
+(function () {
+  function renderKatex() {
+    var element = document.getElementById({{ $id | jsonify }});
+    if (!element || !window.katex) return;
+    try {
+      window.katex.render({{ .Inner | jsonify }}, element, {
+        displayMode: {{ $display }},
+        throwOnError: false
+      });
+    } catch (_) {
+      element.textContent = {{ .Inner | jsonify }};
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", renderKatex);
+  } else {
+    renderKatex();
+  }
+})();
+</script>
