@@ -36,7 +36,7 @@ Maintain the Humble operational line while developing the candidate. A migration
 
 ## Coordination and kickoff
 
-Current SW leader **`@yongwhan-chung`** determines assignments and capacity. A shared GitHub Project and bilingual starter issues are drafted; GitHub Project/repository creation remains pending. [Coordination and artifacts]({{< ref "docs/global-update-project/en/coordination.md" >}})
+Current SW leader **`@yongwhan-chung`** determines assignments and capacity. The [shared Project](https://github.com/orgs/URC-kaist/projects/2) and [migration fork](https://github.com/URC-kaist/mr2-stack-jazzy) are live, with thirteen unassigned starter issues. The Project retains private organization visibility; the SW leader has admin access. [Coordination and artifacts]({{< ref "docs/global-update-project/en/coordination.md" >}})
 
 Agree the integration baseline and required operating profiles, arrange Nano retrieval/access, allocate the first reproducibility tasks, and identify HW/operator participation. Then use measured results to plan parallel porting and URC 2027 integration rehearsals. [Kickoff agenda]({{< ref "docs/global-update-project/en/agenda.md" >}})
 

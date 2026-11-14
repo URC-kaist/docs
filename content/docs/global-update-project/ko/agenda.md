@@ -35,6 +35,6 @@ translation_revision: "8e4d9a6"
 
 ## 공유 문안 제안
 
-> URC 2027 준비를 위한 MR2 글로벌 업데이트 착수 자료를 준비했습니다. Ubuntu 24.04 / ROS 2 Jazzy / Gazebo Harmonic을 목표로 하며, Nano에서 네이티브 개발을 진행하고 운용 중인 NX 로버의 가용성을 유지합니다. 개요와 업무 분담을 검토해 주세요. 착수 회의에서는 기준·범위, Nano 접근, 저장소·Project 소유권, 초기 배정, 공동 HW/SW 검증 계획을 정하고자 합니다. GitHub Project와 저장소 생성은 보류 중이며 현재 산출물은 로컬 초안입니다. 로버 업데이트는 수행하지 않았습니다.
+> URC 2027 준비를 위한 MR2 글로벌 업데이트 착수 자료를 준비했습니다. Ubuntu 24.04 / ROS 2 Jazzy / Gazebo Harmonic을 목표로 하며, Nano에서 네이티브 개발을 진행하고 운용 중인 NX 로버의 가용성을 유지합니다. 개요와 업무 분담을 검토해 주세요. 착수 회의에서는 기준·범위, Nano 접근, 저장소·Project 소유권, 초기 배정, 공동 HW/SW 검증 계획을 정하고자 합니다. [Project](https://github.com/orgs/URC-kaist/projects/2)와 [마이그레이션 저장소](https://github.com/URC-kaist/mr2-stack-jazzy)를 생성했으며 착수 이슈는 팀의 배정을 기다립니다. 로버 업데이트는 수행하지 않았습니다.
 
 실제 공유 시에는 초안·로컬 설명을 게시된 문서, Project, 저장소 링크로 바꿉니다. 아직 만들지 않은 자원의 가상 URL을 생성된 자원처럼 공유하지 않습니다.

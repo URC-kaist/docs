@@ -14,7 +14,7 @@ translation_revision: "developer-guidance-2026-11-14"
 
 | 항목 | 시작점 |
 | --- | --- |
-| 후보 소스 | 로컬 `~/mr2-stack-jazzy`, 브랜치 `migration/jazzy`; 작업 전 현재 버전을 확인합니다. |
+| 후보 소스 | 로컬 `~/mr2-stack-jazzy`, 브랜치 `main`; 작업 전 현재 버전을 확인합니다. |
 | 기준 소스 | 조사한 upstream `2026`의 `74422f36…`; 실제 NX 운용 배포 환경은 별도로 목록화합니다. |
 | 개발 환경 | 격리된 Humble 또는 Noble/Jazzy 워크스테이션; 셸과 빌드 출력을 분리합니다. |
 | 후보 네이티브 시험 | 인수, 환경 구성, 장비 접근을 확보한 뒤 재설정 가능한 Nano에서 수행합니다. |

@@ -1,6 +1,10 @@
 # MR2 Global Update — dispatch package
 
-Prepared 2026-11-14. This directory is a **local GitHub Project blueprint**, not a created GitHub Project or an API import payload. No organization changes, issue creation, assignments, notifications or publication are performed by these files.
+Prepared 2026-11-14. This directory retains the **original GitHub Project blueprint** and dispatch drafts; it is not a GitHub API import payload. Live setup has since been completed as recorded below. Reading these files does not perform any setup actions.
+
+## Live setup
+
+The [migration repository](https://github.com/URC-kaist/mr2-stack-jazzy) and [Project](https://github.com/orgs/URC-kaist/projects/2) are now created. See [live-resources.json](live-resources.json) for actual URLs and state. The blueprint and issue drafts below remain the preparation record.
 
 ## Review entry points
 

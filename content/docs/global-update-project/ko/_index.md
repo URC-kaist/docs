@@ -38,7 +38,7 @@ translation_revision: "developer-guidance-2026-11-14"
 
 ## 협업과 착수 회의
 
-현 SW 팀장 **`@yongwhan-chung`**이 담당자와 투입 여력을 정합니다. 공유 GitHub Project와 양언어 착수 이슈를 작성했으며, GitHub Project·저장소 생성은 보류 중입니다. [협업과 산출물]({{< ref "docs/global-update-project/ko/coordination.md" >}})
+현 SW 팀장 **`@yongwhan-chung`**이 담당자와 투입 여력을 정합니다. [공유 Project](https://github.com/orgs/URC-kaist/projects/2)와 [마이그레이션 fork](https://github.com/URC-kaist/mr2-stack-jazzy)를 생성하고 담당자 미배정 착수 이슈 13개를 등록했습니다. Project는 조직의 비공개 설정을 유지하며 SW 팀장에게 관리자 권한을 부여했습니다. [협업과 산출물]({{< ref "docs/global-update-project/ko/coordination.md" >}})
 
 통합 기준 커밋과 필수 운용 모드를 합의하고, Nano 인수·접근을 준비하며, 초기 재현성 작업과 HW/운용 담당자의 참여를 정합니다. 이후 실제 결과를 바탕으로 병렬 포팅과 URC 2027 통합 리허설을 계획합니다. [착수 회의 안건]({{< ref "docs/global-update-project/ko/agenda.md" >}})
 

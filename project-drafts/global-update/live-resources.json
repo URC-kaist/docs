@@ -1,0 +1,31 @@
+{
+  "setup_date": "2026-11-14",
+  "repository": "https://github.com/URC-kaist/mr2-stack-jazzy",
+  "default_branch": "main",
+  "project": "https://github.com/orgs/URC-kaist/projects/2",
+  "project_visibility": "private; organization owner required to change visibility",
+  "sw_leader_project_role": "ADMIN",
+  "issue_urls": {
+    "GU-00": "https://github.com/URC-kaist/mr2-stack-jazzy/issues/1",
+    "GU-01": "https://github.com/URC-kaist/mr2-stack-jazzy/issues/2",
+    "GU-02": "https://github.com/URC-kaist/mr2-stack-jazzy/issues/3",
+    "GU-03": "https://github.com/URC-kaist/mr2-stack-jazzy/issues/4",
+    "GU-04": "https://github.com/URC-kaist/mr2-stack-jazzy/issues/5",
+    "GU-05": "https://github.com/URC-kaist/mr2-stack-jazzy/issues/6",
+    "GU-06": "https://github.com/URC-kaist/mr2-stack-jazzy/issues/7",
+    "GU-07": "https://github.com/URC-kaist/mr2-stack-jazzy/issues/8",
+    "GU-08": "https://github.com/URC-kaist/mr2-stack-jazzy/issues/9",
+    "GU-09": "https://github.com/URC-kaist/mr2-stack-jazzy/issues/10",
+    "GU-10": "https://github.com/URC-kaist/mr2-stack-jazzy/issues/11",
+    "GU-11": "https://github.com/URC-kaist/mr2-stack-jazzy/issues/12",
+    "GU-12": "https://github.com/URC-kaist/mr2-stack-jazzy/issues/13"
+  },
+  "issue_status": "Backlog",
+  "assignees": [],
+  "views": [
+    "Execution",
+    "Hardware queue",
+    "URC 2027 integration"
+  ],
+  "application_migration": "not started; setup documentation only"
+}

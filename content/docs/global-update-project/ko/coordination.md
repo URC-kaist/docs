@@ -10,7 +10,7 @@ translation_revision: "8e4d9a6"
 
 [프로젝트 개요]({{< ref "docs/global-update-project/ko/_index.md" >}}) · [English]({{< ref "docs/global-update-project/en/coordination.md" >}})
 
-공유 GitHub Project로 운용 코드, 마이그레이션, 문서, 공동 검증을 연결합니다. **로컬 구성 초안과 양언어 착수 이슈를 준비했으며, 조직 Project와 GitHub 저장소는 생성하지 않았습니다.** 소유자, 접근 권한, 생성 위치는 팀이 정합니다.
+공유 GitHub Project로 운용 코드, 마이그레이션, 문서, 공동 검증을 연결합니다. [조직 Project](https://github.com/orgs/URC-kaist/projects/2)와 [마이그레이션 fork](https://github.com/URC-kaist/mr2-stack-jazzy)를 생성했습니다. 영문 착수 이슈 13개를 연결·분류했으며 담당자와 날짜는 미지정입니다. Project는 조직 정책에 따라 비공개이며 SW 팀장에게 관리자 권한을 부여했습니다. 공개 전환은 조직 소유자가 해야 합니다.
 
 [Project 구성 초안]({{< project-resource "projects/global-update-project/project.json" >}})과 [한국어 착수 이슈]({{< project-resource "projects/global-update-project/issues.ko.json" >}})를 내려받을 수 있습니다. 검토용 자료이며 GitHub API에 바로 가져오는 형식은 아닙니다.
 
