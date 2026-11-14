@@ -7,6 +7,13 @@ bookCollapseSection: true
 
 # Navigation
 
+## Detailed Explanations
+
+- [Introduction]({{< ref "docs/2026_mr2/navigation/introduction.md" >}})
+- [Sensor Fusion]({{< ref "docs/2026_mr2/navigation/sensor_fusion.md" >}})
+- [Traversability Pipeline]({{< ref "docs/2026_mr2/navigation/traversability_pipeline.md" >}})
+- [Mission Master and Vision]({{< ref "docs/2026_mr2/navigation/mission_master_and_vision.md" >}})
+
 The 2026 navigation stack is implemented in `mr2-stack/rover/ros2_ws/src` and
 centers on the `mr2_rover_auto` and `mr2_nav2_plugins` ROS 2 packages. It
 combines GNSS/IMU/wheel localization, Nav2 planning and control, a depth-based
