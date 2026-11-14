@@ -15,6 +15,8 @@
   "copied_evidence_hashes": "8 originals match",
   "migration_commit": "0430fd589752de0d1577abb9069f2507a3ba9c3a",
   "migration_changed_files": [
+    ".github/pull_request_template.md",
+    "CONTRIBUTING.md",
     "MIGRATION.ko.md",
     "MIGRATION.md",
     "README.md"
