@@ -1,0 +1,235 @@
+{
+  "format": "mr2-issue-drafts/v1",
+  "language": "ko",
+  "status": "초안만 준비함; 이슈와 담당자 배정을 생성하지 않음",
+  "dependency_semantics": "depends_on은 인수 선행 조건이며 준비 작업은 먼저 시작할 수 있음",
+  "issues": [
+    {
+      "id": "GU-00",
+      "title": "마이그레이션 범위, 통합 기준과 협업 위치 확정",
+      "workstream": "Platform",
+      "priority": "P0 prerequisite",
+      "required_environment": "Team coordination",
+      "suggested_roles": [
+        "SW leader",
+        "Integrator",
+        "HW integration",
+        "Rover operator"
+      ],
+      "assignees": [],
+      "depends_on": [],
+      "body": "결과: 첫 릴리스의 운용 프로파일과 필수·연기·실험 기능을 기록하고, 통합 기준 및 rover-direct 작업 처리 방식을 정합니다. 선호하는 마이그레이션 fork 위치, upstream 수정 반영 절차, 기준 이슈 위치, 공유 Project 소유권을 기록합니다. 인력 배정은 SW 팀장의 역할입니다.\n\n근거: 정확한 소스 SHA, 실제 운용 기준과 아직 확인하지 못한 차이, 필수 기능, 결정과 후속 행동을 식별한 결정 기록을 연결합니다. 저장소 생성이 전면 재작성을 뜻하지는 않습니다.\n\n다음 단계: 실제 투입 여력과 URC 2027 준비 이정표를 바탕으로 초기 작업을 배정합니다. 날짜나 담당자를 임의로 확정하지 않습니다."
+    },
+    {
+      "id": "GU-01",
+      "title": "재설정 가능한 Orin Nano 인수 및 시험 환경 준비",
+      "workstream": "Platform",
+      "priority": "P0 prerequisite",
+      "required_environment": "Orin Nano",
+      "suggested_roles": [
+        "SW leader",
+        "Nano custodian"
+      ],
+      "assignees": [],
+      "depends_on": [],
+      "body": "결과: 사용 가능함이 확인된 Nano를 네이티브 후보 개발에 사용할 수 있게 합니다. 요청자는 yongwhan-chung에게 인수를 요청했으며, 이 초안은 해당 사람에게 알림이나 배정을 보내지 않습니다.\n\n모듈/SKU, 캐리어, 저장장치, 전원·냉각, 접근 방법, 주변장치를 기록합니다. 예약, ROS·명령 엔드포인트 격리, 기준 이미지·구성 경로, 복구·인계 절차를 준비합니다. 로버에 필요한 장비는 운용 상태로 유지합니다.\n\n근거: 장비 목록, 실제 사용·접근 기록, 복구 결과, 아직 필요한 주변장치 목록입니다. 자원이 존재한다는 사실이 후보 이미지의 호환성을 뜻하지는 않습니다."
+    },
+    {
+      "id": "GU-02",
+      "title": "실제 NX 운용 배포 환경과 기준 시나리오 식별",
+      "workstream": "System verification",
+      "priority": "P0 prerequisite",
+      "required_environment": "Operational NX; coordinated non-disruptive observation",
+      "suggested_roles": [
+        "Integrator",
+        "HW integration",
+        "Rover operator"
+      ],
+      "assignees": [],
+      "depends_on": [
+        "GU-00"
+      ],
+      "body": "결과: 조사한 저장소 버전과 구분하여 운용 로버가 실제로 실행하는 구성을 식별합니다. 가용성을 유지하도록 운용 담당자와 관측을 조정합니다.\n\n소스·빌드 출처 또는 명시적으로 확인하지 못한 구성, 설치된 BSP·런타임, 운용 프로파일, 서비스·장치 설정, 보정값·모델 위치, 대표 동작을 기록합니다. 실험적 설치, 서비스 재시작, 운용을 방해하는 기록은 하지 않습니다.\n\n근거: 기준 manifest와 합의한 시나리오 입력·기대 동작입니다. 복구 요구사항을 지금 기록하되, 적절한 복원 시험을 수행한 뒤에만 복구가 검증되었다고 표시합니다."
+    },
+    {
+      "id": "GU-03",
+      "title": "관련 Humble 기준 환경 재현과 클린 점검 수립",
+      "workstream": "Platform",
+      "priority": "P0 prerequisite",
+      "required_environment": "Clean Ubuntu 22.04 / Humble workstation",
+      "suggested_roles": [
+        "Build maintainer",
+        "Application reviewers"
+      ],
+      "assignees": [],
+      "depends_on": [
+        "GU-00"
+      ],
+      "body": "결과: 선택한 소스에 대한 반복 가능한 기준 빌드·점검 절차를 만듭니다. 첫 비교에 필요한 의존성과 시나리오부터 시작합니다.\n\n재현된 dashboard 중복 타입 오류와 누락된 선언을 조사하고 Jazzy 회귀로 취급하지 않습니다. 클린 의존성 설치, gateway/dashboard 점검, 관련 ROS 빌드·시험을 수행하며 무관한 결함은 별도로 추적합니다.\n\n근거: 정확한 환경·소스, 명령, 로그, 알려진 실패, 독립 재현입니다. 이미 구성된 호스트의 rosdep이나 mock 시험이 클린 네이티브 빌드를 입증하지는 않습니다."
+    },
+    {
+      "id": "GU-04",
+      "title": "Noble/Jazzy 후보 환경 구성과 Nano 네이티브 smoke 시험",
+      "workstream": "Platform",
+      "priority": "P0 prerequisite",
+      "required_environment": "Clean Noble/Jazzy workstation and native Orin Nano",
+      "suggested_roles": [
+        "Platform maintainer",
+        "Nano custodian",
+        "Independent reproducer"
+      ],
+      "assignees": [],
+      "depends_on": [
+        "GU-00",
+        "GU-01"
+      ],
+      "body": "결과: 후보 환경 구성 절차, 클린 빌드 시도, 대표 네이티브 시나리오 하나를 확보합니다. 캐리어와 호환되는 JetPack/BSP를 선택하고 의존성 출처·런타임 버전을 기록합니다. Humble/Jazzy의 출력 디렉터리와 셸을 분리합니다.\n\n근거: 클린 설정·빌드 로그, 의존성·소스 고정 버전, 실제 Nano 시나리오 결과, 독립 재현입니다. 초기 실험의 범위를 한정하고 해결되지 않은 플랫폼 문제를 공유합니다. 광범위한 skip 목록으로 실패를 숨기지 않습니다.\n\n측정 결과로 작업량 범위와 의존성을 갱신합니다. NX 전용 점검은 대기 상태이며, 이 이슈에는 운용 NX 변경이 포함되지 않습니다."
+    },
+    {
+      "id": "GU-05",
+      "title": "구동·팔 제어, CAN 인터페이스와 MoveIt Servo 규약 포팅",
+      "workstream": "Control/CAN",
+      "priority": "P1 migration",
+      "required_environment": "Jazzy mocks; Nano bench where applicable; later NX/HW verification",
+      "suggested_roles": [
+        "Control maintainer",
+        "HW integration reviewer"
+      ],
+      "assignees": [],
+      "depends_on": [
+        "GU-00",
+        "GU-04"
+      ],
+      "body": "결과: 제어 규약을 보존하면서 manager/spawner 매개변수, 하드웨어·컨트롤러 인터페이스, Servo 시작·명령·상태 호출부를 수정합니다.\n\n근거: 빌드, 실제 매개변수와 확보한 인터페이스, 수명 주기·재시작, mock 명령 매핑, Servo 모드·상태 결과입니다. 단위, 부호, 제한, 오래된 명령, 수동·자율 제어권 전환의 기대 동작을 유지합니다.\n\nHW와 물리 시험 절차를 함께 준비합니다. mock 또는 virtual CAN 결과로 물리 제어·NX 인수를 완료하지 않습니다. 남은 시험은 GU-12에 연결합니다."
+    },
+    {
+      "id": "GU-06",
+      "title": "Harmonic 시뮬레이션과 센서·clock bridge 동등성 확보",
+      "workstream": "Navigation/Simulation",
+      "priority": "P1 migration",
+      "required_environment": "Noble/Jazzy simulation workstation",
+      "suggested_roles": [
+        "Simulation maintainer",
+        "Control/sensor reviewers"
+      ],
+      "assignees": [],
+      "depends_on": [
+        "GU-00",
+        "GU-04"
+      ],
+      "body": "결과: Harmonic에서 빈 world 생성, 로봇 spawn, 컨트롤러 활성화, clock과 필수 시뮬레이션 센서가 동작하도록 하고 기존 지형으로 확장합니다.\n\n혼재한 Ignition/Gazebo 이름·설정을 정리하고 mimic 의미와 실제 bridge QoS·frame 동작을 검증합니다. 로드된 physics backend와 자원·자산을 기록합니다.\n\n근거: 재현 가능한 시나리오와 관측한 그래프·센서·제어 동작입니다. 동등성 작업 중 지형 표현·설정을 유지하며, 성능 최적화는 별도 실험으로 다룹니다."
+    },
+    {
+      "id": "GU-07",
+      "title": "Nav2, 위치 추정, 주행 가능성 처리와 필수 임무 동작 포팅",
+      "workstream": "Navigation/Simulation",
+      "priority": "P1 migration",
+      "required_environment": "Jazzy replay/simulation; later native rover verification",
+      "suggested_roles": [
+        "Autonomy maintainer",
+        "Mission owner"
+      ],
+      "assignees": [],
+      "depends_on": [
+        "GU-00",
+        "GU-04",
+        "GU-06"
+      ],
+      "body": "결과: 필수 프로파일의 목표 매개변수, plugin 이름, BT XML·라이브러리, 자체 주행 가능성·위치 추정 규약을 맞춥니다.\n\n근거: 매개변수·plugin 해석, TF/datum과 기록 입력 비교, 목표 도달, 도달 불가능한 목표, 인지 입력 누락, 취소·일시정지·재개·중단 동작입니다. 수치 허용오차와 운용 의미는 임무 담당자와 합의합니다.\n\n새 기능 실험은 별도로 선택할 수 있게 유지합니다. 실제 NX·필드 인수는 GU-12에 남깁니다."
+    },
+    {
+      "id": "GU-08",
+      "title": "목표 프로파일의 통신, UI와 네이티브 ROS relay 검증",
+      "workstream": "Communication/UI",
+      "priority": "P1 migration",
+      "required_environment": "Workstation and Nano; later production endpoints",
+      "suggested_roles": [
+        "Gateway/UI maintainer",
+        "Deployment reviewer"
+      ],
+      "assignees": [],
+      "depends_on": [
+        "GU-00",
+        "GU-04"
+      ],
+      "body": "결과: 합의한 base-station/rover-direct 프로파일에서 클린 gateway/dashboard 점검과 실제 네이티브 ROS relay 동작을 확보합니다. 진행 중인 배포 작업의 반영을 명시적으로 정합니다.\n\n근거: 명령·텔레메트리·사용자 정의 인터페이스, 실제 rclnodejs 초기화, 연결 해제·재연결, 브라우저·proxy·서비스 동작, 드러나는 relay 실패입니다. 후보 명령 엔드포인트는 운용 로버와 격리합니다.\n\nmock 단위 시험은 네이티브 점검을 보완하며 대체하지 않습니다. 실제 운용 프로파일의 전체 인수는 GU-12에 연결합니다."
+    },
+    {
+      "id": "GU-09",
+      "title": "카메라, 추론과 영상 의존성 구성 절차 검증",
+      "workstream": "Perception/Video",
+      "priority": "P1 migration",
+      "required_environment": "Nano and dedicated sensors; later NX encoder/full-load checks",
+      "suggested_roles": [
+        "Perception/video maintainer",
+        "HW integration reviewer"
+      ],
+      "assignees": [],
+      "depends_on": [
+        "GU-00",
+        "GU-01",
+        "GU-04"
+      ],
+      "body": "결과: 관리되는 Python/OpenCV/가속기 의존성, 카메라 SDK·wrapper·firmware 조합, 원본 모델 출처, 재현 가능한 추론 산출물을 확보합니다.\n\n근거: 연결 장치·GPU smoke 점검, 스트림 매핑, 데이터·frame 호환성, 명시적인 Nano 시험 프로파일입니다. Nano에는 NVENC가 없으므로 축소된 소프트웨어 인코딩은 전송을 시험할 수 있지만 실제 운용 인코더를 검증하지는 않습니다.\n\nNX 전용 엔진·인코더·동시 부하 점검을 GU-12에 준비합니다. 전체 NX 부하가 Nano에 맞아야 한다고 요구하거나 엔진 이식성을 가정하지 않습니다."
+    },
+    {
+      "id": "GU-10",
+      "title": "유용한 새 Nav2 기능과 후속 시뮬레이터 성능 평가",
+      "workstream": "Navigation/Simulation",
+      "priority": "P2 capability investigation",
+      "required_environment": "Controlled replay/simulation; NX measurement only in agreed windows",
+      "suggested_roles": [
+        "Autonomy/simulation maintainer",
+        "Mission owner"
+      ],
+      "assignees": [],
+      "depends_on": [
+        "GU-00",
+        "GU-04"
+      ],
+      "body": "결과: 이슈 #55 또는 정의한 성능 문제에 근거하여 선택한 임무 개선안의 채택 근거를 만듭니다.\n\nRolling 문서를 그대로 적용하지 않고 정확한 목표 버전의 기능 유무를 확인합니다. 막힌 경유점, route graph, 부분 경로의 의도한 의미를 정합니다. 동등한 부하에서 컨트롤러·지형 개선을 측정하고 geometry·backend 변경 효과를 분리합니다.\n\n근거: 시나리오, 버전, 기준, 결과, 장단점, 채택 결정입니다. 팀이 명시적으로 릴리스 범위를 바꾸지 않는 한 실험은 선택 사항입니다."
+    },
+    {
+      "id": "GU-11",
+      "title": "공동 HW/SW 검증, 산출물 저장과 통합 일정 준비",
+      "workstream": "System verification",
+      "priority": "P0 prerequisite",
+      "required_environment": "SW/HW/operator coordination",
+      "suggested_roles": [
+        "Integrator",
+        "HW integration",
+        "Rover operator",
+        "Release authority"
+      ],
+      "assignees": [],
+      "depends_on": [
+        "GU-00",
+        "GU-02"
+      ],
+      "body": "결과: 공동 검토한 기능·시험표, 명시된 인수 책임, 근거 위치, 실제 URC 2027 이정표에 맞춘 Nano/NX/시스템 시험 잠정 일정을 준비합니다. 구현 완료 전에 계획합니다.\n\n물리 설정, 보정, 수치 기준, 실패·복구, 동시 부하, 중단 조건, 복원·재시험을 포함합니다. 대형 이미지·모델·bag의 저장·접근·보존 정책을 선택하고 Project에서 manifest를 연결합니다.\n\n근거: 팀이 검토한 시험표와 의존성·일정 기록입니다. NX 접근 부재는 소프트웨어·Nano 통과로 대체하지 않고 보이는 관문으로 남깁니다."
+    },
+    {
+      "id": "GU-12",
+      "title": "준비된 NX·공동 로버 인수 시험 수행 후 전환 결정",
+      "workstream": "System verification",
+      "priority": "P1 migration",
+      "required_environment": "Actual NX/carrier/rover and joint field session",
+      "suggested_roles": [
+        "SW integrator",
+        "HW integration",
+        "Rover operator",
+        "Release authority"
+      ],
+      "assignees": [],
+      "depends_on": [
+        "GU-05",
+        "GU-06",
+        "GU-07",
+        "GU-08",
+        "GU-09",
+        "GU-11"
+      ],
+      "body": "결과: 배정된 정비 시간에 필수 NX 네이티브·물리·필드 기능의 근거와 식별된 배포·복구 묶음을 확보합니다.\n\n해당 Nano·소프트웨어 결과, 정확한 소스·설정, 준비된 시험, 중단 조건, 펌웨어를 고려한 복구를 갖춥니다. 물리 제어, 센서, 인코딩·추론, 전체 부하, 재시작·재연결, 필수 임무를 검증하고 복원·재시험 시간을 확보합니다.\n\n시험 후에는 기본적으로 기존 운용 환경을 복구하고 재점검합니다. 전환은 별도의 팀 릴리스 결정이 필요합니다. 시간 미확보나 실패한 관문은 대기 상태로 남습니다. 프로젝트 안내 자료 공개는 배포 인수가 아닙니다."
+    }
+  ]
+}

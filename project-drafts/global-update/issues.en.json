@@ -1,0 +1,73 @@
+{
+  "format": "mr2-issue-drafts/v1",
+  "language": "en",
+  "status": "drafts only; no issues or assignments created",
+  "dependency_semantics": "depends_on lists acceptance prerequisites; preparation may begin earlier",
+  "issues": [
+    {
+      "id": "GU-00", "title": "Confirm migration scope, integration baseline and collaboration home",
+      "workstream": "Platform", "priority": "P0 prerequisite", "required_environment": "Team coordination", "suggested_roles": ["SW leader", "Integrator", "HW integration", "Rover operator"], "assignees": [], "depends_on": [],
+      "body": "Outcome: record first-release operating profiles and required/deferred/experimental capabilities; choose the integration baseline and disposition of rover-direct work. Record the preferred migration fork destination, upstream-fix routine, canonical issue location and shared Project ownership. Staffing belongs to the SW leader.\n\nEvidence: a linked decision record identifying exact source SHA, pending operational-reference differences, required capabilities, decisions and remaining actions. No rewrite is implied by repository creation.\n\nNext step: allocate initial work based on actual capacity and URC 2027 readiness milestones; do not invent dates or assignees."
+    },
+    {
+      "id": "GU-01", "title": "Retrieve and establish the configurable Orin Nano bench",
+      "workstream": "Platform", "priority": "P0 prerequisite", "required_environment": "Orin Nano", "suggested_roles": ["SW leader", "Nano custodian"], "assignees": [], "depends_on": [],
+      "body": "Outcome: make the confirmed Nano resource available for native candidate work. The requester asks yongwhan-chung to retrieve it; this draft does not notify or assign that person.\n\nRecord module/SKU, carrier, storage, power/cooling, access and available peripherals. Establish reservations, isolated ROS/command endpoints, a reference image/provisioning path and recovery/handover procedure. Leave required rover equipment in service.\n\nEvidence: inventory and usable bench/access record, recovery result and pending peripherals. Availability does not imply candidate-image compatibility."
+    },
+    {
+      "id": "GU-02", "title": "Identify the operational NX deployment and reference scenarios",
+      "workstream": "System verification", "priority": "P0 prerequisite", "required_environment": "Operational NX; coordinated non-disruptive observation", "suggested_roles": ["Integrator", "HW integration", "Rover operator"], "assignees": [], "depends_on": ["GU-00"],
+      "body": "Outcome: identify what the operational rover actually runs, separately from the audited repository revision. Coordinate observations with the operator to preserve availability.\n\nRecord source/build provenance or explicitly unknown components, installed BSP/runtime versions, operating profiles, service/device configuration, calibration/model locations and representative behavior. Avoid experimental installs, service restarts or disruptive recordings.\n\nEvidence: reference manifest and agreed scenario inputs/expected behavior. Record recovery requirements now; call restoration verified only when the appropriate restoration test has occurred."
+    },
+    {
+      "id": "GU-03", "title": "Reproduce the relevant Humble baseline and establish clean checks",
+      "workstream": "Platform", "priority": "P0 prerequisite", "required_environment": "Clean Ubuntu 22.04 / Humble workstation", "suggested_roles": ["Build maintainer", "Application reviewers"], "assignees": [], "depends_on": ["GU-00"],
+      "body": "Outcome: a repeatable baseline build/check recipe for the selected source. Start with the dependencies and scenario needed for the first comparison.\n\nInvestigate the reproduced dashboard duplicate-type errors and missing declarations without treating them as Jazzy regressions. Run clean dependency installation, gateway/dashboard checks and the relevant ROS build/tests. Track unrelated defects independently.\n\nEvidence: exact environment/source, commands, logs, known failures and an independent reproduction. Existing populated-host rosdep or mocked tests do not establish a clean native build."
+    },
+    {
+      "id": "GU-04", "title": "Provision the Noble/Jazzy candidate and run a native Nano smoke scenario",
+      "workstream": "Platform", "priority": "P0 prerequisite", "required_environment": "Clean Noble/Jazzy workstation and native Orin Nano", "suggested_roles": ["Platform maintainer", "Nano custodian", "Independent reproducer"], "assignees": [], "depends_on": ["GU-00", "GU-01"],
+      "body": "Outcome: a provisioned candidate recipe, clean build attempt and one representative native scenario. Select a carrier-compatible JetPack/BSP; record dependency sources and runtime versions. Use independent Humble/Jazzy outputs and shells.\n\nEvidence: clean setup/build logs, dependency/source pins, actual Nano scenario results and independent reproduction. Bound the initial experiment and escalate unresolved platform blockers; do not hide failures with broad skip lists.\n\nUpdate effort ranges and dependencies from measured results. NX-specific checks remain pending; no operational NX changes are part of this issue."
+    },
+    {
+      "id": "GU-05", "title": "Port drive/arm control, CAN interfaces and MoveIt Servo contracts",
+      "workstream": "Control/CAN", "priority": "P1 migration", "required_environment": "Jazzy mocks; Nano bench where applicable; later NX/HW verification", "suggested_roles": ["Control maintainer", "HW integration reviewer"], "assignees": [], "depends_on": ["GU-00", "GU-04"],
+      "body": "Outcome: adapted manager/spawner parameters, hardware/controller interfaces and Servo startup/command/status callers with preserved control contracts.\n\nEvidence: build, parameters and claimed interfaces, lifecycle/restart behavior, mock command mapping and Servo mode/status results. Preserve units, signs, limits, stale-command and manual/autonomous handover expectations.\n\nPrepare physical bench procedures jointly with HW. Mock or virtual-CAN results do not close physical control/NX acceptance. Link remaining checks to GU-12."
+    },
+    {
+      "id": "GU-06", "title": "Establish Harmonic simulation and sensor/clock bridge parity",
+      "workstream": "Navigation/Simulation", "priority": "P1 migration", "required_environment": "Noble/Jazzy simulation workstation", "suggested_roles": ["Simulation maintainer", "Control/sensor reviewers"], "assignees": [], "depends_on": ["GU-00", "GU-04"],
+      "body": "Outcome: empty-world spawn, controller activation, clock and required simulated sensors work under Harmonic, followed by the existing terrain.\n\nNormalize mixed Ignition/Gazebo names and configuration, verify mimic semantics and actual bridge QoS/frame behavior. Record the loaded physics backend and resource/assets.\n\nEvidence: reproducible scenarios and observed graph/sensor/control behavior. Preserve terrain representation/settings during parity work; performance optimization is a separate experiment."
+    },
+    {
+      "id": "GU-07", "title": "Port Nav2, localization, traversability and required mission behavior",
+      "workstream": "Navigation/Simulation", "priority": "P1 migration", "required_environment": "Jazzy replay/simulation; later native rover verification", "suggested_roles": ["Autonomy maintainer", "Mission owner"], "assignees": [], "depends_on": ["GU-00", "GU-04", "GU-06"],
+      "body": "Outcome: reconcile target parameters, plugin names, BT XML/libraries and custom traversability/localization contracts for the required profiles.\n\nEvidence: parameter/plugin resolution, TF/datum and recorded-input comparisons, successful goals, unreachable goals, missing-perception behavior and cancel/pause/resume/abort. Agree numerical tolerances and operational semantics with the mission owner.\n\nKeep new-feature experiments separately selectable. Native NX/field acceptance remains in GU-12."
+    },
+    {
+      "id": "GU-08", "title": "Validate communication, UI and native ROS relay in target profiles",
+      "workstream": "Communication/UI", "priority": "P1 migration", "required_environment": "Workstation and Nano; later production endpoints", "suggested_roles": ["Gateway/UI maintainer", "Deployment reviewer"], "assignees": [], "depends_on": ["GU-00", "GU-04"],
+      "body": "Outcome: clean gateway/dashboard checks and actual native ROS relay behavior for agreed base-station/rover-direct profiles. Reconcile relevant pending deployment work explicitly.\n\nEvidence: commands/telemetry/custom interfaces, real rclnodejs initialization, disconnect/reconnect, browser/proxy/service behavior and visible relay failures. Keep candidate command endpoints isolated from the operational rover.\n\nMocked unit tests supplement native checks; they do not replace them. Link full production-profile acceptance to GU-12."
+    },
+    {
+      "id": "GU-09", "title": "Qualify camera, inference and video dependency recipes",
+      "workstream": "Perception/Video", "priority": "P1 migration", "required_environment": "Nano and dedicated sensors; later NX encoder/full-load checks", "suggested_roles": ["Perception/video maintainer", "HW integration reviewer"], "assignees": [], "depends_on": ["GU-00", "GU-01", "GU-04"],
+      "body": "Outcome: controlled Python/OpenCV/accelerator dependencies, camera SDK/wrapper/firmware choices, source-model provenance and reproducible inference artifacts.\n\nEvidence: attached-device and GPU smoke checks, stream mapping, data/frame compatibility and an explicit Nano test profile. Nano lacks NVENC: reduced software encoding can test transport, not the production encoder.\n\nPrepare NX-specific engine/encoder/concurrent-workload checks for GU-12. Do not require the full NX workload to fit the Nano or assume engine portability."
+    },
+    {
+      "id": "GU-10", "title": "Evaluate useful newer Nav2 capabilities and deferred simulator performance",
+      "workstream": "Navigation/Simulation", "priority": "P2 capability investigation", "required_environment": "Controlled replay/simulation; NX measurement only in agreed windows", "suggested_roles": ["Autonomy/simulation maintainer", "Mission owner"], "assignees": [], "depends_on": ["GU-00", "GU-04"],
+      "body": "Outcome: evidence-backed recommendations for selected mission improvements, motivated by issue #55 or a defined performance problem.\n\nVerify exact target feature availability rather than copying Rolling documentation. State the desired semantics for blocked waypoints, route graphs or partial paths. Measure controller or terrain improvements under equivalent workloads and isolate geometry/backend changes.\n\nEvidence: scenario, version, baseline, result, tradeoffs and adoption decision. Experiments are optional unless the team explicitly changes release scope."
+    },
+    {
+      "id": "GU-11", "title": "Prepare joint HW/SW verification, artifact storage and integration scheduling",
+      "workstream": "System verification", "priority": "P0 prerequisite", "required_environment": "SW/HW/operator coordination", "suggested_roles": ["Integrator", "HW integration", "Rover operator", "Release authority"], "assignees": [], "depends_on": ["GU-00", "GU-02"],
+      "body": "Outcome: jointly reviewed capability/test matrix, named acceptance responsibilities, evidence locations and indicative Nano/NX/system-session scheduling aligned with actual URC 2027 milestones. Plan before implementation completes.\n\nInclude physical setup, calibration, numerical criteria, failure/recovery cases, simultaneous load, stop conditions, restoration and reruns. Select storage/access/retention for large images/models/bags; index manifests from the Project.\n\nEvidence: team-reviewed matrix and dependency/calendar record. Missing NX access remains a visible gate rather than a software/Nano pass."
+    },
+    {
+      "id": "GU-12", "title": "Execute prepared NX and joint rover acceptance, then decide cutover",
+      "workstream": "System verification", "priority": "P1 migration", "required_environment": "Actual NX/carrier/rover and joint field session", "suggested_roles": ["SW integrator", "HW integration", "Rover operator", "Release authority"], "assignees": [], "depends_on": ["GU-05", "GU-06", "GU-07", "GU-08", "GU-09", "GU-11"],
+      "body": "Outcome: evidence for required native NX and physical/field capabilities in allocated maintenance windows, with an identified deployment/recovery bundle.\n\nBring applicable Nano/software results, exact source/configuration, prepared tests, stop conditions and firmware-aware recovery. Verify physical control, sensors, encoding/inference, full workload, restart/reconnect and required missions. Reserve restoration and rerun time.\n\nRestore the operational deployment after a test session by default and recheck it. Cutover requires a separate team release decision; unavailable windows or failed gates remain pending. Publication of the project brief is not deployment acceptance."
+    }
+  ]
+}

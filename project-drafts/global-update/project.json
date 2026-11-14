@@ -1,0 +1,123 @@
+{
+  "format": "mr2-project-blueprint/v1",
+  "prepared_on": "2026-11-14",
+  "status": "local draft; no GitHub Project created",
+  "name": "MR2 Global Update · URC 2027",
+  "owner": null,
+  "github_url": null,
+  "description": {
+    "en": "Coordinate the Ubuntu 24.04 / ROS 2 Jazzy / Gazebo Harmonic migration, using an Orin Nano bench while preserving operational NX rover availability.",
+    "ko": "Orin Nano 시험 장비에서 Ubuntu 24.04 / ROS 2 Jazzy / Gazebo Harmonic 마이그레이션을 진행하고 운용 NX 로버의 가용성을 유지하도록 조정합니다."
+  },
+  "readme": {
+    "en": "Preserve required rover behavior on a reproducible, qualified Orin NX platform. Use workstations for parallel development and the configurable Orin Nano for native candidate integration. Keep the NX operational during ordinary development; schedule disruptive target verification and agree cutover separately. The SW leader assigns people. Track implementation and joint HW/SW evidence separately; Project items link artifact manifests, not bulk files. Begin with baseline/scope, Nano retrieval/setup, and reproducibility. Candidate support is researched, not yet qualified.",
+    "ko": "재현 가능하고 검증된 Orin NX 플랫폼에서 필요한 로버 동작을 보존합니다. 워크스테이션에서 병렬 개발하고 재설정 가능한 Orin Nano에서 후보 환경을 네이티브 통합합니다. 일상 개발 중에는 NX 운용을 유지하며 중단이 필요한 대상 검증과 전환은 별도로 합의합니다. SW 팀장이 인력을 배정합니다. 구현과 공동 HW/SW 근거를 구분하고, Project는 대형 파일 대신 산출물 manifest를 연결합니다. 기준·범위, Nano 인수·설정, 재현성부터 시작합니다. 후보 지원 조건은 조사했지만 실제 검증은 아직 수행하지 않았습니다."
+  },
+  "roles": {
+    "sw_team_leader": "yongwhan-chung",
+    "assignment_authority": "Current SW team leader; no assignees set by this draft",
+    "hardware_and_release_authority": "To be identified jointly by the team",
+    "nano_retrieval": "Requested of yongwhan-chung; completion not confirmed"
+  },
+  "repositories": [
+    {
+      "role": "operational upstream",
+      "repository": "URC-kaist/mr2-stack",
+      "audited_branch": "2026",
+      "audited_sha": "74422f36c55140519f111cf6709f1725711b536a"
+    },
+    {
+      "role": "documentation",
+      "repository": "URC-kaist/docs",
+      "local_branch": "docs/global-update-main",
+      "content_path": "content/docs/global-update-project"
+    },
+    {
+      "role": "migration candidate",
+      "repository": null,
+      "local_path": "~/mr2-stack-jazzy",
+      "local_branch": "migration/jazzy",
+      "github_creation": "pending; local preparation only",
+      "preferred_topology": "history-preserving fork, subject to team destination/ownership decision"
+    }
+  ],
+  "fields": [
+    {
+      "name": "Status",
+      "type": "SINGLE_SELECT",
+      "options": [
+        "Backlog",
+        "Ready",
+        "In progress",
+        "In review",
+        "Blocked",
+        "Done"
+      ]
+    },
+    {
+      "name": "Workstream",
+      "type": "SINGLE_SELECT",
+      "options": [
+        "Platform",
+        "Navigation/Simulation",
+        "Communication/UI",
+        "Control/CAN",
+        "Perception/Video",
+        "System verification"
+      ]
+    },
+    {
+      "name": "Priority",
+      "type": "SINGLE_SELECT",
+      "options": [
+        "P0 prerequisite",
+        "P1 migration",
+        "P2 capability investigation"
+      ]
+    },
+    {
+      "name": "Required environment",
+      "type": "TEXT",
+      "note": "May list several environments; detailed gate results belong in versioned issue evidence."
+    }
+  ],
+  "builtin_fields": [
+    "Title",
+    "Assignees",
+    "Repository",
+    "Linked pull requests"
+  ],
+  "views": [
+    {
+      "name": "Execution",
+      "layout": "BOARD",
+      "group_by": "Status"
+    },
+    {
+      "name": "Hardware queue",
+      "layout": "TABLE",
+      "purpose": "Prepared Nano/NX tasks, peripherals, reservations and pending joint sessions"
+    },
+    {
+      "name": "URC 2027 integration",
+      "layout": "TABLE",
+      "purpose": "Start as a milestone/dependency table; add date fields and roadmap after team scheduling"
+    }
+  ],
+  "rules": [
+    "No issue assignees or dates are committed by the blueprint.",
+    "Do not infer NX acceptance from software/Nano results or implementation PR merge.",
+    "Each accepted result identifies source, environment, configuration and evidence location.",
+    "Artifacts are retained in appropriate storage and indexed by manifest links.",
+    "Candidate development does not alter the operational NX outside an agreed window."
+  ],
+  "issue_files": {
+    "en": "issues.en.json",
+    "ko": "issues.ko.json"
+  },
+  "translation": {
+    "english_source_commit": "8e4d9a6",
+    "prepared_on": "2026-11-14",
+    "status": "Korean translation of English draft; GitHub option values and issue IDs remain shared"
+  }
+}
