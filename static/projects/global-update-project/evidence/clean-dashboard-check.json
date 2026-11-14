@@ -1,0 +1,12 @@
+{
+  "name": "clean-dashboard-check",
+  "argv": [
+    "npm",
+    "run",
+    "check"
+  ],
+  "exit_code": 2,
+  "stdout": "\n> dashboard@0.0.0 check\n> npm run typecheck && npm run lint && npm run build\n\n\n> dashboard@0.0.0 typecheck\n> tsc -p tsconfig.app.json\n\nsrc/lib/rosMessages.ts(180,13): error TS2300: Duplicate identifier 'ScienceServiceResponse'.\nsrc/lib/rosMessages.ts(190,13): error TS2300: Duplicate identifier 'SetScienceLedRequest'.\nsrc/lib/rosMessages.ts(195,13): error TS2300: Duplicate identifier 'SelectCentrifugePositionRequest'.\nsrc/lib/rosMessages.ts(199,13): error TS2300: Duplicate identifier 'TriggerCentrifugeRampRequest'.\nsrc/lib/rosMessages.ts(203,13): error TS2300: Duplicate identifier 'MoveCarriageRequest'.\nsrc/lib/rosMessages.ts(208,13): error TS2300: Duplicate identifier 'CarriageMotorCommandRequest'.\nsrc/lib/rosMessages.ts(213,13): error TS2300: Duplicate identifier 'MotorVelocityRequest'.\nsrc/lib/rosMessages.ts(217,13): error TS2300: Duplicate identifier 'MotorPositionRequest'.\nsrc/lib/rosMessages.ts(221,13): error TS2300: Duplicate identifier 'CarriageMotorTelemetryMsg'.\nsrc/lib/rosMessages.ts(254,13): error TS2300: Duplicate identifier 'ScienceServiceResponse'.\nsrc/lib/rosMessages.ts(259,13): error TS2300: Duplicate identifier 'SetScienceLedRequest'.\nsrc/lib/rosMessages.ts(269,13): error TS2300: Duplicate identifier 'SelectCentrifugePositionRequest'.\nsrc/lib/rosMessages.ts(273,13): error TS2300: Duplicate identifier 'TriggerCentrifugeRampRequest'.\nsrc/lib/rosMessages.ts(277,13): error TS2300: Duplicate identifier 'MoveCarriageRequest'.\nsrc/lib/rosMessages.ts(282,13): error TS2300: Duplicate identifier 'CarriageMotorCommandRequest'.\nsrc/lib/rosMessages.ts(287,13): error TS2300: Duplicate identifier 'MotorVelocityRequest'.\nsrc/lib/rosMessages.ts(291,13): error TS2300: Duplicate identifier 'MotorPositionRequest'.\nsrc/lib/rosMessages.ts(295,13): error TS2300: Duplicate identifier 'CarriageMotorTelemetryMsg'.\n",
+  "stderr": "",
+  "scope": "Clean tracked dashboard snapshot and lockfile, Node 24.13.0, amd64 Ubuntu 22.04; no ROS or hardware validation."
+}

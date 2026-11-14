@@ -1,0 +1,40 @@
+{
+  "format": "mr2-dispatch-evidence/v1",
+  "audit_date": "2026-11-14",
+  "audited_sha": "74422f36c55140519f111cf6709f1725711b536a",
+  "scope": "Selected original audit files copied byte-for-byte; no new runtime or hardware test results",
+  "files": {
+    "repository-snapshot.json": {
+      "sha256": "c3a5831def7d7c2caf446330a7c367944162ce28661b8896e3cb0d47f3c5e193",
+      "bytes": 119403
+    },
+    "package-dependencies.tsv": {
+      "sha256": "969fc6c6ae485c9ca64df181529df3dfabeb696f0314400af777fade3862eded",
+      "bytes": 36796
+    },
+    "gateway-tests.json": {
+      "sha256": "405dc3a617ab7485376528f1ef9c94fc124bdeceed4f154f3bdc51a347906a0f",
+      "bytes": 4563
+    },
+    "clean-dashboard-check.json": {
+      "sha256": "0ad86ff65710a6cc0a4d905e0912873076e4043cfd8275fd5feed7aea74846fc",
+      "bytes": 2129
+    },
+    "clean-dashboard-install.json": {
+      "sha256": "73478bf1ba6890ad33acdde11e5a53648e49176726e72730f22b471d2118064a",
+      "bytes": 316
+    },
+    "target-release-availability.json": {
+      "sha256": "a7a212cbef2fc280a4da5c9ed3b3b3ddb4613e0ff4f9827ccb02d17ef665a902",
+      "bytes": 70286
+    },
+    "baseline-checks.json": {
+      "sha256": "fb670e4f456b79bbbabf229ff26baa5794cbe1cebf6cd8f0c1bc15563e32b73c",
+      "bytes": 26311
+    },
+    "github-open-prs.json": {
+      "sha256": "d93b7e0cf2a43c15f76989c0ef3c4e1860b4e45aee0483f5ec5a281f6a598df7",
+      "bytes": 1395
+    }
+  }
+}

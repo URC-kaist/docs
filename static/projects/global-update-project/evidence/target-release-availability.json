@@ -1,0 +1,1982 @@
+{
+  "collected_at": "2026-11-13T18:52:12.035248+00:00",
+  "note": "Release-manifest presence is not binary availability or compatibility validation. Unknown keys may be system rosdep keys.",
+  "distros": {
+    "humble": {
+      "url": "https://raw.githubusercontent.com/ros/rosdistro/master/humble/distribution.yaml",
+      "sha256": "fe3b08a19bde98edf92909184da76e97c3b39b80f1c210736376a026fa4b381a",
+      "queried_packages": {
+        "action_msgs": {
+          "repository": "rcl_interfaces",
+          "version": "1.2.3-1",
+          "release_url": "https://github.com/ros2-gbp/rcl_interfaces-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/rcl_interfaces.git",
+            "version": "humble"
+          }
+        },
+        "ament_cmake": {
+          "repository": "ament_cmake",
+          "version": "1.3.15-1",
+          "release_url": "https://github.com/ros2-gbp/ament_cmake-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ament/ament_cmake.git",
+            "version": "humble"
+          }
+        },
+        "ament_cmake_copyright": {
+          "repository": "ament_lint",
+          "version": "0.12.15-1",
+          "release_url": "https://github.com/ros2-gbp/ament_lint-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ament/ament_lint.git",
+            "version": "humble"
+          }
+        },
+        "ament_cmake_cppcheck": {
+          "repository": "ament_lint",
+          "version": "0.12.15-1",
+          "release_url": "https://github.com/ros2-gbp/ament_lint-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ament/ament_lint.git",
+            "version": "humble"
+          }
+        },
+        "ament_cmake_uncrustify": {
+          "repository": "ament_lint",
+          "version": "0.12.15-1",
+          "release_url": "https://github.com/ros2-gbp/ament_lint-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ament/ament_lint.git",
+            "version": "humble"
+          }
+        },
+        "ament_copyright": {
+          "repository": "ament_lint",
+          "version": "0.12.15-1",
+          "release_url": "https://github.com/ros2-gbp/ament_lint-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ament/ament_lint.git",
+            "version": "humble"
+          }
+        },
+        "ament_flake8": {
+          "repository": "ament_lint",
+          "version": "0.12.15-1",
+          "release_url": "https://github.com/ros2-gbp/ament_lint-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ament/ament_lint.git",
+            "version": "humble"
+          }
+        },
+        "ament_index_cpp": {
+          "repository": "ament_index",
+          "version": "1.4.1-1",
+          "release_url": "https://github.com/ros2-gbp/ament_index-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ament/ament_index.git",
+            "version": "humble"
+          }
+        },
+        "ament_lint_auto": {
+          "repository": "ament_lint",
+          "version": "0.12.15-1",
+          "release_url": "https://github.com/ros2-gbp/ament_lint-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ament/ament_lint.git",
+            "version": "humble"
+          }
+        },
+        "ament_lint_common": {
+          "repository": "ament_lint",
+          "version": "0.12.15-1",
+          "release_url": "https://github.com/ros2-gbp/ament_lint-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ament/ament_lint.git",
+            "version": "humble"
+          }
+        },
+        "ament_pep257": {
+          "repository": "ament_lint",
+          "version": "0.12.15-1",
+          "release_url": "https://github.com/ros2-gbp/ament_lint-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ament/ament_lint.git",
+            "version": "humble"
+          }
+        },
+        "aruco_opencv": {
+          "repository": "aruco_opencv",
+          "version": "2.4.2-1",
+          "release_url": "https://github.com/ros2-gbp/aruco_opencv-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/fictionlab/ros_aruco_opencv.git",
+            "version": "humble"
+          }
+        },
+        "aruco_opencv_msgs": {
+          "repository": "aruco_opencv",
+          "version": "2.4.2-1",
+          "release_url": "https://github.com/ros2-gbp/aruco_opencv-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/fictionlab/ros_aruco_opencv.git",
+            "version": "humble"
+          }
+        },
+        "behaviortree_cpp": {
+          "repository": "behaviortree_cpp_v4",
+          "version": "4.11.0-1",
+          "release_url": "https://github.com/ros2-gbp/behaviortree_cpp_v4-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/BehaviorTree/BehaviorTree.CPP.git",
+            "version": "master"
+          }
+        },
+        "behaviortree_cpp_v3": {
+          "repository": "behaviortree_cpp_v3",
+          "version": "3.8.7-1",
+          "release_url": "https://github.com/BehaviorTree/behaviortree_cpp_v3-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/BehaviorTree/BehaviorTree.CPP.git",
+            "version": "v3.8"
+          }
+        },
+        "builtin_interfaces": {
+          "repository": "rcl_interfaces",
+          "version": "1.2.3-1",
+          "release_url": "https://github.com/ros2-gbp/rcl_interfaces-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/rcl_interfaces.git",
+            "version": "humble"
+          }
+        },
+        "camera_calibration_parsers": {
+          "repository": "image_common",
+          "version": "3.1.13-1",
+          "release_url": "https://github.com/ros2-gbp/image_common-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros-perception/image_common.git",
+            "version": "humble"
+          }
+        },
+        "catkin": null,
+        "control_msgs": {
+          "repository": "control_msgs",
+          "version": "4.9.0-1",
+          "release_url": "https://github.com/ros2-gbp/control_msgs-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-controls/control_msgs.git",
+            "version": "humble"
+          }
+        },
+        "controller_interface": {
+          "repository": "ros2_control",
+          "version": "2.54.4-1",
+          "release_url": "https://github.com/ros2-gbp/ros2_control-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-controls/ros2_control.git",
+            "version": "humble"
+          }
+        },
+        "controller_manager": {
+          "repository": "ros2_control",
+          "version": "2.54.4-1",
+          "release_url": "https://github.com/ros2-gbp/ros2_control-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-controls/ros2_control.git",
+            "version": "humble"
+          }
+        },
+        "cv_bridge": {
+          "repository": "vision_opencv",
+          "version": "3.2.1-1",
+          "release_url": "https://github.com/ros2-gbp/vision_opencv-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros-perception/vision_opencv.git",
+            "version": "humble"
+          }
+        },
+        "diagnostic_msgs": {
+          "repository": "common_interfaces",
+          "version": "4.9.2-1",
+          "release_url": "https://github.com/ros2-gbp/common_interfaces-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/common_interfaces.git",
+            "version": "humble"
+          }
+        },
+        "eigen": null,
+        "filters": {
+          "repository": "filters",
+          "version": "2.2.2-1",
+          "release_url": "https://github.com/ros2-gbp/filters-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros/filters.git",
+            "version": "ros2"
+          }
+        },
+        "geographic_msgs": {
+          "repository": "geographic_info",
+          "version": "1.0.6-1",
+          "release_url": "https://github.com/ros2-gbp/geographic_info-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros-geographic-info/geographic_info.git",
+            "version": "ros2"
+          }
+        },
+        "geographiclib": null,
+        "geometry_msgs": {
+          "repository": "common_interfaces",
+          "version": "4.9.2-1",
+          "release_url": "https://github.com/ros2-gbp/common_interfaces-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/common_interfaces.git",
+            "version": "humble"
+          }
+        },
+        "grid_map": {
+          "repository": "grid_map",
+          "version": "2.0.1-1",
+          "release_url": "https://github.com/ros2-gbp/grid_map-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ANYbotics/grid_map.git",
+            "version": "humble"
+          }
+        },
+        "grid_map_core": {
+          "repository": "grid_map",
+          "version": "2.0.1-1",
+          "release_url": "https://github.com/ros2-gbp/grid_map-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ANYbotics/grid_map.git",
+            "version": "humble"
+          }
+        },
+        "grid_map_filters": {
+          "repository": "grid_map",
+          "version": "2.0.1-1",
+          "release_url": "https://github.com/ros2-gbp/grid_map-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ANYbotics/grid_map.git",
+            "version": "humble"
+          }
+        },
+        "grid_map_msgs": {
+          "repository": "grid_map",
+          "version": "2.0.1-1",
+          "release_url": "https://github.com/ros2-gbp/grid_map-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ANYbotics/grid_map.git",
+            "version": "humble"
+          }
+        },
+        "grid_map_ros": {
+          "repository": "grid_map",
+          "version": "2.0.1-1",
+          "release_url": "https://github.com/ros2-gbp/grid_map-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ANYbotics/grid_map.git",
+            "version": "humble"
+          }
+        },
+        "gz_ros2_control": {
+          "repository": "ign_ros2_control",
+          "version": "0.7.21-1",
+          "release_url": "https://github.com/ros2-gbp/ign_ros2_control-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-controls/gz_ros2_control.git",
+            "version": "humble"
+          }
+        },
+        "gz_ros2_control_demos": {
+          "repository": "ign_ros2_control",
+          "version": "0.7.21-1",
+          "release_url": "https://github.com/ros2-gbp/ign_ros2_control-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-controls/gz_ros2_control.git",
+            "version": "humble"
+          }
+        },
+        "hardware_interface": {
+          "repository": "ros2_control",
+          "version": "2.54.4-1",
+          "release_url": "https://github.com/ros2-gbp/ros2_control-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-controls/ros2_control.git",
+            "version": "humble"
+          }
+        },
+        "image_geometry": {
+          "repository": "vision_opencv",
+          "version": "3.2.1-1",
+          "release_url": "https://github.com/ros2-gbp/vision_opencv-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros-perception/vision_opencv.git",
+            "version": "humble"
+          }
+        },
+        "imu_filter_madgwick": {
+          "repository": "imu_tools",
+          "version": "2.1.6-1",
+          "release_url": "https://github.com/ros2-gbp/imu_tools-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/CCNYRoboticsLab/imu_tools.git",
+            "version": "humble"
+          }
+        },
+        "joint_state_broadcaster": {
+          "repository": "ros2_controllers",
+          "version": "2.54.1-1",
+          "release_url": "https://github.com/ros2-gbp/ros2_controllers-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-controls/ros2_controllers.git",
+            "version": "humble"
+          }
+        },
+        "joint_state_publisher": {
+          "repository": "joint_state_publisher",
+          "version": "2.4.0-1",
+          "release_url": "https://github.com/ros2-gbp/joint_state_publisher-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros/joint_state_publisher.git",
+            "version": "humble"
+          }
+        },
+        "joint_state_publisher_gui": {
+          "repository": "joint_state_publisher",
+          "version": "2.4.0-1",
+          "release_url": "https://github.com/ros2-gbp/joint_state_publisher-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros/joint_state_publisher.git",
+            "version": "humble"
+          }
+        },
+        "joy": {
+          "repository": "joystick_drivers",
+          "version": "3.3.0-1",
+          "release_url": "https://github.com/ros2-gbp/joystick_drivers-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros-drivers/joystick_drivers.git",
+            "version": "ros2"
+          }
+        },
+        "launch": {
+          "repository": "launch",
+          "version": "1.0.16-1",
+          "release_url": "https://github.com/ros2-gbp/launch-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/launch.git",
+            "version": "humble"
+          }
+        },
+        "launch_ros": {
+          "repository": "launch_ros",
+          "version": "0.19.14-1",
+          "release_url": "https://github.com/ros2-gbp/launch_ros-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/launch_ros.git",
+            "version": "humble"
+          }
+        },
+        "libcurl-dev": null,
+        "libopencv-dev": null,
+        "libusb-1.0-dev": null,
+        "message_filters": {
+          "repository": "message_filters",
+          "version": "4.3.20-1",
+          "release_url": "https://github.com/ros2-gbp/ros2_message_filters-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/message_filters.git",
+            "version": "humble"
+          }
+        },
+        "message_generation": null,
+        "message_runtime": null,
+        "moveit_configs_utils": {
+          "repository": "moveit",
+          "version": "2.5.10-1",
+          "release_url": "https://github.com/ros2-gbp/moveit2-release.git",
+          "source": {
+            "test_commits": false,
+            "test_pull_requests": false,
+            "type": "git",
+            "url": "https://github.com/ros-planning/moveit2.git",
+            "version": "main"
+          }
+        },
+        "moveit_kinematics": {
+          "repository": "moveit",
+          "version": "2.5.10-1",
+          "release_url": "https://github.com/ros2-gbp/moveit2-release.git",
+          "source": {
+            "test_commits": false,
+            "test_pull_requests": false,
+            "type": "git",
+            "url": "https://github.com/ros-planning/moveit2.git",
+            "version": "main"
+          }
+        },
+        "moveit_planners": {
+          "repository": "moveit",
+          "version": "2.5.10-1",
+          "release_url": "https://github.com/ros2-gbp/moveit2-release.git",
+          "source": {
+            "test_commits": false,
+            "test_pull_requests": false,
+            "type": "git",
+            "url": "https://github.com/ros-planning/moveit2.git",
+            "version": "main"
+          }
+        },
+        "moveit_ros_visualization": {
+          "repository": "moveit",
+          "version": "2.5.10-1",
+          "release_url": "https://github.com/ros2-gbp/moveit2-release.git",
+          "source": {
+            "test_commits": false,
+            "test_pull_requests": false,
+            "type": "git",
+            "url": "https://github.com/ros-planning/moveit2.git",
+            "version": "main"
+          }
+        },
+        "moveit_servo": {
+          "repository": "moveit",
+          "version": "2.5.10-1",
+          "release_url": "https://github.com/ros2-gbp/moveit2-release.git",
+          "source": {
+            "test_commits": false,
+            "test_pull_requests": false,
+            "type": "git",
+            "url": "https://github.com/ros-planning/moveit2.git",
+            "version": "main"
+          }
+        },
+        "moveit_simple_controller_manager": {
+          "repository": "moveit",
+          "version": "2.5.10-1",
+          "release_url": "https://github.com/ros2-gbp/moveit2-release.git",
+          "source": {
+            "test_commits": false,
+            "test_pull_requests": false,
+            "type": "git",
+            "url": "https://github.com/ros-planning/moveit2.git",
+            "version": "main"
+          }
+        },
+        "nav2_behavior_tree": {
+          "repository": "navigation2",
+          "version": "1.1.20-1",
+          "release_url": "https://github.com/SteveMacenski/navigation2-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-planning/navigation2.git",
+            "version": "humble"
+          }
+        },
+        "nav2_bringup": {
+          "repository": "navigation2",
+          "version": "1.1.20-1",
+          "release_url": "https://github.com/SteveMacenski/navigation2-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-planning/navigation2.git",
+            "version": "humble"
+          }
+        },
+        "nav2_costmap_2d": {
+          "repository": "navigation2",
+          "version": "1.1.20-1",
+          "release_url": "https://github.com/SteveMacenski/navigation2-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-planning/navigation2.git",
+            "version": "humble"
+          }
+        },
+        "nav2_lifecycle_manager": {
+          "repository": "navigation2",
+          "version": "1.1.20-1",
+          "release_url": "https://github.com/SteveMacenski/navigation2-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-planning/navigation2.git",
+            "version": "humble"
+          }
+        },
+        "nav2_map_server": {
+          "repository": "navigation2",
+          "version": "1.1.20-1",
+          "release_url": "https://github.com/SteveMacenski/navigation2-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-planning/navigation2.git",
+            "version": "humble"
+          }
+        },
+        "nav2_msgs": {
+          "repository": "navigation2",
+          "version": "1.1.20-1",
+          "release_url": "https://github.com/SteveMacenski/navigation2-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-planning/navigation2.git",
+            "version": "humble"
+          }
+        },
+        "nav2_util": {
+          "repository": "navigation2",
+          "version": "1.1.20-1",
+          "release_url": "https://github.com/SteveMacenski/navigation2-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-planning/navigation2.git",
+            "version": "humble"
+          }
+        },
+        "nav_msgs": {
+          "repository": "common_interfaces",
+          "version": "4.9.2-1",
+          "release_url": "https://github.com/ros2-gbp/common_interfaces-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/common_interfaces.git",
+            "version": "humble"
+          }
+        },
+        "nlohmann-json-dev": null,
+        "pcl_conversions": {
+          "repository": "perception_pcl",
+          "version": "2.4.5-2",
+          "release_url": "https://github.com/ros2-gbp/perception_pcl-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros-perception/perception_pcl.git",
+            "version": "humble"
+          }
+        },
+        "pkg-config": null,
+        "pluginlib": {
+          "repository": "pluginlib",
+          "version": "5.1.5-1",
+          "release_url": "https://github.com/ros2-gbp/pluginlib-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros/pluginlib.git",
+            "version": "humble"
+          }
+        },
+        "position_controllers": {
+          "repository": "ros2_controllers",
+          "version": "2.54.1-1",
+          "release_url": "https://github.com/ros2-gbp/ros2_controllers-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-controls/ros2_controllers.git",
+            "version": "humble"
+          }
+        },
+        "python3-numpy": null,
+        "python3-opencv": null,
+        "python3-psutil": null,
+        "python3-pytest": null,
+        "rclcpp": {
+          "repository": "rclcpp",
+          "version": "16.0.23-1",
+          "release_url": "https://github.com/ros2-gbp/rclcpp-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/rclcpp.git",
+            "version": "humble"
+          }
+        },
+        "rclcpp_action": {
+          "repository": "rclcpp",
+          "version": "16.0.23-1",
+          "release_url": "https://github.com/ros2-gbp/rclcpp-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/rclcpp.git",
+            "version": "humble"
+          }
+        },
+        "rclcpp_components": {
+          "repository": "rclcpp",
+          "version": "16.0.23-1",
+          "release_url": "https://github.com/ros2-gbp/rclcpp-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/rclcpp.git",
+            "version": "humble"
+          }
+        },
+        "rclcpp_lifecycle": {
+          "repository": "rclcpp",
+          "version": "16.0.23-1",
+          "release_url": "https://github.com/ros2-gbp/rclcpp-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/rclcpp.git",
+            "version": "humble"
+          }
+        },
+        "rclpy": {
+          "repository": "rclpy",
+          "version": "3.3.22-1",
+          "release_url": "https://github.com/ros2-gbp/rclpy-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/rclpy.git",
+            "version": "humble"
+          }
+        },
+        "realsense2_camera": {
+          "repository": "realsense2_camera",
+          "version": "4.59.1-1",
+          "release_url": "https://github.com/ros2-gbp/realsense-ros-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/IntelRealSense/realsense-ros.git",
+            "version": "ros2-master"
+          }
+        },
+        "robot_localization": {
+          "repository": "robot_localization",
+          "version": "3.5.5-1",
+          "release_url": "https://github.com/ros2-gbp/robot_localization-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/cra-ros-pkg/robot_localization.git",
+            "version": "humble-devel"
+          }
+        },
+        "robot_state_publisher": {
+          "repository": "robot_state_publisher",
+          "version": "3.0.3-2",
+          "release_url": "https://github.com/ros2-gbp/robot_state_publisher-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros/robot_state_publisher.git",
+            "version": "humble"
+          }
+        },
+        "ros2_control": {
+          "repository": "ros2_control",
+          "version": "2.54.4-1",
+          "release_url": "https://github.com/ros2-gbp/ros2_control-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-controls/ros2_control.git",
+            "version": "humble"
+          }
+        },
+        "ros2_controllers": {
+          "repository": "ros2_controllers",
+          "version": "2.54.1-1",
+          "release_url": "https://github.com/ros2-gbp/ros2_controllers-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-controls/ros2_controllers.git",
+            "version": "humble"
+          }
+        },
+        "ros_environment": {
+          "repository": "ros_environment",
+          "version": "3.2.2-1",
+          "release_url": "https://github.com/ros2-gbp/ros_environment-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros/ros_environment.git",
+            "version": "humble"
+          }
+        },
+        "ros_gz": {
+          "repository": "ros_gz",
+          "version": "0.244.27-1",
+          "release_url": "https://github.com/ros2-gbp/ros_ign-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/gazebosim/ros_gz.git",
+            "version": "humble"
+          }
+        },
+        "ros_gz_bridge": {
+          "repository": "ros_gz",
+          "version": "0.244.27-1",
+          "release_url": "https://github.com/ros2-gbp/ros_ign-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/gazebosim/ros_gz.git",
+            "version": "humble"
+          }
+        },
+        "ros_gz_sim": {
+          "repository": "ros_gz",
+          "version": "0.244.27-1",
+          "release_url": "https://github.com/ros2-gbp/ros_ign-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/gazebosim/ros_gz.git",
+            "version": "humble"
+          }
+        },
+        "rosbridge_server": {
+          "repository": "rosbridge_suite",
+          "version": "2.0.8-1",
+          "release_url": "https://github.com/ros2-gbp/rosbridge_suite-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/RobotWebTools/rosbridge_suite.git",
+            "version": "humble"
+          }
+        },
+        "rosidl_default_generators": {
+          "repository": "rosidl_defaults",
+          "version": "1.2.1-1",
+          "release_url": "https://github.com/ros2-gbp/rosidl_defaults-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/rosidl_defaults.git",
+            "version": "humble"
+          }
+        },
+        "rosidl_default_runtime": {
+          "repository": "rosidl_defaults",
+          "version": "1.2.1-1",
+          "release_url": "https://github.com/ros2-gbp/rosidl_defaults-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/rosidl_defaults.git",
+            "version": "humble"
+          }
+        },
+        "rviz2": {
+          "repository": "rviz",
+          "version": "11.2.29-1",
+          "release_url": "https://github.com/ros2-gbp/rviz-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/rviz.git",
+            "version": "humble"
+          }
+        },
+        "rviz_common": {
+          "repository": "rviz",
+          "version": "11.2.29-1",
+          "release_url": "https://github.com/ros2-gbp/rviz-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/rviz.git",
+            "version": "humble"
+          }
+        },
+        "rviz_default_plugins": {
+          "repository": "rviz",
+          "version": "11.2.29-1",
+          "release_url": "https://github.com/ros2-gbp/rviz-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/rviz.git",
+            "version": "humble"
+          }
+        },
+        "sensor_msgs": {
+          "repository": "common_interfaces",
+          "version": "4.9.2-1",
+          "release_url": "https://github.com/ros2-gbp/common_interfaces-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/common_interfaces.git",
+            "version": "humble"
+          }
+        },
+        "socat": null,
+        "std_msgs": {
+          "repository": "common_interfaces",
+          "version": "4.9.2-1",
+          "release_url": "https://github.com/ros2-gbp/common_interfaces-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/common_interfaces.git",
+            "version": "humble"
+          }
+        },
+        "std_srvs": {
+          "repository": "common_interfaces",
+          "version": "4.9.2-1",
+          "release_url": "https://github.com/ros2-gbp/common_interfaces-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/common_interfaces.git",
+            "version": "humble"
+          }
+        },
+        "tf2": {
+          "repository": "geometry2",
+          "version": "0.25.24-1",
+          "release_url": "https://github.com/ros2-gbp/geometry2-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/geometry2.git",
+            "version": "humble"
+          }
+        },
+        "tf2_eigen": {
+          "repository": "geometry2",
+          "version": "0.25.24-1",
+          "release_url": "https://github.com/ros2-gbp/geometry2-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/geometry2.git",
+            "version": "humble"
+          }
+        },
+        "tf2_geometry_msgs": {
+          "repository": "geometry2",
+          "version": "0.25.24-1",
+          "release_url": "https://github.com/ros2-gbp/geometry2-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/geometry2.git",
+            "version": "humble"
+          }
+        },
+        "tf2_ros": {
+          "repository": "geometry2",
+          "version": "0.25.24-1",
+          "release_url": "https://github.com/ros2-gbp/geometry2-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/geometry2.git",
+            "version": "humble"
+          }
+        },
+        "topic_tools": {
+          "repository": "topic_tools",
+          "version": "1.1.2-1",
+          "release_url": "https://github.com/ros2-gbp/topic_tools-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-tooling/topic_tools.git",
+            "version": "humble"
+          }
+        },
+        "transmission_interface": {
+          "repository": "ros2_control",
+          "version": "2.54.4-1",
+          "release_url": "https://github.com/ros2-gbp/ros2_control-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-controls/ros2_control.git",
+            "version": "humble"
+          }
+        },
+        "v4l-utils": null,
+        "v4l2_camera": {
+          "repository": "v4l2_camera",
+          "version": "0.6.2-1",
+          "release_url": "https://github.com/ros2-gbp/ros2_v4l2_camera-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://gitlab.com/boldhearts/ros2_v4l2_camera.git",
+            "version": "humble"
+          }
+        },
+        "xacro": {
+          "repository": "xacro",
+          "version": "2.1.1-1",
+          "release_url": "https://github.com/ros2-gbp/xacro-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros/xacro.git",
+            "version": "ros2"
+          }
+        }
+      }
+    },
+    "jazzy": {
+      "url": "https://raw.githubusercontent.com/ros/rosdistro/master/jazzy/distribution.yaml",
+      "sha256": "b2b64a68b02ed56163aa89c66b550eed6033d496dbdee6d0e5b9ad51d36e3bee",
+      "queried_packages": {
+        "action_msgs": {
+          "repository": "rcl_interfaces",
+          "version": "2.0.4-1",
+          "release_url": "https://github.com/ros2-gbp/rcl_interfaces-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/rcl_interfaces.git",
+            "version": "jazzy"
+          }
+        },
+        "ament_cmake": {
+          "repository": "ament_cmake",
+          "version": "2.5.7-1",
+          "release_url": "https://github.com/ros2-gbp/ament_cmake-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ament/ament_cmake.git",
+            "version": "jazzy"
+          }
+        },
+        "ament_cmake_copyright": {
+          "repository": "ament_lint",
+          "version": "0.17.5-1",
+          "release_url": "https://github.com/ros2-gbp/ament_lint-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ament/ament_lint.git",
+            "version": "jazzy"
+          }
+        },
+        "ament_cmake_cppcheck": {
+          "repository": "ament_lint",
+          "version": "0.17.5-1",
+          "release_url": "https://github.com/ros2-gbp/ament_lint-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ament/ament_lint.git",
+            "version": "jazzy"
+          }
+        },
+        "ament_cmake_uncrustify": {
+          "repository": "ament_lint",
+          "version": "0.17.5-1",
+          "release_url": "https://github.com/ros2-gbp/ament_lint-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ament/ament_lint.git",
+            "version": "jazzy"
+          }
+        },
+        "ament_copyright": {
+          "repository": "ament_lint",
+          "version": "0.17.5-1",
+          "release_url": "https://github.com/ros2-gbp/ament_lint-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ament/ament_lint.git",
+            "version": "jazzy"
+          }
+        },
+        "ament_flake8": {
+          "repository": "ament_lint",
+          "version": "0.17.5-1",
+          "release_url": "https://github.com/ros2-gbp/ament_lint-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ament/ament_lint.git",
+            "version": "jazzy"
+          }
+        },
+        "ament_index_cpp": {
+          "repository": "ament_index",
+          "version": "1.8.4-1",
+          "release_url": "https://github.com/ros2-gbp/ament_index-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ament/ament_index.git",
+            "version": "jazzy"
+          }
+        },
+        "ament_lint_auto": {
+          "repository": "ament_lint",
+          "version": "0.17.5-1",
+          "release_url": "https://github.com/ros2-gbp/ament_lint-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ament/ament_lint.git",
+            "version": "jazzy"
+          }
+        },
+        "ament_lint_common": {
+          "repository": "ament_lint",
+          "version": "0.17.5-1",
+          "release_url": "https://github.com/ros2-gbp/ament_lint-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ament/ament_lint.git",
+            "version": "jazzy"
+          }
+        },
+        "ament_pep257": {
+          "repository": "ament_lint",
+          "version": "0.17.5-1",
+          "release_url": "https://github.com/ros2-gbp/ament_lint-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ament/ament_lint.git",
+            "version": "jazzy"
+          }
+        },
+        "aruco_opencv": {
+          "repository": "aruco_opencv",
+          "version": "6.1.2-1",
+          "release_url": "https://github.com/ros2-gbp/aruco_opencv-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/fictionlab/ros_aruco_opencv.git",
+            "version": "jazzy"
+          }
+        },
+        "aruco_opencv_msgs": {
+          "repository": "aruco_opencv",
+          "version": "6.1.2-1",
+          "release_url": "https://github.com/ros2-gbp/aruco_opencv-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/fictionlab/ros_aruco_opencv.git",
+            "version": "jazzy"
+          }
+        },
+        "behaviortree_cpp": {
+          "repository": "behaviortree_cpp_v4",
+          "version": "4.11.0-1",
+          "release_url": "https://github.com/ros2-gbp/behaviortree_cpp_v4-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/BehaviorTree/BehaviorTree.CPP.git",
+            "version": "master"
+          }
+        },
+        "behaviortree_cpp_v3": {
+          "repository": "behaviortree_cpp_v3",
+          "version": "3.8.8-1",
+          "release_url": "https://github.com/ros2-gbp/behaviortree_cpp-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/BehaviorTree/BehaviorTree.CPP.git",
+            "version": "v3.8"
+          }
+        },
+        "builtin_interfaces": {
+          "repository": "rcl_interfaces",
+          "version": "2.0.4-1",
+          "release_url": "https://github.com/ros2-gbp/rcl_interfaces-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/rcl_interfaces.git",
+            "version": "jazzy"
+          }
+        },
+        "camera_calibration_parsers": {
+          "repository": "image_common",
+          "version": "5.1.8-1",
+          "release_url": "https://github.com/ros2-gbp/image_common-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros-perception/image_common.git",
+            "version": "jazzy"
+          }
+        },
+        "catkin": null,
+        "control_msgs": {
+          "repository": "control_msgs",
+          "version": "5.11.0-1",
+          "release_url": "https://github.com/ros2-gbp/control_msgs-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-controls/control_msgs.git",
+            "version": "jazzy"
+          }
+        },
+        "controller_interface": {
+          "repository": "ros2_control",
+          "version": "4.50.0-1",
+          "release_url": "https://github.com/ros2-gbp/ros2_control-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-controls/ros2_control.git",
+            "version": "jazzy"
+          }
+        },
+        "controller_manager": {
+          "repository": "ros2_control",
+          "version": "4.50.0-1",
+          "release_url": "https://github.com/ros2-gbp/ros2_control-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-controls/ros2_control.git",
+            "version": "jazzy"
+          }
+        },
+        "cv_bridge": {
+          "repository": "vision_opencv",
+          "version": "4.1.0-1",
+          "release_url": "https://github.com/ros2-gbp/vision_opencv-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros-perception/vision_opencv.git",
+            "version": "rolling"
+          }
+        },
+        "diagnostic_msgs": {
+          "repository": "common_interfaces",
+          "version": "5.3.8-1",
+          "release_url": "https://github.com/ros2-gbp/common_interfaces-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/common_interfaces.git",
+            "version": "jazzy"
+          }
+        },
+        "eigen": null,
+        "filters": {
+          "repository": "filters",
+          "version": "2.2.2-1",
+          "release_url": "https://github.com/ros2-gbp/filters-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros/filters.git",
+            "version": "ros2"
+          }
+        },
+        "geographic_msgs": {
+          "repository": "geographic_info",
+          "version": "1.0.6-2",
+          "release_url": "https://github.com/ros2-gbp/geographic_info-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros-geographic-info/geographic_info.git",
+            "version": "ros2"
+          }
+        },
+        "geographiclib": null,
+        "geometry_msgs": {
+          "repository": "common_interfaces",
+          "version": "5.3.8-1",
+          "release_url": "https://github.com/ros2-gbp/common_interfaces-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/common_interfaces.git",
+            "version": "jazzy"
+          }
+        },
+        "grid_map": {
+          "repository": "grid_map",
+          "version": "2.2.2-2",
+          "release_url": "https://github.com/ros2-gbp/grid_map-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ANYbotics/grid_map.git",
+            "version": "jazzy"
+          }
+        },
+        "grid_map_core": {
+          "repository": "grid_map",
+          "version": "2.2.2-2",
+          "release_url": "https://github.com/ros2-gbp/grid_map-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ANYbotics/grid_map.git",
+            "version": "jazzy"
+          }
+        },
+        "grid_map_filters": {
+          "repository": "grid_map",
+          "version": "2.2.2-2",
+          "release_url": "https://github.com/ros2-gbp/grid_map-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ANYbotics/grid_map.git",
+            "version": "jazzy"
+          }
+        },
+        "grid_map_msgs": {
+          "repository": "grid_map",
+          "version": "2.2.2-2",
+          "release_url": "https://github.com/ros2-gbp/grid_map-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ANYbotics/grid_map.git",
+            "version": "jazzy"
+          }
+        },
+        "grid_map_ros": {
+          "repository": "grid_map",
+          "version": "2.2.2-2",
+          "release_url": "https://github.com/ros2-gbp/grid_map-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ANYbotics/grid_map.git",
+            "version": "jazzy"
+          }
+        },
+        "gz_ros2_control": {
+          "repository": "gz_ros2_control",
+          "version": "1.2.20-1",
+          "release_url": "https://github.com/ros2-gbp/ign_ros2_control-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-controls/gz_ros2_control.git",
+            "version": "jazzy"
+          }
+        },
+        "gz_ros2_control_demos": {
+          "repository": "gz_ros2_control",
+          "version": "1.2.20-1",
+          "release_url": "https://github.com/ros2-gbp/ign_ros2_control-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-controls/gz_ros2_control.git",
+            "version": "jazzy"
+          }
+        },
+        "hardware_interface": {
+          "repository": "ros2_control",
+          "version": "4.50.0-1",
+          "release_url": "https://github.com/ros2-gbp/ros2_control-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-controls/ros2_control.git",
+            "version": "jazzy"
+          }
+        },
+        "image_geometry": {
+          "repository": "vision_opencv",
+          "version": "4.1.0-1",
+          "release_url": "https://github.com/ros2-gbp/vision_opencv-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros-perception/vision_opencv.git",
+            "version": "rolling"
+          }
+        },
+        "imu_filter_madgwick": {
+          "repository": "imu_tools",
+          "version": "2.1.6-1",
+          "release_url": "https://github.com/ros2-gbp/imu_tools-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/CCNYRoboticsLab/imu_tools.git",
+            "version": "jazzy"
+          }
+        },
+        "joint_state_broadcaster": {
+          "repository": "ros2_controllers",
+          "version": "4.43.1-1",
+          "release_url": "https://github.com/ros2-gbp/ros2_controllers-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-controls/ros2_controllers.git",
+            "version": "jazzy"
+          }
+        },
+        "joint_state_publisher": {
+          "repository": "joint_state_publisher",
+          "version": "2.4.3-1",
+          "release_url": "https://github.com/ros2-gbp/joint_state_publisher-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros/joint_state_publisher.git",
+            "version": "ros2"
+          }
+        },
+        "joint_state_publisher_gui": {
+          "repository": "joint_state_publisher",
+          "version": "2.4.3-1",
+          "release_url": "https://github.com/ros2-gbp/joint_state_publisher-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros/joint_state_publisher.git",
+            "version": "ros2"
+          }
+        },
+        "joy": {
+          "repository": "joystick_drivers",
+          "version": "3.3.0-3",
+          "release_url": "https://github.com/ros2-gbp/joystick_drivers-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros-drivers/joystick_drivers.git",
+            "version": "ros2"
+          }
+        },
+        "launch": {
+          "repository": "launch",
+          "version": "3.4.13-1",
+          "release_url": "https://github.com/ros2-gbp/launch-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/launch.git",
+            "version": "jazzy"
+          }
+        },
+        "launch_ros": {
+          "repository": "launch_ros",
+          "version": "0.26.13-1",
+          "release_url": "https://github.com/ros2-gbp/launch_ros-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/launch_ros.git",
+            "version": "jazzy"
+          }
+        },
+        "libcurl-dev": null,
+        "libopencv-dev": null,
+        "libusb-1.0-dev": null,
+        "message_filters": {
+          "repository": "message_filters",
+          "version": "4.11.18-1",
+          "release_url": "https://github.com/ros2-gbp/ros2_message_filters-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/message_filters.git",
+            "version": "jazzy"
+          }
+        },
+        "message_generation": null,
+        "message_runtime": null,
+        "moveit_configs_utils": {
+          "repository": "moveit",
+          "version": "2.12.4-1",
+          "release_url": "https://github.com/ros2-gbp/moveit2-release.git",
+          "source": {
+            "test_commits": false,
+            "test_pull_requests": false,
+            "type": "git",
+            "url": "https://github.com/ros-planning/moveit2.git",
+            "version": "main"
+          }
+        },
+        "moveit_kinematics": {
+          "repository": "moveit",
+          "version": "2.12.4-1",
+          "release_url": "https://github.com/ros2-gbp/moveit2-release.git",
+          "source": {
+            "test_commits": false,
+            "test_pull_requests": false,
+            "type": "git",
+            "url": "https://github.com/ros-planning/moveit2.git",
+            "version": "main"
+          }
+        },
+        "moveit_planners": {
+          "repository": "moveit",
+          "version": "2.12.4-1",
+          "release_url": "https://github.com/ros2-gbp/moveit2-release.git",
+          "source": {
+            "test_commits": false,
+            "test_pull_requests": false,
+            "type": "git",
+            "url": "https://github.com/ros-planning/moveit2.git",
+            "version": "main"
+          }
+        },
+        "moveit_ros_visualization": {
+          "repository": "moveit",
+          "version": "2.12.4-1",
+          "release_url": "https://github.com/ros2-gbp/moveit2-release.git",
+          "source": {
+            "test_commits": false,
+            "test_pull_requests": false,
+            "type": "git",
+            "url": "https://github.com/ros-planning/moveit2.git",
+            "version": "main"
+          }
+        },
+        "moveit_servo": {
+          "repository": "moveit",
+          "version": "2.12.4-1",
+          "release_url": "https://github.com/ros2-gbp/moveit2-release.git",
+          "source": {
+            "test_commits": false,
+            "test_pull_requests": false,
+            "type": "git",
+            "url": "https://github.com/ros-planning/moveit2.git",
+            "version": "main"
+          }
+        },
+        "moveit_simple_controller_manager": {
+          "repository": "moveit",
+          "version": "2.12.4-1",
+          "release_url": "https://github.com/ros2-gbp/moveit2-release.git",
+          "source": {
+            "test_commits": false,
+            "test_pull_requests": false,
+            "type": "git",
+            "url": "https://github.com/ros-planning/moveit2.git",
+            "version": "main"
+          }
+        },
+        "nav2_behavior_tree": {
+          "repository": "navigation2",
+          "version": "1.3.14-1",
+          "release_url": "https://github.com/SteveMacenski/navigation2-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-planning/navigation2.git",
+            "version": "jazzy"
+          }
+        },
+        "nav2_bringup": {
+          "repository": "navigation2",
+          "version": "1.3.14-1",
+          "release_url": "https://github.com/SteveMacenski/navigation2-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-planning/navigation2.git",
+            "version": "jazzy"
+          }
+        },
+        "nav2_costmap_2d": {
+          "repository": "navigation2",
+          "version": "1.3.14-1",
+          "release_url": "https://github.com/SteveMacenski/navigation2-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-planning/navigation2.git",
+            "version": "jazzy"
+          }
+        },
+        "nav2_lifecycle_manager": {
+          "repository": "navigation2",
+          "version": "1.3.14-1",
+          "release_url": "https://github.com/SteveMacenski/navigation2-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-planning/navigation2.git",
+            "version": "jazzy"
+          }
+        },
+        "nav2_map_server": {
+          "repository": "navigation2",
+          "version": "1.3.14-1",
+          "release_url": "https://github.com/SteveMacenski/navigation2-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-planning/navigation2.git",
+            "version": "jazzy"
+          }
+        },
+        "nav2_msgs": {
+          "repository": "navigation2",
+          "version": "1.3.14-1",
+          "release_url": "https://github.com/SteveMacenski/navigation2-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-planning/navigation2.git",
+            "version": "jazzy"
+          }
+        },
+        "nav2_util": {
+          "repository": "navigation2",
+          "version": "1.3.14-1",
+          "release_url": "https://github.com/SteveMacenski/navigation2-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-planning/navigation2.git",
+            "version": "jazzy"
+          }
+        },
+        "nav_msgs": {
+          "repository": "common_interfaces",
+          "version": "5.3.8-1",
+          "release_url": "https://github.com/ros2-gbp/common_interfaces-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/common_interfaces.git",
+            "version": "jazzy"
+          }
+        },
+        "nlohmann-json-dev": null,
+        "pcl_conversions": {
+          "repository": "perception_pcl",
+          "version": "2.6.5-1",
+          "release_url": "https://github.com/ros2-gbp/perception_pcl-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros-perception/perception_pcl.git",
+            "version": "jazzy"
+          }
+        },
+        "pkg-config": null,
+        "pluginlib": {
+          "repository": "pluginlib",
+          "version": "5.4.6-1",
+          "release_url": "https://github.com/ros2-gbp/pluginlib-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros/pluginlib.git",
+            "version": "jazzy"
+          }
+        },
+        "position_controllers": {
+          "repository": "ros2_controllers",
+          "version": "4.43.1-1",
+          "release_url": "https://github.com/ros2-gbp/ros2_controllers-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-controls/ros2_controllers.git",
+            "version": "jazzy"
+          }
+        },
+        "python3-numpy": null,
+        "python3-opencv": null,
+        "python3-psutil": null,
+        "python3-pytest": null,
+        "rclcpp": {
+          "repository": "rclcpp",
+          "version": "28.1.23-1",
+          "release_url": "https://github.com/ros2-gbp/rclcpp-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/rclcpp.git",
+            "version": "jazzy"
+          }
+        },
+        "rclcpp_action": {
+          "repository": "rclcpp",
+          "version": "28.1.23-1",
+          "release_url": "https://github.com/ros2-gbp/rclcpp-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/rclcpp.git",
+            "version": "jazzy"
+          }
+        },
+        "rclcpp_components": {
+          "repository": "rclcpp",
+          "version": "28.1.23-1",
+          "release_url": "https://github.com/ros2-gbp/rclcpp-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/rclcpp.git",
+            "version": "jazzy"
+          }
+        },
+        "rclcpp_lifecycle": {
+          "repository": "rclcpp",
+          "version": "28.1.23-1",
+          "release_url": "https://github.com/ros2-gbp/rclcpp-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/rclcpp.git",
+            "version": "jazzy"
+          }
+        },
+        "rclpy": {
+          "repository": "rclpy",
+          "version": "7.1.13-1",
+          "release_url": "https://github.com/ros2-gbp/rclpy-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/rclpy.git",
+            "version": "jazzy"
+          }
+        },
+        "realsense2_camera": {
+          "repository": "realsense2_camera",
+          "version": "4.59.1-1",
+          "release_url": "https://github.com/ros2-gbp/realsense-ros-release.git",
+          "source": {
+            "test_pull_requests": false,
+            "type": "git",
+            "url": "https://github.com/IntelRealSense/realsense-ros.git",
+            "version": "ros2-master"
+          }
+        },
+        "robot_localization": {
+          "repository": "robot_localization",
+          "version": "3.8.4-1",
+          "release_url": "https://github.com/ros2-gbp/robot_localization-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/cra-ros-pkg/robot_localization.git",
+            "version": "jazzy-devel"
+          }
+        },
+        "robot_state_publisher": {
+          "repository": "robot_state_publisher",
+          "version": "3.3.4-1",
+          "release_url": "https://github.com/ros2-gbp/robot_state_publisher-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros/robot_state_publisher.git",
+            "version": "jazzy"
+          }
+        },
+        "ros2_control": {
+          "repository": "ros2_control",
+          "version": "4.50.0-1",
+          "release_url": "https://github.com/ros2-gbp/ros2_control-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-controls/ros2_control.git",
+            "version": "jazzy"
+          }
+        },
+        "ros2_controllers": {
+          "repository": "ros2_controllers",
+          "version": "4.43.1-1",
+          "release_url": "https://github.com/ros2-gbp/ros2_controllers-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-controls/ros2_controllers.git",
+            "version": "jazzy"
+          }
+        },
+        "ros_environment": {
+          "repository": "ros_environment",
+          "version": "4.2.1-1",
+          "release_url": "https://github.com/ros2-gbp/ros_environment-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros/ros_environment.git",
+            "version": "jazzy"
+          }
+        },
+        "ros_gz": {
+          "repository": "ros_gz",
+          "version": "1.0.25-1",
+          "release_url": "https://github.com/ros2-gbp/ros_ign-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/gazebosim/ros_gz.git",
+            "version": "jazzy"
+          }
+        },
+        "ros_gz_bridge": {
+          "repository": "ros_gz",
+          "version": "1.0.25-1",
+          "release_url": "https://github.com/ros2-gbp/ros_ign-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/gazebosim/ros_gz.git",
+            "version": "jazzy"
+          }
+        },
+        "ros_gz_sim": {
+          "repository": "ros_gz",
+          "version": "1.0.25-1",
+          "release_url": "https://github.com/ros2-gbp/ros_ign-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/gazebosim/ros_gz.git",
+            "version": "jazzy"
+          }
+        },
+        "rosbridge_server": {
+          "repository": "rosbridge_suite",
+          "version": "2.7.1-1",
+          "release_url": "https://github.com/ros2-gbp/rosbridge_suite-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/RobotWebTools/rosbridge_suite.git",
+            "version": "jazzy"
+          }
+        },
+        "rosidl_default_generators": {
+          "repository": "rosidl_defaults",
+          "version": "1.6.1-1",
+          "release_url": "https://github.com/ros2-gbp/rosidl_defaults-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/rosidl_defaults.git",
+            "version": "jazzy"
+          }
+        },
+        "rosidl_default_runtime": {
+          "repository": "rosidl_defaults",
+          "version": "1.6.1-1",
+          "release_url": "https://github.com/ros2-gbp/rosidl_defaults-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/rosidl_defaults.git",
+            "version": "jazzy"
+          }
+        },
+        "rviz2": {
+          "repository": "rviz",
+          "version": "14.1.24-1",
+          "release_url": "https://github.com/ros2-gbp/rviz-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/rviz.git",
+            "version": "jazzy"
+          }
+        },
+        "rviz_common": {
+          "repository": "rviz",
+          "version": "14.1.24-1",
+          "release_url": "https://github.com/ros2-gbp/rviz-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/rviz.git",
+            "version": "jazzy"
+          }
+        },
+        "rviz_default_plugins": {
+          "repository": "rviz",
+          "version": "14.1.24-1",
+          "release_url": "https://github.com/ros2-gbp/rviz-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/rviz.git",
+            "version": "jazzy"
+          }
+        },
+        "sensor_msgs": {
+          "repository": "common_interfaces",
+          "version": "5.3.8-1",
+          "release_url": "https://github.com/ros2-gbp/common_interfaces-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/common_interfaces.git",
+            "version": "jazzy"
+          }
+        },
+        "socat": null,
+        "std_msgs": {
+          "repository": "common_interfaces",
+          "version": "5.3.8-1",
+          "release_url": "https://github.com/ros2-gbp/common_interfaces-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/common_interfaces.git",
+            "version": "jazzy"
+          }
+        },
+        "std_srvs": {
+          "repository": "common_interfaces",
+          "version": "5.3.8-1",
+          "release_url": "https://github.com/ros2-gbp/common_interfaces-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/common_interfaces.git",
+            "version": "jazzy"
+          }
+        },
+        "tf2": {
+          "repository": "geometry2",
+          "version": "0.36.23-1",
+          "release_url": "https://github.com/ros2-gbp/geometry2-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/geometry2.git",
+            "version": "jazzy"
+          }
+        },
+        "tf2_eigen": {
+          "repository": "geometry2",
+          "version": "0.36.23-1",
+          "release_url": "https://github.com/ros2-gbp/geometry2-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/geometry2.git",
+            "version": "jazzy"
+          }
+        },
+        "tf2_geometry_msgs": {
+          "repository": "geometry2",
+          "version": "0.36.23-1",
+          "release_url": "https://github.com/ros2-gbp/geometry2-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/geometry2.git",
+            "version": "jazzy"
+          }
+        },
+        "tf2_ros": {
+          "repository": "geometry2",
+          "version": "0.36.23-1",
+          "release_url": "https://github.com/ros2-gbp/geometry2-release.git",
+          "source": {
+            "test_pull_requests": true,
+            "type": "git",
+            "url": "https://github.com/ros2/geometry2.git",
+            "version": "jazzy"
+          }
+        },
+        "topic_tools": {
+          "repository": "topic_tools",
+          "version": "1.3.4-1",
+          "release_url": "https://github.com/ros2-gbp/topic_tools-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-tooling/topic_tools.git",
+            "version": "jazzy"
+          }
+        },
+        "transmission_interface": {
+          "repository": "ros2_control",
+          "version": "4.50.0-1",
+          "release_url": "https://github.com/ros2-gbp/ros2_control-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros-controls/ros2_control.git",
+            "version": "jazzy"
+          }
+        },
+        "v4l-utils": null,
+        "v4l2_camera": {
+          "repository": "v4l2_camera",
+          "version": "0.7.3-1",
+          "release_url": "https://github.com/ros2-gbp/ros2_v4l2_camera-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://gitlab.com/boldhearts/ros2_v4l2_camera.git",
+            "version": "jazzy"
+          }
+        },
+        "xacro": {
+          "repository": "xacro",
+          "version": "2.1.1-1",
+          "release_url": "https://github.com/ros2-gbp/xacro-release.git",
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ros/xacro.git",
+            "version": "ros2"
+          }
+        }
+      }
+    }
+  },
+  "jazzy_arm64_index": {
+    "url": "https://packages.ros.org/ros2/ubuntu/dists/noble/main/binary-arm64/Packages.gz",
+    "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'packages.ros.org'. (_ssl.c:1007)>"
+  }
+}
