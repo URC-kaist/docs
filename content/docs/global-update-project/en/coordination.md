@@ -10,7 +10,7 @@ draft: false
 
 [Briefing]({{< ref "docs/global-update-project/en/_index.md" >}})
 
-Use a shared GitHub Project to connect the operational codebase, migration work, documentation, and joint verification. **A local blueprint and bilingual starter issues are prepared; the organization Project and GitHub repository have not been created.** Their ownership, access and destination remain for team setup.
+Use a shared GitHub Project to connect the operational codebase, migration work, documentation, and joint verification. The [organization Project](https://github.com/orgs/URC-kaist/projects/2) and [migration fork](https://github.com/URC-kaist/mr2-stack-jazzy) are live. Thirteen English starter issues are linked and classified, with no assignees or dates. The Project is private under organization policy; the SW leader has admin access. An organization owner must change visibility if public access is desired.
 
 Download the [Project blueprint]({{< project-resource "projects/global-update-project/project.json" >}}) and [English starter issues]({{< project-resource "projects/global-update-project/issues.en.json" >}}). These files are review drafts, not a GitHub API import payload.
 

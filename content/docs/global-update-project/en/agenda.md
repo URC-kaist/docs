@@ -35,6 +35,6 @@ Produce an identified reference/scope, usable Nano bench and a reproducible envi
 
 ## Suggested dispatch text
 
-> We have prepared the MR2 Global Update initiation package for URC 2027 preparation: Ubuntu 24.04 / ROS 2 Jazzy / Gazebo Harmonic, with Nano-based native development and preservation of operational NX rover availability. Please review the briefing and work packages. The kickoff should settle baseline/scope, Nano access, repository/Project ownership, initial assignments and joint HW/SW verification planning. GitHub Project/repository creation is pending; the current deliverables are local drafts. No rover update has been performed.
+> We have prepared the MR2 Global Update initiation package for URC 2027 preparation: Ubuntu 24.04 / ROS 2 Jazzy / Gazebo Harmonic, with Nano-based native development and preservation of operational NX rover availability. Please review the briefing and work packages. The kickoff should settle baseline/scope, Nano access, repository/Project ownership, initial assignments and joint HW/SW verification planning. The [Project](https://github.com/orgs/URC-kaist/projects/2) and [migration repository](https://github.com/URC-kaist/mr2-stack-jazzy) are live; starter issues await team allocation. No rover update has been performed.
 
 Replace draft/local references with the actual published documentation, Project and repository links at dispatch time. Do not circulate a placeholder URL as a created resource.

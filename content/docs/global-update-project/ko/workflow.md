@@ -23,7 +23,7 @@ flowchart LR
 
 ## 두 개발 계열을 유지합니다
 
-Humble 운용 계열을 유지하면서, 격리된 저장소/작업 공간에서 Jazzy를 개발합니다. 팀이 접근할 수 있는 마이그레이션 fork를 우선 검토하되, GitHub 생성 위치와 최종 기준 저장소 정책은 팀이 정합니다. 이력을 보존한 로컬 저장소는 `~/mr2-stack-jazzy`에 준비되어 있습니다. 브랜치는 `migration/jazzy`이며, `upstream`은 `URC-kaist/mr2-stack`을 가리키고 게시용 remote는 없습니다.
+Humble 운용 계열을 유지하면서, 격리된 저장소/작업 공간에서 Jazzy를 개발합니다. [이력을 보존한 마이그레이션 fork](https://github.com/URC-kaist/mr2-stack-jazzy)의 기본 브랜치는 `main`입니다. 로컬 `~/mr2-stack-jazzy`는 `origin`을 통해 이를 추적합니다. `upstream`은 `URC-kaist/mr2-stack`을 fetch하며 push URL은 비활성화했습니다. 최종 기준 저장소 정책은 팀이 정합니다.
 
 시작점은 조사한 커밋 `74422f36c55140519f111cf6709f1725711b536a`이며, 로컬 태그 `audit/2026-11-14`로도 표시합니다. 이는 잠정적인 통합 시작점입니다. 각 분야의 포팅을 합치기 전에 rover-direct 작업과 실제 운용 환경의 차이를 기준에 어떻게 반영할지 결정합니다.
 

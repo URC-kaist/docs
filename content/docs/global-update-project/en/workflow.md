@@ -23,7 +23,7 @@ flowchart LR
 
 ## Two development lines
 
-Keep the operational Humble line available while developing Jazzy in an isolated repository/workspace. A team-accessible migration fork is preferred for consideration; its GitHub destination and eventual canonical-repository policy remain team decisions. A local history-preserving repository is prepared at `~/mr2-stack-jazzy`, on `migration/jazzy`, with `upstream` pointing to `URC-kaist/mr2-stack` and no publishing remote.
+Keep the operational Humble line available while developing Jazzy in an isolated repository/workspace. The [history-preserving migration fork](https://github.com/URC-kaist/mr2-stack-jazzy) uses `main` as its default branch. The local `~/mr2-stack-jazzy` checkout tracks it through `origin`; `upstream` fetches from `URC-kaist/mr2-stack` with its push URL disabled. The eventual canonical-repository policy remains a team decision.
 
 Its starting point is audited commit `74422f36c55140519f111cf6709f1725711b536a`, also marked by local tag `audit/2026-11-14`. This is a provisional integration starting point. Decide how rover-direct work and any differences in the operational deployment join the baseline before sector ports converge.
 

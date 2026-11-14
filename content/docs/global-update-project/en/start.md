@@ -12,7 +12,7 @@ Use this card when taking a migration task. [Briefing]({{< ref "docs/global-upda
 
 | Item | Starting point |
 | --- | --- |
-| Candidate source | Local `~/mr2-stack-jazzy`, branch `migration/jazzy`; verify its current revision before work |
+| Candidate source | Local `~/mr2-stack-jazzy`, branch `main`; verify its current revision before work |
 | Reference source | Audited upstream `2026` at `74422f36…`; actual operational NX deployment is a separate inventory task |
 | Development environment | Isolated Humble or Noble/Jazzy workstation environment; separate shells and build outputs |
 | Native candidate tests | Configurable Nano, after retrieval, provisioning and bench access are established |
