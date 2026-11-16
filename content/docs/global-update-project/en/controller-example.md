@@ -12,7 +12,7 @@ This proposed subtask of **GU-05** illustrates what a developer or Codex can do 
 
 ## 1. Identify the existing contract
 
-At audited commit `74422f36…`, [`launch_common.py`](https://github.com/URC-kaist/mr2-stack/blob/74422f36c55140519f111cf6709f1725711b536a/rover/ros2_ws/src/mr2_rover_description/mr2_rover_description/launch_common.py) passes the configuration file to `ros2_control_node`; `controller_spawners()` supplies controller names and optional `--inactive`, without a parameter file. Individual launch files also create spawners outside that helper.
+At audited commit `74422f36…`, [`launch_common.py`](https://github.com/URC-kaist/mr2-stack/blob/74422f36c55140519f111cf6709f1725711b536a/rover/ros2_ws/src/mr2_rover_description/mr2_rover_description/launch_common.py) passes the configuration file to `ros2_control_node`. A spawner loads a controller and starts it in the configured state. The `controller_spawners()` helper builds each spawner command with the controller name and, where needed, `--inactive`. It does not pass a parameter file to the spawner. Individual launch files also create spawners outside that helper.
 
 [`rover_controllers.yaml`](https://github.com/URC-kaist/mr2-stack/blob/74422f36c55140519f111cf6709f1725711b536a/rover/ros2_ws/src/mr2_rover_description/config/controllers/rover_controllers.yaml) separates controller-manager declarations from `rover_controller` parameters. The intended contract is that joint lists, geometry and `twist_timeout` reach the actual controller. Preserve their selected values during this port; they are not new tuning recommendations.
 
