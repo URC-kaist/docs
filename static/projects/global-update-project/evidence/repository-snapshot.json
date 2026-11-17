@@ -1,0 +1,3823 @@
+{
+  "collected_at": "2026-11-13T18:45:17.650012+00:00",
+  "repo": "/home/menny/mr2-stack",
+  "ref": "origin/2026",
+  "sha": "74422f36c55140519f111cf6709f1725711b536a",
+  "scope": "Tracked default-branch sources plus pinned local submodule manifests; static audit only.",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "status",
+        "--porcelain=v1",
+        "--branch"
+      ],
+      "exit_code": 0,
+      "stdout": "## 2026...origin/2026\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "remote",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "origin\thttps://github.com/URC-kaist/mr2-stack.git (fetch)\norigin\thttps://github.com/URC-kaist/mr2-stack.git (push)\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "log",
+        "-1",
+        "--format=%H %cI %s",
+        "74422f36c55140519f111cf6709f1725711b536a"
+      ],
+      "exit_code": 0,
+      "stdout": "74422f36c55140519f111cf6709f1725711b536a 2026-06-22T20:50:59+09:00 Add slides\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "show-ref",
+        "--heads"
+      ],
+      "exit_code": 0,
+      "stdout": "74422f36c55140519f111cf6709f1725711b536a refs/heads/2026\nfe1348f7ef4f30b10a1014b3901ab13f88db5796 refs/heads/2026-auto\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "for-each-ref",
+        "--format=%(refname) %(objectname)",
+        "refs/remotes/origin"
+      ],
+      "exit_code": 0,
+      "stdout": "refs/remotes/origin/2026 74422f36c55140519f111cf6709f1725711b536a\nrefs/remotes/origin/2026-auto 25c1fcbcc6db1a8469aa30d1f7e813d2833fd01c\nrefs/remotes/origin/2026-base-gnss 1159d6f409313728f8daa57a6aeb9541b8450f1d\nrefs/remotes/origin/2026-camerafixes df5013caa118cd182d0a1bf63db91bbead8780d2\nrefs/remotes/origin/2026-can-bus-polling-fix f003900eb558ef7fa2a18ab888a3f081cf852e39\nrefs/remotes/origin/2026-can_hw-E-Stop 185ea98ab4e3eeee042eeb9061daa3b47f94d6f0\nrefs/remotes/origin/2026-dashboard 0f53f5640c0c741c1aa5f5e523483405e8f0675f\nrefs/remotes/origin/2026-dashboard-step1 fc49c6cfb315ee623ceed7d51d41eb1f198a94c2\nrefs/remotes/origin/2026-gripper-dashboard 93bba958d5b70869eea80d78dfcd24eb9ff449c0\nrefs/remotes/origin/2026-jay 3c6ebeb9da9626a74dd8e387bf47c01587b36289\nrefs/remotes/origin/2026-led-driver 7dde231058b21680e9a529f4e185fe097a77cbf5\nrefs/remotes/origin/2026-local-map edb4509d2e4eefd6fac2c3d38fad9270db140448\nrefs/remotes/origin/2026-manipulator-controller 54ca871d916d2e30f2d8a979306c68914ce30382\nrefs/remotes/origin/2026-nepo-demo 3b24685c0d7153888f7bcbcf22cca5ea5ea85cb5\nrefs/remotes/origin/2026-rover-rosdep-cleanup 64a2fdf39f90efc824875cfa2935039470a2ab27\nrefs/remotes/origin/2026-spectrophotometer 93c5c258bfec0299e4a6b09e9e962e9ebfd0c21d\nrefs/remotes/origin/2026-twist-to-cmd-rollback 5b5d5566c3425f62dbed5e0dc54be8cb8919ee46\nrefs/remotes/origin/2026_arm 9461b01641fa43bc83198305dd98b93638261c38\nrefs/remotes/origin/HEAD 74422f36c55140519f111cf6709f1725711b536a\nrefs/remotes/origin/codex/add-launch-configurations-to-sim_launch 48065051645a1dd24d51b4738cd861929a329e32\nrefs/remotes/origin/codex/implement-ros2_control-for-arm-manipulators 14b610e276bc668013d585325f21b4511c573798\nrefs/remotes/origin/codex/implement-ros2_control-for-arm-manipulators-yjkrg0 b3730eb4f95c75bc1dae7d79fa3af92707fc568a\nrefs/remotes/origin/codex/issue-76-video-streaming e97b9272d50916efb07b6709e061ad6d59bd0f77\nrefs/remotes/origin/codex/issue-76-video-streaming-explicit-source 8769f62921897e4ee0e993fe5c487df3109fa38b\nrefs/remotes/origin/codex/move-and-rename-ak_servo-to-arm_device bc0321ee2fb08234843d661994c7939275ce7c39\nrefs/remotes/origin/codex/nav2-daejeon-fallback-tuning aee604fd29c89d11f6d13b3c86695492d07e0e28\nrefs/remotes/origin/codex/transfer-joint-effort-and-velocity-from-actuators 02835f6e537de3b8c2f06bb2a27163d72dc9816e\nrefs/remotes/origin/copilot/update-dashboard-map-provider 20c1957e6e02b353286074d03f463691ded70104\nrefs/remotes/origin/docker-fix 93dc86a61acdea39e03460f66946dfc498632639\nrefs/remotes/origin/drive_cpp ceec7f0c04d98c4db3fd1983712114a7f3d97b1e\nrefs/remotes/origin/feature/chrony-latency-diagnostics 371b12f29a54e409251f897ac4d1380cc7fec695\nrefs/remotes/origin/feature/four-bar-transmission-launch d4db50cfa8587b4f96208ad91dc630e0b1356bf2\nrefs/remotes/origin/feature/homing-watchdog 4d6975d8410d1786dfb508f319ae1cee15a3062a\nrefs/remotes/origin/feature/rover-direct 5f04032484cd0c5a37b27c039c6a425aaaf0fdf3\nrefs/remotes/origin/hehe 73a0daf06650c4d7d241873adcdd1914b60149d0\nrefs/remotes/origin/master 69d2d7835d71398b524f431b4ba178da11c84bed\nrefs/remotes/origin/simplify-gitignore 9b2fd634bc3c5e6fb686dd415c82ea4af65babfd\nrefs/remotes/origin/simplify-gitignore-2026 f7a31ba22c172fb4462c90818860261184bfd1c0\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "submodule",
+        "status",
+        "--recursive"
+      ],
+      "exit_code": 0,
+      "stdout": " 8d27ab5f4d4a581e1bb9c87d572994c25197f6d4 rover/ros2_ws/src/rtcm_msgs (1.1.6)\n f4fdcf77f1427ef92195e064e42232855f016256 rover/ros2_ws/src/ublox_dgnss (0.3.0-269-gf4fdcf7)\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "ls-tree",
+        "74422f36c55140519f111cf6709f1725711b536a",
+        "rover/ros2_ws/src/rtcm_msgs",
+        "rover/ros2_ws/src/ublox_dgnss"
+      ],
+      "exit_code": 0,
+      "stdout": "160000 commit 8d27ab5f4d4a581e1bb9c87d572994c25197f6d4\trover/ros2_ws/src/rtcm_msgs\n160000 commit f4fdcf77f1427ef92195e064e42232855f016256\trover/ros2_ws/src/ublox_dgnss\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "rev-list",
+        "--left-right",
+        "--count",
+        "origin/master...origin/2026"
+      ],
+      "exit_code": 0,
+      "stdout": "2\t451\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "rev-list",
+        "--left-right",
+        "--count",
+        "origin/2026...origin/feature/rover-direct"
+      ],
+      "exit_code": 0,
+      "stdout": "0\t4\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "rev-list",
+        "--left-right",
+        "--count",
+        "origin/2026...origin/feature/chrony-latency-diagnostics"
+      ],
+      "exit_code": 0,
+      "stdout": "0\t8\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--stat",
+        "origin/2026...origin/feature/rover-direct"
+      ],
+      "exit_code": 0,
+      "stdout": " .env.example                                       |   9 +\n .nvmrc                                             |   1 +\n README.md                                          |  46 ++\n base/gateway/README.md                             |  25 +-\n base/gateway/package-lock.json                     |   3 +\n base/gateway/package.json                          |   4 +\n base/gateway/src/app/create_gateway_app.js         |  28 +-\n base/gateway/src/config.js                         |  45 +-\n base/gateway/src/runtime/rocket_m2_client.js       |   3 +-\n base/gateway/test/config.test.js                   |  45 ++\n base/gateway/test/rocket_m2_client.test.js         |  18 +\n dashboard/.env.example                             |   4 +\n dashboard/.env.local.example                       |   3 +\n dashboard/README.md                                |  12 +\n dashboard/package-lock.json                        |  16 +-\n dashboard/package.json                             |   4 +\n dashboard/src/App.tsx                              |   5 +-\n .../components/ControlPanel/ControlStatusList.css  |   4 +\n .../components/ControlPanel/ControlStatusList.tsx  |  53 ++-\n dashboard/src/components/DeliveryPanel.tsx         |  11 +-\n dashboard/src/components/MissionTabs.tsx           |  11 +-\n dashboard/src/components/SystemStatusPanel.tsx     |   9 +-\n dashboard/src/hooks/useSystemStatusCards.ts        |  28 +-\n dashboard/src/lib/operatingProfile.ts              |   3 +\n dashboard/src/lib/rosMessages.ts                   |  53 +--\n docs/README.md                                     |   3 +\n docs/rover-direct-operation.md                     | 253 ++++++++++\n rover/README.md                                    |  42 ++\n .../include/mr2_can_bus_core/can_bus_registry.hpp  |  19 +\n .../src/mr2_can_hardware_interface/src/can_hw.cpp  |   8 +-\n .../src/output_actuator_device.cpp                 |  52 +-\n .../ros2_ws/src/mr2_launch/launch/rover.launch.py  |  48 +-\n .../src/mr2_launch/launch/rover_direct.launch.py   | 526 +++++++++++++++++++++\n .../src/mr2_launch/launch/rover_real.launch.py     |  35 +-\n .../src/mr2_launch/launch/rover_sim.launch.py      |   7 +-\n .../mr2_launch/launch/ublox_base_custom.launch.py  |   1 +\n .../launch/ublox_fb_r_rover_named.launch.py        |   4 +-\n .../mr2_launch/launch/video_streaming.launch.py    |   4 +-\n .../mr2_rover_description/launch/real.launch.py    |  65 ++-\n .../src/mr2_rover_description/launch/sim.launch.py |   1 -\n .../mr2_rover_description/launch_common.py         |   2 +-\n .../static_joint_state_publisher.py                |   5 +-\n .../ros2_control/rover_can.ros2_control.xacro      |   3 +\n rover/ros2_ws/src/mr2_rover_description/setup.py   |   3 +-\n scripts/check_ak_actuator_status.bash              |  30 ++\n scripts/check_rover_direct.bash                    | 114 +++++\n scripts/configure_rover_ap.bash                    |  63 +++\n scripts/install_rover_direct.bash                  | 246 ++++++++++\n scripts/nginx/mr2-rover-direct-locations.conf      |  39 ++\n scripts/nginx/mr2-rover-direct.conf.template       |  26 +\n scripts/run_rover_direct.bash                      |  86 ++++\n scripts/systemd/mr2-rover-direct.service.template  |  22 +\n scripts/trace_manipulator_servo_jog.bash           |  59 +--\n 53 files changed, 2024 insertions(+), 185 deletions(-)\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--stat",
+        "origin/2026...origin/feature/chrony-latency-diagnostics"
+      ],
+      "exit_code": 0,
+      "stdout": " .env.example                                       |   17 +\n .gitignore                                         |    4 +\n .nvmrc                                             |    1 +\n README.md                                          |   46 +\n base/gateway/README.md                             |   70 +-\n base/gateway/env.local                             |    5 +\n base/gateway/package-lock.json                     |    3 +\n base/gateway/package.json                          |    4 +\n base/gateway/src/app/create_gateway_app.js         |  101 +-\n base/gateway/src/config.js                         |   99 +-\n base/gateway/src/latency/artifact_store.js         |   67 ++\n base/gateway/src/latency/capture_process.js        |  121 +++\n base/gateway/src/latency/uplink_trial_manager.js   |  427 ++++++++\n base/gateway/src/runtime/chrony_status.js          |  107 ++\n base/gateway/src/runtime/http_handlers.js          |  137 ++-\n base/gateway/src/runtime/rocket_m2_client.js       |    3 +-\n base/gateway/src/video/protocol.js                 |   36 +\n base/gateway/src/video/receiver.js                 |  117 +-\n base/gateway/src/video/rtp_stream_parser.js        |   63 ++\n base/gateway/src/video/service.js                  |   48 +-\n base/gateway/test/chrony_status.test.js            |   84 ++\n base/gateway/test/config.test.js                   |   65 ++\n base/gateway/test/gateway_latency_trace.test.js    |   55 +\n base/gateway/test/http_handlers.test.js            |   67 ++\n base/gateway/test/rocket_m2_client.test.js         |   18 +\n base/gateway/test/rtp_stream_parser.test.js        |   39 +\n base/gateway/test/uplink_trial_manager.test.js     |  181 ++++\n base/gateway/test/video_protocol.test.js           |   21 +\n base/gateway/test/video_receiver.test.js           |   65 +-\n base/gateway/test/video_service.test.js            |   33 +\n dashboard/.env.example                             |    4 +\n dashboard/.env.local.example                       |    3 +\n dashboard/README.md                                |   56 +\n dashboard/package-lock.json                        |    3 +\n dashboard/package.json                             |    5 +\n dashboard/src/App.tsx                              |    5 +-\n dashboard/src/components/ControlPanel.tsx          |   11 +-\n .../src/components/ControlPanel/ControlPanel.css   |    8 +-\n .../components/ControlPanel/ControlStatusList.css  |    4 +\n .../components/ControlPanel/ControlStatusList.tsx  |   53 +-\n .../ControlPanel/LatencyDiagnosticsPanel.css       |  317 ++++++\n dashboard/src/components/DeliveryPanel.tsx         |   11 +-\n .../src/components/LatencyDiagnosticsPanel.tsx     |  768 +++++++++++++\n dashboard/src/components/LatencyResultTable.tsx    |   50 +\n dashboard/src/components/MissionTabs.tsx           |   11 +-\n dashboard/src/components/SystemStatusPanel.tsx     |    9 +-\n dashboard/src/components/VideoStreamCard.tsx       |   25 +-\n dashboard/src/hooks/useLatencyClockReadiness.ts    |  130 +++\n dashboard/src/hooks/useLatencyDiagnostics.ts       |    9 +\n dashboard/src/hooks/useSystemStatusCards.ts        |   28 +-\n dashboard/src/lib/chronyStatus.ts                  |  184 ++++\n dashboard/src/lib/latency/downlinkTrial.ts         |  141 +++\n dashboard/src/lib/latency/latencyApi.ts            |  116 ++\n dashboard/src/lib/latency/statistics.ts            |   43 +\n dashboard/src/lib/latency/types.ts                 |   80 ++\n dashboard/src/lib/latency/uplinkStreamSelection.ts |   10 +\n dashboard/src/lib/latency/uplinkTrial.ts           |   57 +\n dashboard/src/lib/latencyDiagnostics.ts            | 1025 ++++++++++++++++++\n dashboard/src/lib/operatingProfile.ts              |    3 +\n dashboard/src/lib/rosMessages.ts                   |   62 +-\n dashboard/src/lib/rtpLatencyReport.ts              |  312 ++++++\n dashboard/src/lib/videoGateway.ts                  |   57 +-\n dashboard/src/lib/videoProtocol.ts                 |   48 +\n dashboard/src/lib/xbeeGateway.ts                   |   30 +-\n dashboard/test/chronyStatus.test.ts                |   68 ++\n dashboard/test/downlinkTrial.test.ts               |   30 +\n dashboard/test/latencyDiagnostics.test.ts          |  153 +++\n dashboard/test/latencyStatistics.test.ts           |   19 +\n dashboard/test/rtpLatencyReport.test.ts            |  113 ++\n dashboard/test/run.ts                              |    9 +\n dashboard/test/uplinkStreamSelection.test.ts       |   53 +\n dashboard/test/uplinkTrial.test.ts                 |   28 +\n dashboard/test/videoGateway.test.ts                |  154 +++\n dashboard/test/videoProtocol.test.ts               |   32 +\n docs/README.md                                     |    6 +\n ...ated-directional-latency-implementation-plan.md | 1137 ++++++++++++++++++++\n docs/chrony-base-clock-implementation-plan.md      |  236 ++++\n docs/latency-mvp-implementation-plan.md            |  470 ++++++++\n docs/rover-direct-operation.md                     |  253 +++++\n docs/rtp-link-latency-implementation-plan.md       |  409 +++++++\n docs/video-pipeline.md                             |   12 +\n rover/README.md                                    |   42 +\n .../include/mr2_can_bus_core/can_bus_registry.hpp  |   19 +\n .../src/mr2_can_hardware_interface/src/can_hw.cpp  |    8 +-\n .../src/output_actuator_device.cpp                 |   52 +-\n .../mr2_latency_diagnostics/__init__.py            |    1 +\n .../mr2_latency_diagnostics/agent_node.py          |  403 +++++++\n .../mr2_latency_diagnostics/capture.py             |  211 ++++\n .../mr2_latency_diagnostics/trial_state.py         |   59 +\n .../src/mr2_latency_diagnostics/package.xml        |   23 +\n .../resource/mr2_latency_diagnostics               |    1 +\n .../ros2_ws/src/mr2_latency_diagnostics/setup.cfg  |    4 +\n rover/ros2_ws/src/mr2_latency_diagnostics/setup.py |   25 +\n .../src/mr2_latency_diagnostics/test/test_agent.py |   39 +\n .../test/test_trial_state.py                       |  122 +++\n rover/ros2_ws/src/mr2_latency_msgs/CMakeLists.txt  |   17 +\n .../src/mr2_latency_msgs/msg/UplinkTrialStatus.msg |    6 +\n rover/ros2_ws/src/mr2_latency_msgs/package.xml     |   18 +\n .../srv/AcquireVideoStreamLease.srv                |    8 +\n .../src/mr2_latency_msgs/srv/CancelUplinkTrial.srv |    4 +\n .../mr2_latency_msgs/srv/PrepareUplinkTrial.srv    |    5 +\n .../srv/ReleaseVideoStreamLease.srv                |    5 +\n .../src/mr2_latency_msgs/srv/StartUplinkTrial.srv  |    7 +\n .../ros2_ws/src/mr2_launch/launch/rover.launch.py  |   92 +-\n .../src/mr2_launch/launch/rover_direct.launch.py   |  526 +++++++++\n .../src/mr2_launch/launch/rover_real.launch.py     |   42 +-\n .../src/mr2_launch/launch/rover_sim.launch.py      |   14 +-\n .../mr2_launch/launch/ublox_base_custom.launch.py  |    1 +\n .../launch/ublox_fb_r_rover_named.launch.py        |    4 +-\n .../mr2_launch/launch/video_streaming.launch.py    |   11 +-\n rover/ros2_ws/src/mr2_launch/package.xml           |    1 +\n .../mr2_rover_description/launch/real.launch.py    |   65 +-\n .../src/mr2_rover_description/launch/sim.launch.py |    1 -\n .../mr2_rover_description/launch_common.py         |    2 +-\n .../static_joint_state_publisher.py                |    5 +-\n .../ros2_control/rover_can.ros2_control.xacro      |    3 +\n rover/ros2_ws/src/mr2_rover_description/setup.py   |    3 +-\n .../mr2_system_status/chrony_status.py             |  120 +++\n .../mr2_system_status/system_status_node.py        |   30 +\n rover/ros2_ws/src/mr2_system_status/package.xml    |    3 +-\n rover/ros2_ws/src/mr2_system_status/setup.py       |    2 +-\n .../mr2_system_status/test/test_chrony_status.py   |   66 ++\n .../ros2_ws/src/mr2_video_streaming/CMakeLists.txt |    2 +\n rover/ros2_ws/src/mr2_video_streaming/package.xml  |    1 +\n .../src/video_streaming_node.cpp                   |  161 ++-\n rover/ros2_ws/src/mr2_xbee_bridge/README.md        |   26 +\n .../src/mr2_xbee_bridge/src/xbee_bridge_node.cpp   |   60 +-\n scripts/check_ak_actuator_status.bash              |   30 +\n scripts/check_rover_direct.bash                    |  114 ++\n scripts/chrony_base.sh                             |    4 +\n scripts/chrony_script.sh                           |    4 +\n scripts/configure_rover_ap.bash                    |   63 ++\n scripts/install_rover_direct.bash                  |  246 +++++\n scripts/latency/README.md                          |  176 +++\n scripts/latency/__init__.py                        |    1 +\n scripts/latency/analyze_rtp_latency.py             |  676 ++++++++++++\n scripts/latency/chrony/README.md                   |  145 +++\n scripts/latency/chrony/__init__.py                 |    1 +\n scripts/latency/chrony/configure_chrony.py         |  242 +++++\n scripts/latency/chrony/test_configure_chrony.py    |   94 ++\n scripts/latency/install_capture_permissions.bash   |   33 +\n scripts/latency/notes/target-dashboard-workflow.md |  107 ++\n scripts/latency/rtp_capture.py                     |  230 ++++\n scripts/latency/test_rtp_latency.py                |  363 +++++++\n scripts/nginx/mr2-dashboard-locations.conf         |   20 +\n scripts/nginx/mr2-dashboard.conf.template          |   16 +-\n scripts/nginx/mr2-rover-direct-locations.conf      |   39 +\n scripts/nginx/mr2-rover-direct.conf.template       |   26 +\n scripts/run_rover_direct.bash                      |   86 ++\n scripts/start_chrony.sh                            |    6 +\n scripts/start_chrony_base.sh                       |    3 +\n scripts/systemd/mr2-rover-direct.service.template  |   22 +\n scripts/trace_manipulator_servo_jog.bash           |   59 +-\n 153 files changed, 13852 insertions(+), 238 deletions(-)\n",
+      "stderr": ""
+    }
+  ],
+  "submodule_worktrees": [
+    {
+      "path": "rover/ros2_ws/src/rtcm_msgs",
+      "argv": [
+        "git",
+        "status",
+        "--porcelain=v1"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "path": "rover/ros2_ws/src/ublox_dgnss",
+      "argv": [
+        "git",
+        "status",
+        "--porcelain=v1"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "packages": [
+    {
+      "name": "mr2_action_interface",
+      "path": "rover/ros2_ws/src/mr2_action_interface/package.xml",
+      "source": "superproject",
+      "build_type": "ament_cmake",
+      "dependencies": [
+        {
+          "kind": "buildtool_depend",
+          "name": "ament_cmake",
+          "condition": null
+        },
+        {
+          "kind": "buildtool_depend",
+          "name": "rosidl_default_generators",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_auto",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_common",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "action_msgs",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "builtin_interfaces",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "geometry_msgs",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "sensor_msgs",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "rosidl_default_runtime",
+          "condition": null
+        }
+      ]
+    },
+    {
+      "name": "mr2_battery_monitor",
+      "path": "rover/ros2_ws/src/mr2_battery_monitor/package.xml",
+      "source": "superproject",
+      "build_type": "ament_cmake",
+      "dependencies": [
+        {
+          "kind": "buildtool_depend",
+          "name": "ament_cmake",
+          "condition": null
+        },
+        {
+          "kind": "build_depend",
+          "name": "rosidl_default_generators",
+          "condition": null
+        },
+        {
+          "kind": "build_depend",
+          "name": "rclcpp",
+          "condition": null
+        },
+        {
+          "kind": "build_depend",
+          "name": "sensor_msgs",
+          "condition": null
+        },
+        {
+          "kind": "build_depend",
+          "name": "std_msgs",
+          "condition": null
+        },
+        {
+          "kind": "build_depend",
+          "name": "mr2_can_bus_core",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "rosidl_default_runtime",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "rclcpp",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "sensor_msgs",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "std_msgs",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "mr2_can_bus_core",
+          "condition": null
+        }
+      ]
+    },
+    {
+      "name": "mr2_camera_turret",
+      "path": "rover/ros2_ws/src/mr2_camera_turret/package.xml",
+      "source": "superproject",
+      "build_type": "ament_cmake",
+      "dependencies": [
+        {
+          "kind": "buildtool_depend",
+          "name": "ament_cmake",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "rclcpp",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "geometry_msgs",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "mr2_can_bus_core",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "launch",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "launch_ros",
+          "condition": null
+        }
+      ]
+    },
+    {
+      "name": "mr2_can_bus_core",
+      "path": "rover/ros2_ws/src/mr2_can_bus_core/package.xml",
+      "source": "superproject",
+      "build_type": "ament_cmake",
+      "dependencies": [
+        {
+          "kind": "buildtool_depend",
+          "name": "ament_cmake",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_auto",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_common",
+          "condition": null
+        }
+      ]
+    },
+    {
+      "name": "mr2_can_hardware_interface",
+      "path": "rover/ros2_ws/src/mr2_can_hardware_interface/package.xml",
+      "source": "superproject",
+      "build_type": "ament_cmake",
+      "dependencies": [
+        {
+          "kind": "buildtool_depend",
+          "name": "ament_cmake",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "mr2_can_bus_core",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "hardware_interface",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "pluginlib",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "rclcpp",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "transmission_interface",
+          "condition": null
+        }
+      ]
+    },
+    {
+      "name": "mr2_devices_ak_servo",
+      "path": "rover/ros2_ws/src/mr2_devices_ak_servo/package.xml",
+      "source": "superproject",
+      "build_type": "ament_cmake",
+      "dependencies": [
+        {
+          "kind": "depend",
+          "name": "mr2_can_bus_core",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "hardware_interface",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "pluginlib",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "rclcpp",
+          "condition": null
+        },
+        {
+          "kind": "buildtool_depend",
+          "name": "ament_cmake",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_auto",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_common",
+          "condition": null
+        }
+      ]
+    },
+    {
+      "name": "mr2_devices_output_actuator",
+      "path": "rover/ros2_ws/src/mr2_devices_output_actuator/package.xml",
+      "source": "superproject",
+      "build_type": "ament_cmake",
+      "dependencies": [
+        {
+          "kind": "buildtool_depend",
+          "name": "ament_cmake",
+          "condition": null
+        },
+        {
+          "kind": "build_depend",
+          "name": "rosidl_default_generators",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "builtin_interfaces",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "mr2_can_bus_core",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "hardware_interface",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "pluginlib",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "rclcpp",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "rosidl_default_runtime",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_auto",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_common",
+          "condition": null
+        }
+      ]
+    },
+    {
+      "name": "mr2_launch",
+      "path": "rover/ros2_ws/src/mr2_launch/package.xml",
+      "source": "superproject",
+      "build_type": "ament_python",
+      "dependencies": [
+        {
+          "kind": "exec_depend",
+          "name": "launch",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "launch_ros",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "aruco_opencv",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "mr2_video_streaming",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "mr2_panorama",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "mr2_science_module",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "rclcpp_components",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "realsense2_camera",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "rosbridge_server",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "rviz2",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "socat",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "tf2_ros",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "topic_tools",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "ublox_dgnss",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "ublox_dgnss_node",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "ublox_nav_sat_fix_hp_node",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "v4l2_camera",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_copyright",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_flake8",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_pep257",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "python3-pytest",
+          "condition": null
+        }
+      ]
+    },
+    {
+      "name": "mr2_led",
+      "path": "rover/ros2_ws/src/mr2_led/package.xml",
+      "source": "superproject",
+      "build_type": "ament_cmake",
+      "dependencies": [
+        {
+          "kind": "buildtool_depend",
+          "name": "ament_cmake",
+          "condition": null
+        },
+        {
+          "kind": "build_depend",
+          "name": "rosidl_default_generators",
+          "condition": null
+        },
+        {
+          "kind": "build_depend",
+          "name": "rclcpp",
+          "condition": null
+        },
+        {
+          "kind": "build_depend",
+          "name": "mr2_can_bus_core",
+          "condition": null
+        },
+        {
+          "kind": "build_depend",
+          "name": "mr2_action_interface",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "rosidl_default_runtime",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "rclcpp",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "mr2_can_bus_core",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "mr2_action_interface",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "launch",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "launch_ros",
+          "condition": null
+        }
+      ]
+    },
+    {
+      "name": "mr2_moveit",
+      "path": "rover/ros2_ws/src/mr2_moveit/package.xml",
+      "source": "superproject",
+      "build_type": "ament_cmake",
+      "dependencies": [
+        {
+          "kind": "buildtool_depend",
+          "name": "ament_cmake",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "moveit_kinematics",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "moveit_planners",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "moveit_simple_controller_manager",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "joint_state_publisher",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "joint_state_publisher_gui",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "tf2_ros",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "xacro",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "moveit_servo",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "controller_manager",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "joy",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "rclcpp_components",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "moveit_configs_utils",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "moveit_ros_visualization",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "mr2_rover_description",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "rviz2",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "rviz_common",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "rviz_default_plugins",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "xacro",
+          "condition": null
+        }
+      ]
+    },
+    {
+      "name": "mr2_nav2_plugins",
+      "path": "rover/ros2_ws/src/mr2_nav2_plugins/package.xml",
+      "source": "superproject",
+      "build_type": "ament_cmake",
+      "dependencies": [
+        {
+          "kind": "buildtool_depend",
+          "name": "ament_cmake",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "nav2_costmap_2d",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "pluginlib",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "rclcpp",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "grid_map_core",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "grid_map_ros",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "grid_map_msgs",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "tf2",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "tf2_ros",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "tf2_geometry_msgs",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "geometry_msgs",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "nav2_util",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_auto",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_common",
+          "condition": null
+        }
+      ]
+    },
+    {
+      "name": "mr2_panorama",
+      "path": "rover/ros2_ws/src/mr2_panorama/package.xml",
+      "source": "superproject",
+      "build_type": "ament_cmake",
+      "dependencies": [
+        {
+          "kind": "buildtool_depend",
+          "name": "ament_cmake",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "ament_index_cpp",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "camera_calibration_parsers",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "mr2_action_interface",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "rclcpp",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "rclcpp_action",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "sensor_msgs",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "tf2",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "tf2_geometry_msgs",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "tf2_ros",
+          "condition": null
+        },
+        {
+          "kind": "build_depend",
+          "name": "libopencv-dev",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "libopencv-dev",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_auto",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_common",
+          "condition": null
+        }
+      ]
+    },
+    {
+      "name": "mr2_rover_auto",
+      "path": "rover/ros2_ws/src/mr2_rover_auto/package.xml",
+      "source": "superproject",
+      "build_type": "ament_cmake",
+      "dependencies": [
+        {
+          "kind": "buildtool_depend",
+          "name": "ament_cmake",
+          "condition": null
+        },
+        {
+          "kind": "buildtool_depend",
+          "name": "rosidl_default_generators",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "launch",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "launch_ros",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "rclcpp",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "rclcpp_action",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "rclcpp_components",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "geometry_msgs",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "nav2_bringup",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "nav2_lifecycle_manager",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "nav2_map_server",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "nav2_msgs",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "tf2",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "tf2_ros",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "tf2_geometry_msgs",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "tf2_eigen",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "ament_index_cpp",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "std_msgs",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "sensor_msgs",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "geographic_msgs",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "geographiclib",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "eigen",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "mr2_action_interface",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "mr2_panorama",
+          "condition": null
+        },
+        {
+          "kind": "build_depend",
+          "name": "geographiclib",
+          "condition": null
+        },
+        {
+          "kind": "build_depend",
+          "name": "robot_localization",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "aruco_opencv",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "aruco_opencv_msgs",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "robot_localization",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "ublox_ubx_msgs",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "behaviortree_cpp_v3",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "nav2_behavior_tree",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "mr2_nav2_plugins",
+          "condition": null
+        },
+        {
+          "kind": "build_depend",
+          "name": "grid_map_ros",
+          "condition": null
+        },
+        {
+          "kind": "build_depend",
+          "name": "grid_map_core",
+          "condition": null
+        },
+        {
+          "kind": "build_depend",
+          "name": "grid_map_msgs",
+          "condition": null
+        },
+        {
+          "kind": "build_depend",
+          "name": "grid_map_filters",
+          "condition": null
+        },
+        {
+          "kind": "build_depend",
+          "name": "filters",
+          "condition": null
+        },
+        {
+          "kind": "build_depend",
+          "name": "pluginlib",
+          "condition": null
+        },
+        {
+          "kind": "build_depend",
+          "name": "pcl_conversions",
+          "condition": null
+        },
+        {
+          "kind": "build_depend",
+          "name": "libopencv-dev",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "grid_map_ros",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "grid_map_core",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "grid_map_msgs",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "grid_map_filters",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "filters",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "pluginlib",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "pcl_conversions",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "libopencv-dev",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "imu_filter_madgwick",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "rosidl_default_runtime",
+          "condition": null
+        }
+      ]
+    },
+    {
+      "name": "mr2_rover_control",
+      "path": "rover/ros2_ws/src/mr2_rover_control/package.xml",
+      "source": "superproject",
+      "build_type": "ament_cmake",
+      "dependencies": [
+        {
+          "kind": "buildtool_depend",
+          "name": "ament_cmake",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "rclcpp",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "rclcpp_lifecycle",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "controller_interface",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "pluginlib",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "geometry_msgs",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "nav_msgs",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "mr2_action_interface",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_auto",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_common",
+          "condition": null
+        }
+      ]
+    },
+    {
+      "name": "mr2_rover_description",
+      "path": "rover/ros2_ws/src/mr2_rover_description/package.xml",
+      "source": "superproject",
+      "build_type": "ament_python",
+      "dependencies": [
+        {
+          "kind": "depend",
+          "name": "ros_gz",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "gz_ros2_control",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "gz_ros2_control_demos",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "ros2_controllers",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "ros2_control",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "controller_manager",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "mr2_battery_monitor",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "joint_state_broadcaster",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "position_controllers",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "rclpy",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "robot_state_publisher",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "ros_gz_bridge",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "ros_gz_sim",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "sensor_msgs",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_copyright",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_flake8",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_pep257",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "python3-pytest",
+          "condition": null
+        }
+      ]
+    },
+    {
+      "name": "mr2_science_module",
+      "path": "rover/ros2_ws/src/mr2_science_module/package.xml",
+      "source": "superproject",
+      "build_type": "ament_cmake",
+      "dependencies": [
+        {
+          "kind": "buildtool_depend",
+          "name": "ament_cmake",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "builtin_interfaces",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "mr2_can_bus_core",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "rclcpp",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "rosidl_default_generators",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "launch",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "launch_ros",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "rosidl_default_runtime",
+          "condition": null
+        }
+      ]
+    },
+    {
+      "name": "mr2_spectrophotometer",
+      "path": "rover/ros2_ws/src/mr2_spectrophotometer/package.xml",
+      "source": "superproject",
+      "build_type": "ament_python",
+      "dependencies": [
+        {
+          "kind": "depend",
+          "name": "rclpy",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "mr2_spectrophotometer_msgs",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "python3-numpy",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "python3-opencv",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "v4l-utils",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "launch",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "launch_ros",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_auto",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_common",
+          "condition": null
+        }
+      ]
+    },
+    {
+      "name": "mr2_spectrophotometer_msgs",
+      "path": "rover/ros2_ws/src/mr2_spectrophotometer_msgs/package.xml",
+      "source": "superproject",
+      "build_type": "ament_cmake",
+      "dependencies": [
+        {
+          "kind": "buildtool_depend",
+          "name": "ament_cmake",
+          "condition": null
+        },
+        {
+          "kind": "build_depend",
+          "name": "rosidl_default_generators",
+          "condition": null
+        },
+        {
+          "kind": "build_depend",
+          "name": "std_msgs",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "rosidl_default_runtime",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "std_msgs",
+          "condition": null
+        }
+      ]
+    },
+    {
+      "name": "mr2_system_status",
+      "path": "rover/ros2_ws/src/mr2_system_status/package.xml",
+      "source": "superproject",
+      "build_type": "ament_python",
+      "dependencies": [
+        {
+          "kind": "depend",
+          "name": "rclpy",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "diagnostic_msgs",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "python3-psutil",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_copyright",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_flake8",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_pep257",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "python3-pytest",
+          "condition": null
+        }
+      ]
+    },
+    {
+      "name": "mr2_video_streaming",
+      "path": "rover/ros2_ws/src/mr2_video_streaming/package.xml",
+      "source": "superproject",
+      "build_type": "ament_cmake",
+      "dependencies": [
+        {
+          "kind": "buildtool_depend",
+          "name": "ament_cmake",
+          "condition": null
+        },
+        {
+          "kind": "buildtool_depend",
+          "name": "pkg-config",
+          "condition": null
+        },
+        {
+          "kind": "build_depend",
+          "name": "nlohmann-json-dev",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "rclcpp",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "sensor_msgs",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "std_srvs",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_auto",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_common",
+          "condition": null
+        }
+      ]
+    },
+    {
+      "name": "mr2_xbee_bridge",
+      "path": "rover/ros2_ws/src/mr2_xbee_bridge/package.xml",
+      "source": "superproject",
+      "build_type": "ament_cmake",
+      "dependencies": [
+        {
+          "kind": "buildtool_depend",
+          "name": "ament_cmake",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "rclcpp",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "control_msgs",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "geometry_msgs",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "nav_msgs",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "sensor_msgs",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "std_msgs",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "mr2_action_interface",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "mr2_battery_monitor",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "ublox_ubx_msgs",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "rtcm_msgs",
+          "condition": null
+        }
+      ]
+    },
+    {
+      "name": "mr2_yolo_perception",
+      "path": "rover/ros2_ws/src/mr2_yolo_perception/package.xml",
+      "source": "superproject",
+      "build_type": "ament_python",
+      "dependencies": [
+        {
+          "kind": "depend",
+          "name": "rclpy",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "sensor_msgs",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "geometry_msgs",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "tf2_ros",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "tf2_geometry_msgs",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "image_geometry",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "message_filters",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "python3-numpy",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "python3-opencv",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_auto",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_common",
+          "condition": null
+        }
+      ]
+    },
+    {
+      "name": "ntrip_client_node",
+      "path": "rover/ros2_ws/src/ublox_dgnss/ntrip_client_node/package.xml",
+      "source": "pinned-submodule-worktree",
+      "build_type": "ament_cmake",
+      "dependencies": [
+        {
+          "kind": "buildtool_depend",
+          "name": "ament_cmake",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "rclcpp",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "rclcpp_components",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "libcurl-dev",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "std_msgs",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "rtcm_msgs",
+          "condition": null
+        },
+        {
+          "kind": "build_depend",
+          "name": "pkg-config",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_auto",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_common",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_cmake_cppcheck",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_cmake_copyright",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_cmake_uncrustify",
+          "condition": null
+        }
+      ]
+    },
+    {
+      "name": "rtcm_msgs",
+      "path": "rover/ros2_ws/src/rtcm_msgs/package.xml",
+      "source": "pinned-submodule-worktree",
+      "build_type": "catkin",
+      "dependencies": [
+        {
+          "kind": "buildtool_depend",
+          "name": "catkin",
+          "condition": "$ROS_VERSION == 1"
+        },
+        {
+          "kind": "buildtool_depend",
+          "name": "ament_cmake",
+          "condition": "$ROS_VERSION == 2"
+        },
+        {
+          "kind": "buildtool_depend",
+          "name": "rosidl_default_generators",
+          "condition": "$ROS_VERSION == 2"
+        },
+        {
+          "kind": "build_depend",
+          "name": "ros_environment",
+          "condition": null
+        },
+        {
+          "kind": "build_depend",
+          "name": "message_generation",
+          "condition": "$ROS_VERSION == 1"
+        },
+        {
+          "kind": "build_depend",
+          "name": "builtin_interfaces",
+          "condition": "$ROS_VERSION == 2"
+        },
+        {
+          "kind": "depend",
+          "name": "std_msgs",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "message_runtime",
+          "condition": "$ROS_VERSION == 1"
+        },
+        {
+          "kind": "exec_depend",
+          "name": "rosidl_default_runtime",
+          "condition": "$ROS_VERSION == 2"
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_common",
+          "condition": "$ROS_VERSION == 2"
+        }
+      ]
+    },
+    {
+      "name": "ublox_dgnss",
+      "path": "rover/ros2_ws/src/ublox_dgnss/ublox_dgnss/package.xml",
+      "source": "pinned-submodule-worktree",
+      "build_type": "ament_cmake",
+      "dependencies": [
+        {
+          "kind": "buildtool_depend",
+          "name": "ament_cmake",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "ublox_ubx_msgs",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "ublox_ubx_interfaces",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "ublox_dgnss_node",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "ublox_nav_sat_fix_hp_node",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "ntrip_client_node",
+          "condition": null
+        }
+      ]
+    },
+    {
+      "name": "ublox_dgnss_node",
+      "path": "rover/ros2_ws/src/ublox_dgnss/ublox_dgnss_node/package.xml",
+      "source": "pinned-submodule-worktree",
+      "build_type": "ament_cmake",
+      "dependencies": [
+        {
+          "kind": "buildtool_depend",
+          "name": "ament_cmake",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "rclcpp",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "rclcpp_components",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "libusb-1.0-dev",
+          "condition": null
+        },
+        {
+          "kind": "exec_depend",
+          "name": "std_msgs",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "ublox_ubx_msgs",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "ublox_ubx_interfaces",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "rtcm_msgs",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "ament_index_cpp",
+          "condition": null
+        },
+        {
+          "kind": "build_depend",
+          "name": "pkg-config",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_auto",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_common",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_cmake_cppcheck",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_cmake_copyright",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_cmake_uncrustify",
+          "condition": null
+        }
+      ]
+    },
+    {
+      "name": "ublox_nav_sat_fix_hp_node",
+      "path": "rover/ros2_ws/src/ublox_dgnss/ublox_nav_sat_fix_hp_node/package.xml",
+      "source": "pinned-submodule-worktree",
+      "build_type": "ament_cmake",
+      "dependencies": [
+        {
+          "kind": "buildtool_depend",
+          "name": "ament_cmake",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "rclcpp",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "rclcpp_components",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "std_msgs",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "sensor_msgs",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "ublox_ubx_msgs",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "ublox_ubx_interfaces",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_auto",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_common",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_cmake_cppcheck",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_cmake_copyright",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_cmake_uncrustify",
+          "condition": null
+        }
+      ]
+    },
+    {
+      "name": "ublox_ubx_interfaces",
+      "path": "rover/ros2_ws/src/ublox_dgnss/ublox_ubx_interfaces/package.xml",
+      "source": "pinned-submodule-worktree",
+      "build_type": "ament_cmake",
+      "dependencies": [
+        {
+          "kind": "buildtool_depend",
+          "name": "ament_cmake",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "rosidl_default_generators",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_auto",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_common",
+          "condition": null
+        }
+      ]
+    },
+    {
+      "name": "ublox_ubx_msgs",
+      "path": "rover/ros2_ws/src/ublox_dgnss/ublox_ubx_msgs/package.xml",
+      "source": "pinned-submodule-worktree",
+      "build_type": "ament_cmake",
+      "dependencies": [
+        {
+          "kind": "buildtool_depend",
+          "name": "ament_cmake",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "builtin_interfaces",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "std_msgs",
+          "condition": null
+        },
+        {
+          "kind": "depend",
+          "name": "rosidl_default_generators",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_auto",
+          "condition": null
+        },
+        {
+          "kind": "test_depend",
+          "name": "ament_lint_common",
+          "condition": null
+        }
+      ]
+    }
+  ],
+  "tracked_file_count": 1937,
+  "workflow_files": [],
+  "lock_and_recipe_files": [
+    "base/gateway/package-lock.json",
+    "dashboard/package-lock.json"
+  ],
+  "syntax_checks": {
+    "python": [
+      {
+        "path": "base/arduino/trigger_homing.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_camera_turret/launch/camera_turret_can.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_launch/launch/front_uvc_camera.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_launch/launch/local_test.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_launch/launch/manipulator_moveit.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_launch/launch/realsense_rgbd.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_launch/launch/rover.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_launch/launch/rover_real.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_launch/launch/rover_sim.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_launch/launch/ublox_base_custom.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_launch/launch/ublox_fb_r_rover_named.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_launch/launch/video_streaming.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_launch/launch/xbee_sim.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_launch/mr2_launch/__init__.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_launch/mr2_launch/env.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_launch/setup.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_launch/test/test_copyright.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_launch/test/test_flake8.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_launch/test/test_pep257.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_led/launch/led_can.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_moveit/launch/moveit_rviz.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_moveit/launch/realtime_servo.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_auto/launch/action.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_auto/launch/local_imu.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_auto/launch/localization.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_auto/launch/map.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_auto/launch/nav2.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_auto/launch/navigation.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_auto/launch/navigation_launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_auto/launch/path_to_geopath.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_auto/launch/traversability_pipeline.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_auto/launch/vision_ablation.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_description/launch/common.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_description/launch/four_bar_transmission.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_description/launch/manipulator_ak_can.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_description/launch/real.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_description/launch/sim.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_description/launch/single_joint_absolute_encoder.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_description/launch/single_joint_limit_switch.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_description/mr2_rover_description/__init__.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_description/mr2_rover_description/launch_common.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_description/mr2_rover_description/static_joint_state_publisher.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_description/setup.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_description/test/test_copyright.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_description/test/test_flake8.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_description/test/test_pep257.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_science_module/launch/science_module_can.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_spectrophotometer/launch/spectrophotometer.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_spectrophotometer/mr2_spectrophotometer/__init__.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_spectrophotometer/mr2_spectrophotometer/live_view.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_spectrophotometer/mr2_spectrophotometer/spectrophotometer_node.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_spectrophotometer/mr2_spectrophotometer/web_calibrate.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_spectrophotometer/setup.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_spectrophotometer/spectro/__init__.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_spectrophotometer/spectro/calibration.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_spectrophotometer/spectro/capture.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_spectrophotometer/spectro/intensity.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_spectrophotometer/spectro/processing.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_spectrophotometer/spectro/webviz.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_system_status/mr2_system_status/__init__.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_system_status/mr2_system_status/system_status_node.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_system_status/setup.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_yolo_perception/launch/yolo_rgbd_detector.launch.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_yolo_perception/mr2_yolo_perception/__init__.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_yolo_perception/mr2_yolo_perception/yolo_rgbd_detector.py",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_yolo_perception/setup.py",
+        "result": "pass"
+      },
+      {
+        "path": "scripts/check_hardware_health.py",
+        "result": "pass"
+      },
+      {
+        "path": "scripts/wgs84_shift.py",
+        "result": "pass"
+      }
+    ],
+    "bash": [
+      {
+        "path": "rover/ros2_ws/my_rviz.bash",
+        "exit_code": 0,
+        "stderr": ""
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_battery_monitor/scripts/emulate_battery.bash",
+        "exit_code": 0,
+        "stderr": ""
+      },
+      {
+        "path": "scripts/calibrate_all_nofw_motors.bash",
+        "exit_code": 0,
+        "stderr": ""
+      },
+      {
+        "path": "scripts/camera_turret_move.bash",
+        "exit_code": 0,
+        "stderr": ""
+      },
+      {
+        "path": "scripts/can0.bash",
+        "exit_code": 0,
+        "stderr": ""
+      },
+      {
+        "path": "scripts/check_ak_actuator_status.bash",
+        "exit_code": 0,
+        "stderr": ""
+      },
+      {
+        "path": "scripts/check_battery_status.bash",
+        "exit_code": 0,
+        "stderr": ""
+      },
+      {
+        "path": "scripts/deploy_dashboard.bash",
+        "exit_code": 0,
+        "stderr": ""
+      },
+      {
+        "path": "scripts/drive_wheel_slow.bash",
+        "exit_code": 0,
+        "stderr": ""
+      },
+      {
+        "path": "scripts/install_udev_base_station_rules.bash",
+        "exit_code": 0,
+        "stderr": ""
+      },
+      {
+        "path": "scripts/install_udev_serial_rules.bash",
+        "exit_code": 0,
+        "stderr": ""
+      },
+      {
+        "path": "scripts/lib/mr2_env.bash",
+        "exit_code": 0,
+        "stderr": ""
+      },
+      {
+        "path": "scripts/nofw_diag_periods.bash",
+        "exit_code": 0,
+        "stderr": ""
+      },
+      {
+        "path": "scripts/steering_90_cansend.bash",
+        "exit_code": 0,
+        "stderr": ""
+      },
+      {
+        "path": "scripts/tmp_run_video_e2e.sh",
+        "exit_code": 0,
+        "stderr": ""
+      },
+      {
+        "path": "scripts/trace_manipulator_servo_jog.bash",
+        "exit_code": 0,
+        "stderr": ""
+      },
+      {
+        "path": "scripts/vcan0.bash",
+        "exit_code": 0,
+        "stderr": ""
+      },
+      {
+        "path": "scripts/watch_manipulator_ak_joints.bash",
+        "exit_code": 0,
+        "stderr": ""
+      },
+      {
+        "path": "scripts/watch_nofw_commands.bash",
+        "exit_code": 0,
+        "stderr": ""
+      },
+      {
+        "path": "scripts/watch_rover_joints_from_can.bash",
+        "exit_code": 0,
+        "stderr": ""
+      },
+      {
+        "path": "scripts/zero_steering.bash",
+        "exit_code": 0,
+        "stderr": ""
+      }
+    ],
+    "xml": [
+      {
+        "path": "rover/ros2_ws/src/mr2_action_interface/package.xml",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_battery_monitor/package.xml",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_camera_turret/package.xml",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_can_bus_core/package.xml",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_can_hardware_interface/package.xml",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_can_hardware_interface/plugin.xml",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_devices_ak_servo/package.xml",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_devices_ak_servo/plugin.xml",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_devices_output_actuator/package.xml",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_devices_output_actuator/plugin.xml",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_launch/package.xml",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_led/package.xml",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_moveit/config/rover.ros2_control.xacro",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_moveit/config/rover.urdf.xacro",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_moveit/package.xml",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_nav2_plugins/package.xml",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_nav2_plugins/traversability_layer.xml",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_panorama/package.xml",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_auto/behavior_trees/my_navigate_through_poses.xml",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_auto/behavior_trees/my_navigate_to_pose.xml",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_auto/package.xml",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_control/package.xml",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_control/plugin.xml",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_description/package.xml",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_description/ros2_control/rover_can.ros2_control.xacro",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_description/ros2_control/rover_gazebo.ros2_control.xacro",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_description/urdf/four_bar_transmission.urdf.xacro",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_description/urdf/manipulator.xacro",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_description/urdf/manipulator_ak_can.urdf.xacro",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_description/urdf/rover.urdf.xacro",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_description/urdf/rover_base.xacro",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_description/urdf/rover_gazebo_sensors.xacro",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_description/urdf/single_joint_absolute_encoder.urdf.xacro",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_description/urdf/single_joint_limit_switch.urdf.xacro",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_description/urdf/swerve_module.xacro",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_rover_description/worlds/world.sdf",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_science_module/package.xml",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_spectrophotometer/package.xml",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_spectrophotometer_msgs/package.xml",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_system_status/package.xml",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_video_streaming/package.xml",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_xbee_bridge/package.xml",
+        "result": "pass"
+      },
+      {
+        "path": "rover/ros2_ws/src/mr2_yolo_perception/package.xml",
+        "result": "pass"
+      }
+    ]
+  },
+  "terrain_assets": [
+    {
+      "path": "rover/ros2_ws/src/mr2_rover_description/worlds/mdrs.stl",
+      "bytes": 22785884,
+      "git_blob": "79ce49d302d64f298872806d676934749fcb1bc5",
+      "binary_stl_triangles": 455716
+    },
+    {
+      "path": "rover/ros2_ws/src/mr2_rover_description/worlds/mdrs_cropped.stl",
+      "bytes": 681334,
+      "git_blob": "de01e13a8a879906f4e54c95fbf958919fa37036",
+      "binary_stl_triangles": 13625
+    },
+    {
+      "path": "rover/ros2_ws/src/mr2_rover_description/worlds/mdrs_textured.obj",
+      "bytes": 47915322,
+      "git_blob": "3402ad4793dde9e8f3b5119d8c91b991fbbcaf8a"
+    }
+  ],
+  "node_packages": {
+    "base/gateway": {
+      "manifest": {
+        "name": "gateway",
+        "version": "0.1.0",
+        "private": true,
+        "description": "Headless MR2 serial <-> dashboard WebSocket gateway",
+        "main": "index.js",
+        "type": "commonjs",
+        "scripts": {
+          "start": "node index.js",
+          "test": "node --test"
+        },
+        "dependencies": {
+          "dotenv": "^16.4.7",
+          "rclnodejs": "^1.5.0",
+          "serialport": "^12.0.0",
+          "ws": "^8.16.0"
+        }
+      },
+      "lockfileVersion": 3,
+      "locked_direct_dependencies": {
+        "dotenv": {
+          "version": "16.6.1",
+          "resolved": "https://registry.npmjs.org/dotenv/-/dotenv-16.6.1.tgz",
+          "integrity": "sha512-uBq4egWHTcTt33a72vpSG0z3HnPuIl6NqYcTrKEg2azoEyl2hpW0zqlxysq2pK9HlDIHyHyakeYaYnSAwd8bow==",
+          "license": "BSD-2-Clause",
+          "engines": {
+            "node": ">=12"
+          },
+          "funding": {
+            "url": "https://dotenvx.com"
+          }
+        },
+        "rclnodejs": {
+          "version": "1.8.1",
+          "resolved": "https://registry.npmjs.org/rclnodejs/-/rclnodejs-1.8.1.tgz",
+          "integrity": "sha512-gc34VrtSisduS8HplqoiAewZDchoiB+dvL3NQ/9zE6o5cNouot+rUIK+/GyDu1FgZJBebdeBX/qs5eoVvZLARA==",
+          "hasInstallScript": true,
+          "license": "Apache-2.0",
+          "dependencies": {
+            "@rclnodejs/ref-array-di": "^1.2.2",
+            "@rclnodejs/ref-struct-di": "^1.1.1",
+            "bindings": "^1.5.0",
+            "debug": "^4.4.0",
+            "json-bigint": "^1.0.0",
+            "node-addon-api": "^8.3.1",
+            "rxjs": "^7.8.1",
+            "walk": "^2.3.15"
+          },
+          "bin": {
+            "generate-ros-messages": "scripts/generate_messages.js"
+          },
+          "engines": {
+            "node": ">= 16.13.0"
+          }
+        },
+        "serialport": {
+          "version": "12.0.0",
+          "resolved": "https://registry.npmjs.org/serialport/-/serialport-12.0.0.tgz",
+          "integrity": "sha512-AmH3D9hHPFmnF/oq/rvigfiAouAKyK/TjnrkwZRYSFZxNggJxwvbAbfYrLeuvq7ktUdhuHdVdSjj852Z55R+uA==",
+          "license": "MIT",
+          "dependencies": {
+            "@serialport/binding-mock": "10.2.2",
+            "@serialport/bindings-cpp": "12.0.1",
+            "@serialport/parser-byte-length": "12.0.0",
+            "@serialport/parser-cctalk": "12.0.0",
+            "@serialport/parser-delimiter": "12.0.0",
+            "@serialport/parser-inter-byte-timeout": "12.0.0",
+            "@serialport/parser-packet-length": "12.0.0",
+            "@serialport/parser-readline": "12.0.0",
+            "@serialport/parser-ready": "12.0.0",
+            "@serialport/parser-regex": "12.0.0",
+            "@serialport/parser-slip-encoder": "12.0.0",
+            "@serialport/parser-spacepacket": "12.0.0",
+            "@serialport/stream": "12.0.0",
+            "debug": "4.3.4"
+          },
+          "engines": {
+            "node": ">=16.0.0"
+          },
+          "funding": {
+            "url": "https://opencollective.com/serialport/donate"
+          }
+        },
+        "ws": {
+          "version": "8.18.3",
+          "resolved": "https://registry.npmjs.org/ws/-/ws-8.18.3.tgz",
+          "integrity": "sha512-PEIGCY5tSlUt50cqyMXfCzX+oOPqN0vuGqWzbcJ2xvnkzkq46oOpz7dQaTDBdfICb4N14+GARUDw2XV2N4tvzg==",
+          "license": "MIT",
+          "engines": {
+            "node": ">=10.0.0"
+          },
+          "peerDependencies": {
+            "bufferutil": "^4.0.1",
+            "utf-8-validate": ">=5.0.2"
+          },
+          "peerDependenciesMeta": {
+            "bufferutil": {
+              "optional": true
+            },
+            "utf-8-validate": {
+              "optional": true
+            }
+          }
+        }
+      }
+    },
+    "dashboard": {
+      "manifest": {
+        "name": "dashboard",
+        "private": true,
+        "version": "0.0.0",
+        "type": "module",
+        "scripts": {
+          "dev": "vite",
+          "build": "vite build",
+          "lint": "eslint .",
+          "lint:fix": "eslint . --fix",
+          "preview": "vite preview",
+          "typecheck": "tsc -p tsconfig.app.json",
+          "check": "npm run typecheck && npm run lint && npm run build"
+        },
+        "dependencies": {
+          "@fontsource/dm-mono": "^5.2.7",
+          "@fontsource/space-grotesk": "^5.2.10",
+          "bootstrap": "^5.3.3",
+          "maplibre-gl": "^4.7.1",
+          "react": "^18.3.1",
+          "react-bootstrap": "^2.10.10",
+          "react-dom": "^18.3.1",
+          "react-icons": "^5.5.0",
+          "roslib": "^1.4.0",
+          "three": "^0.184.0",
+          "uplot": "^1.6.32"
+        },
+        "devDependencies": {
+          "@eslint/js": "^9.39.1",
+          "@types/react": "^18.3.3",
+          "@types/react-dom": "^18.3.0",
+          "@types/three": "^0.184.1",
+          "@typescript-eslint/eslint-plugin": "^8.44.0",
+          "@typescript-eslint/parser": "^8.44.0",
+          "@vitejs/plugin-react": "^5.1.1",
+          "eslint": "^9.39.1",
+          "eslint-plugin-react-hooks": "^7.0.1",
+          "eslint-plugin-react-refresh": "^0.4.24",
+          "globals": "^16.5.0",
+          "typescript": "^5.8.3",
+          "vite": "^7.2.4"
+        }
+      },
+      "lockfileVersion": 3,
+      "locked_direct_dependencies": {
+        "@fontsource/dm-mono": {
+          "version": "5.2.7",
+          "resolved": "https://registry.npmjs.org/@fontsource/dm-mono/-/dm-mono-5.2.7.tgz",
+          "integrity": "sha512-Ma1az2atTVgQWuOWwjuxx26p/6A6CU9HBNKq1CFV6YKpKhpswnf9ry9Ql4+T6bTZzkdtSfS6tjJvqZOljVzIFQ==",
+          "license": "OFL-1.1",
+          "funding": {
+            "url": "https://github.com/sponsors/ayuhito"
+          }
+        },
+        "@fontsource/space-grotesk": {
+          "version": "5.2.10",
+          "resolved": "https://registry.npmjs.org/@fontsource/space-grotesk/-/space-grotesk-5.2.10.tgz",
+          "integrity": "sha512-XNXEbT74OIITPqw2H6HXwPDp85fy43uxfBwFR5PU+9sLnjuLj12KlhVM9nZVN6q6dlKjkuN8JisW/OBxwxgUew==",
+          "license": "OFL-1.1",
+          "funding": {
+            "url": "https://github.com/sponsors/ayuhito"
+          }
+        },
+        "bootstrap": {
+          "version": "5.3.8",
+          "resolved": "https://registry.npmjs.org/bootstrap/-/bootstrap-5.3.8.tgz",
+          "integrity": "sha512-HP1SZDqaLDPwsNiqRqi5NcP0SSXciX2s9E+RyqJIIqGo+vJeN5AJVM98CXmW/Wux0nQ5L7jeWUdplCEf0Ee+tg==",
+          "funding": [
+            {
+              "type": "github",
+              "url": "https://github.com/sponsors/twbs"
+            },
+            {
+              "type": "opencollective",
+              "url": "https://opencollective.com/bootstrap"
+            }
+          ],
+          "license": "MIT",
+          "peerDependencies": {
+            "@popperjs/core": "^2.11.8"
+          }
+        },
+        "maplibre-gl": {
+          "version": "4.7.1",
+          "resolved": "https://registry.npmjs.org/maplibre-gl/-/maplibre-gl-4.7.1.tgz",
+          "integrity": "sha512-lgL7XpIwsgICiL82ITplfS7IGwrB1OJIw/pCvprDp2dhmSSEBgmPzYRvwYYYvJGJD7fxUv1Tvpih4nZ6VrLuaA==",
+          "license": "BSD-3-Clause",
+          "dependencies": {
+            "@mapbox/geojson-rewind": "^0.5.2",
+            "@mapbox/jsonlint-lines-primitives": "^2.0.2",
+            "@mapbox/point-geometry": "^0.1.0",
+            "@mapbox/tiny-sdf": "^2.0.6",
+            "@mapbox/unitbezier": "^0.0.1",
+            "@mapbox/vector-tile": "^1.3.1",
+            "@mapbox/whoots-js": "^3.1.0",
+            "@maplibre/maplibre-gl-style-spec": "^20.3.1",
+            "@types/geojson": "^7946.0.14",
+            "@types/geojson-vt": "3.2.5",
+            "@types/mapbox__point-geometry": "^0.1.4",
+            "@types/mapbox__vector-tile": "^1.3.4",
+            "@types/pbf": "^3.0.5",
+            "@types/supercluster": "^7.1.3",
+            "earcut": "^3.0.0",
+            "geojson-vt": "^4.0.2",
+            "gl-matrix": "^3.4.3",
+            "global-prefix": "^4.0.0",
+            "kdbush": "^4.0.2",
+            "murmurhash-js": "^1.0.0",
+            "pbf": "^3.3.0",
+            "potpack": "^2.0.0",
+            "quickselect": "^3.0.0",
+            "supercluster": "^8.0.1",
+            "tinyqueue": "^3.0.0",
+            "vt-pbf": "^3.1.3"
+          },
+          "engines": {
+            "node": ">=16.14.0",
+            "npm": ">=8.1.0"
+          },
+          "funding": {
+            "url": "https://github.com/maplibre/maplibre-gl-js?sponsor=1"
+          }
+        },
+        "react": {
+          "version": "18.3.1",
+          "resolved": "https://registry.npmjs.org/react/-/react-18.3.1.tgz",
+          "integrity": "sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==",
+          "license": "MIT",
+          "peer": true,
+          "dependencies": {
+            "loose-envify": "^1.1.0"
+          },
+          "engines": {
+            "node": ">=0.10.0"
+          }
+        },
+        "react-bootstrap": {
+          "version": "2.10.10",
+          "resolved": "https://registry.npmjs.org/react-bootstrap/-/react-bootstrap-2.10.10.tgz",
+          "integrity": "sha512-gMckKUqn8aK/vCnfwoBpBVFUGT9SVQxwsYrp9yDHt0arXMamxALerliKBxr1TPbntirK/HGrUAHYbAeQTa9GHQ==",
+          "license": "MIT",
+          "dependencies": {
+            "@babel/runtime": "^7.24.7",
+            "@restart/hooks": "^0.4.9",
+            "@restart/ui": "^1.9.4",
+            "@types/prop-types": "^15.7.12",
+            "@types/react-transition-group": "^4.4.6",
+            "classnames": "^2.3.2",
+            "dom-helpers": "^5.2.1",
+            "invariant": "^2.2.4",
+            "prop-types": "^15.8.1",
+            "prop-types-extra": "^1.1.0",
+            "react-transition-group": "^4.4.5",
+            "uncontrollable": "^7.2.1",
+            "warning": "^4.0.3"
+          },
+          "peerDependencies": {
+            "@types/react": ">=16.14.8",
+            "react": ">=16.14.0",
+            "react-dom": ">=16.14.0"
+          },
+          "peerDependenciesMeta": {
+            "@types/react": {
+              "optional": true
+            }
+          }
+        },
+        "react-dom": {
+          "version": "18.3.1",
+          "resolved": "https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz",
+          "integrity": "sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==",
+          "license": "MIT",
+          "peer": true,
+          "dependencies": {
+            "loose-envify": "^1.1.0",
+            "scheduler": "^0.23.2"
+          },
+          "peerDependencies": {
+            "react": "^18.3.1"
+          }
+        },
+        "react-icons": {
+          "version": "5.5.0",
+          "resolved": "https://registry.npmjs.org/react-icons/-/react-icons-5.5.0.tgz",
+          "integrity": "sha512-MEFcXdkP3dLo8uumGI5xN3lDFNsRtrjbOEKDLD7yv76v4wpnEq2Lt2qeHaQOr34I/wPN3s3+N08WkQ+CW37Xiw==",
+          "license": "MIT",
+          "peerDependencies": {
+            "react": "*"
+          }
+        },
+        "roslib": {
+          "version": "1.4.1",
+          "resolved": "https://registry.npmjs.org/roslib/-/roslib-1.4.1.tgz",
+          "integrity": "sha512-l3BOHqG99RHb73XROykj8o2rRaUqqYwN0E6C1EkH+R1GIfDjMaUGPaCNEoKKmsXT0Vu0EOyL1BudQtdVlMsgjA==",
+          "license": "BSD-2-Clause",
+          "dependencies": {
+            "@xmldom/xmldom": "^0.8.0",
+            "cbor-js": "^0.1.0",
+            "eventemitter2": "^6.4.0",
+            "object-assign": "^4.0.0",
+            "pngparse": "^2.0.0",
+            "socket.io": "^4.0.0",
+            "webworkify": "^1.5.0",
+            "webworkify-webpack": "^2.1.5",
+            "ws": "^8.0.0"
+          },
+          "engines": {
+            "node": ">=0.10"
+          }
+        },
+        "three": {
+          "version": "0.184.0",
+          "resolved": "https://registry.npmjs.org/three/-/three-0.184.0.tgz",
+          "integrity": "sha512-wtTRjG92pM5eUg/KuUnHsqSAlPM296brTOcLgMRqEeylYTh/CdtvKUvCyyCQTzFuStieWxvZb8mVTMvdPyUpxg==",
+          "license": "MIT"
+        },
+        "uplot": {
+          "version": "1.6.32",
+          "resolved": "https://registry.npmjs.org/uplot/-/uplot-1.6.32.tgz",
+          "integrity": "sha512-KIMVnG68zvu5XXUbC4LQEPnhwOxBuLyW1AHtpm6IKTXImkbLgkMy+jabjLgSLMasNuGGzQm/ep3tOkyTxpiQIw==",
+          "license": "MIT"
+        },
+        "@eslint/js": {
+          "version": "9.39.2",
+          "resolved": "https://registry.npmjs.org/@eslint/js/-/js-9.39.2.tgz",
+          "integrity": "sha512-q1mjIoW1VX4IvSocvM/vbTiveKC4k9eLrajNEuSsmjymSDEbpGddtpfOoN7YGAqBK3NG+uqo8ia4PDTt8buCYA==",
+          "dev": true,
+          "license": "MIT",
+          "engines": {
+            "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+          },
+          "funding": {
+            "url": "https://eslint.org/donate"
+          }
+        },
+        "@types/react": {
+          "version": "18.3.27",
+          "resolved": "https://registry.npmjs.org/@types/react/-/react-18.3.27.tgz",
+          "integrity": "sha512-cisd7gxkzjBKU2GgdYrTdtQx1SORymWyaAFhaxQPK9bYO9ot3Y5OikQRvY0VYQtvwjeQnizCINJAenh/V7MK2w==",
+          "license": "MIT",
+          "peer": true,
+          "dependencies": {
+            "@types/prop-types": "*",
+            "csstype": "^3.2.2"
+          }
+        },
+        "@types/react-dom": {
+          "version": "18.3.7",
+          "resolved": "https://registry.npmjs.org/@types/react-dom/-/react-dom-18.3.7.tgz",
+          "integrity": "sha512-MEe3UeoENYVFXzoXEWsvcpg6ZvlrFNlOQ7EOsvhI3CfAXwzPfO8Qwuxd40nepsYKqyyVQnTdEfv68q91yLcKrQ==",
+          "dev": true,
+          "license": "MIT",
+          "peerDependencies": {
+            "@types/react": "^18.0.0"
+          }
+        },
+        "@types/three": {
+          "version": "0.184.1",
+          "resolved": "https://registry.npmjs.org/@types/three/-/three-0.184.1.tgz",
+          "integrity": "sha512-6q4VdiqVsrTRqmk62/BnlcAvIrnDM0zf2ZDVKI5kZiniWrSaOHaQzmbp+BNzoggc/8tgW412pL//wZIxu2PPTA==",
+          "dev": true,
+          "license": "MIT",
+          "dependencies": {
+            "@dimforge/rapier3d-compat": "~0.12.0",
+            "@tweenjs/tween.js": "~23.1.3",
+            "@types/stats.js": "*",
+            "@types/webxr": ">=0.5.17",
+            "fflate": "~0.8.2",
+            "meshoptimizer": "~1.1.1"
+          }
+        },
+        "@typescript-eslint/eslint-plugin": {
+          "version": "8.51.0",
+          "resolved": "https://registry.npmjs.org/@typescript-eslint/eslint-plugin/-/eslint-plugin-8.51.0.tgz",
+          "integrity": "sha512-XtssGWJvypyM2ytBnSnKtHYOGT+4ZwTnBVl36TA4nRO2f4PRNGz5/1OszHzcZCvcBMh+qb7I06uoCmLTRdR9og==",
+          "dev": true,
+          "license": "MIT",
+          "dependencies": {
+            "@eslint-community/regexpp": "^4.10.0",
+            "@typescript-eslint/scope-manager": "8.51.0",
+            "@typescript-eslint/type-utils": "8.51.0",
+            "@typescript-eslint/utils": "8.51.0",
+            "@typescript-eslint/visitor-keys": "8.51.0",
+            "ignore": "^7.0.0",
+            "natural-compare": "^1.4.0",
+            "ts-api-utils": "^2.2.0"
+          },
+          "engines": {
+            "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+          },
+          "funding": {
+            "type": "opencollective",
+            "url": "https://opencollective.com/typescript-eslint"
+          },
+          "peerDependencies": {
+            "@typescript-eslint/parser": "^8.51.0",
+            "eslint": "^8.57.0 || ^9.0.0",
+            "typescript": ">=4.8.4 <6.0.0"
+          }
+        },
+        "@typescript-eslint/parser": {
+          "version": "8.51.0",
+          "resolved": "https://registry.npmjs.org/@typescript-eslint/parser/-/parser-8.51.0.tgz",
+          "integrity": "sha512-3xP4XzzDNQOIqBMWogftkwxhg5oMKApqY0BAflmLZiFYHqyhSOxv/cd/zPQLTcCXr4AkaKb25joocY0BD1WC6A==",
+          "dev": true,
+          "license": "MIT",
+          "peer": true,
+          "dependencies": {
+            "@typescript-eslint/scope-manager": "8.51.0",
+            "@typescript-eslint/types": "8.51.0",
+            "@typescript-eslint/typescript-estree": "8.51.0",
+            "@typescript-eslint/visitor-keys": "8.51.0",
+            "debug": "^4.3.4"
+          },
+          "engines": {
+            "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+          },
+          "funding": {
+            "type": "opencollective",
+            "url": "https://opencollective.com/typescript-eslint"
+          },
+          "peerDependencies": {
+            "eslint": "^8.57.0 || ^9.0.0",
+            "typescript": ">=4.8.4 <6.0.0"
+          }
+        },
+        "@vitejs/plugin-react": {
+          "version": "5.1.2",
+          "resolved": "https://registry.npmjs.org/@vitejs/plugin-react/-/plugin-react-5.1.2.tgz",
+          "integrity": "sha512-EcA07pHJouywpzsoTUqNh5NwGayl2PPVEJKUSinGGSxFGYn+shYbqMGBg6FXDqgXum9Ou/ecb+411ssw8HImJQ==",
+          "dev": true,
+          "license": "MIT",
+          "dependencies": {
+            "@babel/core": "^7.28.5",
+            "@babel/plugin-transform-react-jsx-self": "^7.27.1",
+            "@babel/plugin-transform-react-jsx-source": "^7.27.1",
+            "@rolldown/pluginutils": "1.0.0-beta.53",
+            "@types/babel__core": "^7.20.5",
+            "react-refresh": "^0.18.0"
+          },
+          "engines": {
+            "node": "^20.19.0 || >=22.12.0"
+          },
+          "peerDependencies": {
+            "vite": "^4.2.0 || ^5.0.0 || ^6.0.0 || ^7.0.0"
+          }
+        },
+        "eslint": {
+          "version": "9.39.2",
+          "resolved": "https://registry.npmjs.org/eslint/-/eslint-9.39.2.tgz",
+          "integrity": "sha512-LEyamqS7W5HB3ujJyvi0HQK/dtVINZvd5mAAp9eT5S/ujByGjiZLCzPcHVzuXbpJDJF/cxwHlfceVUDZ2lnSTw==",
+          "dev": true,
+          "license": "MIT",
+          "peer": true,
+          "dependencies": {
+            "@eslint-community/eslint-utils": "^4.8.0",
+            "@eslint-community/regexpp": "^4.12.1",
+            "@eslint/config-array": "^0.21.1",
+            "@eslint/config-helpers": "^0.4.2",
+            "@eslint/core": "^0.17.0",
+            "@eslint/eslintrc": "^3.3.1",
+            "@eslint/js": "9.39.2",
+            "@eslint/plugin-kit": "^0.4.1",
+            "@humanfs/node": "^0.16.6",
+            "@humanwhocodes/module-importer": "^1.0.1",
+            "@humanwhocodes/retry": "^0.4.2",
+            "@types/estree": "^1.0.6",
+            "ajv": "^6.12.4",
+            "chalk": "^4.0.0",
+            "cross-spawn": "^7.0.6",
+            "debug": "^4.3.2",
+            "escape-string-regexp": "^4.0.0",
+            "eslint-scope": "^8.4.0",
+            "eslint-visitor-keys": "^4.2.1",
+            "espree": "^10.4.0",
+            "esquery": "^1.5.0",
+            "esutils": "^2.0.2",
+            "fast-deep-equal": "^3.1.3",
+            "file-entry-cache": "^8.0.0",
+            "find-up": "^5.0.0",
+            "glob-parent": "^6.0.2",
+            "ignore": "^5.2.0",
+            "imurmurhash": "^0.1.4",
+            "is-glob": "^4.0.0",
+            "json-stable-stringify-without-jsonify": "^1.0.1",
+            "lodash.merge": "^4.6.2",
+            "minimatch": "^3.1.2",
+            "natural-compare": "^1.4.0",
+            "optionator": "^0.9.3"
+          },
+          "bin": {
+            "eslint": "bin/eslint.js"
+          },
+          "engines": {
+            "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+          },
+          "funding": {
+            "url": "https://eslint.org/donate"
+          },
+          "peerDependencies": {
+            "jiti": "*"
+          },
+          "peerDependenciesMeta": {
+            "jiti": {
+              "optional": true
+            }
+          }
+        },
+        "eslint-plugin-react-hooks": {
+          "version": "7.0.1",
+          "resolved": "https://registry.npmjs.org/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-7.0.1.tgz",
+          "integrity": "sha512-O0d0m04evaNzEPoSW+59Mezf8Qt0InfgGIBJnpC0h3NH/WjUAR7BIKUfysC6todmtiZ/A0oUVS8Gce0WhBrHsA==",
+          "dev": true,
+          "license": "MIT",
+          "dependencies": {
+            "@babel/core": "^7.24.4",
+            "@babel/parser": "^7.24.4",
+            "hermes-parser": "^0.25.1",
+            "zod": "^3.25.0 || ^4.0.0",
+            "zod-validation-error": "^3.5.0 || ^4.0.0"
+          },
+          "engines": {
+            "node": ">=18"
+          },
+          "peerDependencies": {
+            "eslint": "^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0"
+          }
+        },
+        "eslint-plugin-react-refresh": {
+          "version": "0.4.26",
+          "resolved": "https://registry.npmjs.org/eslint-plugin-react-refresh/-/eslint-plugin-react-refresh-0.4.26.tgz",
+          "integrity": "sha512-1RETEylht2O6FM/MvgnyvT+8K21wLqDNg4qD51Zj3guhjt433XbnnkVttHMyaVyAFD03QSV4LPS5iE3VQmO7XQ==",
+          "dev": true,
+          "license": "MIT",
+          "peerDependencies": {
+            "eslint": ">=8.40"
+          }
+        },
+        "globals": {
+          "version": "16.5.0",
+          "resolved": "https://registry.npmjs.org/globals/-/globals-16.5.0.tgz",
+          "integrity": "sha512-c/c15i26VrJ4IRt5Z89DnIzCGDn9EcebibhAOjw5ibqEHsE1wLUgkPn9RDmNcUKyU87GeaL633nyJ+pplFR2ZQ==",
+          "dev": true,
+          "license": "MIT",
+          "engines": {
+            "node": ">=18"
+          },
+          "funding": {
+            "url": "https://github.com/sponsors/sindresorhus"
+          }
+        },
+        "typescript": {
+          "version": "5.9.3",
+          "resolved": "https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz",
+          "integrity": "sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==",
+          "dev": true,
+          "license": "Apache-2.0",
+          "peer": true,
+          "bin": {
+            "tsc": "bin/tsc",
+            "tsserver": "bin/tsserver"
+          },
+          "engines": {
+            "node": ">=14.17"
+          }
+        },
+        "vite": {
+          "version": "7.3.0",
+          "resolved": "https://registry.npmjs.org/vite/-/vite-7.3.0.tgz",
+          "integrity": "sha512-dZwN5L1VlUBewiP6H9s2+B3e3Jg96D0vzN+Ry73sOefebhYr9f94wwkMNN/9ouoU8pV1BqA1d1zGk8928cx0rg==",
+          "dev": true,
+          "license": "MIT",
+          "peer": true,
+          "dependencies": {
+            "esbuild": "^0.27.0",
+            "fdir": "^6.5.0",
+            "picomatch": "^4.0.3",
+            "postcss": "^8.5.6",
+            "rollup": "^4.43.0",
+            "tinyglobby": "^0.2.15"
+          },
+          "bin": {
+            "vite": "bin/vite.js"
+          },
+          "engines": {
+            "node": "^20.19.0 || >=22.12.0"
+          },
+          "funding": {
+            "url": "https://github.com/vitejs/vite?sponsor=1"
+          },
+          "optionalDependencies": {
+            "fsevents": "~2.3.3"
+          },
+          "peerDependencies": {
+            "@types/node": "^20.19.0 || >=22.12.0",
+            "jiti": ">=1.21.0",
+            "less": "^4.0.0",
+            "lightningcss": "^1.21.0",
+            "sass": "^1.70.0",
+            "sass-embedded": "^1.70.0",
+            "stylus": ">=0.54.8",
+            "sugarss": "^5.0.0",
+            "terser": "^5.16.0",
+            "tsx": "^4.8.1",
+            "yaml": "^2.4.2"
+          },
+          "peerDependenciesMeta": {
+            "@types/node": {
+              "optional": true
+            },
+            "jiti": {
+              "optional": true
+            },
+            "less": {
+              "optional": true
+            },
+            "lightningcss": {
+              "optional": true
+            },
+            "sass": {
+              "optional": true
+            },
+            "sass-embedded": {
+              "optional": true
+            },
+            "stylus": {
+              "optional": true
+            },
+            "sugarss": {
+              "optional": true
+            },
+            "terser": {
+              "optional": true
+            },
+            "tsx": {
+              "optional": true
+            },
+            "yaml": {
+              "optional": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "cmake_find_packages": {
+    "rover/ros2_ws/src/mr2_action_interface/CMakeLists.txt": [
+      "ament_cmake",
+      "action_msgs",
+      "builtin_interfaces",
+      "geometry_msgs",
+      "sensor_msgs",
+      "rosidl_default_generators",
+      "<dependency>",
+      "ament_lint_auto"
+    ],
+    "rover/ros2_ws/src/mr2_battery_monitor/CMakeLists.txt": [
+      "ament_cmake",
+      "rosidl_default_generators",
+      "rclcpp",
+      "sensor_msgs",
+      "std_msgs",
+      "mr2_can_bus_core"
+    ],
+    "rover/ros2_ws/src/mr2_camera_turret/CMakeLists.txt": [
+      "ament_cmake",
+      "rclcpp",
+      "geometry_msgs",
+      "mr2_can_bus_core"
+    ],
+    "rover/ros2_ws/src/mr2_can_bus_core/CMakeLists.txt": [
+      "ament_cmake",
+      "Threads"
+    ],
+    "rover/ros2_ws/src/mr2_can_hardware_interface/CMakeLists.txt": [
+      "ament_cmake",
+      "mr2_can_bus_core",
+      "hardware_interface",
+      "pluginlib",
+      "rclcpp",
+      "transmission_interface"
+    ],
+    "rover/ros2_ws/src/mr2_devices_ak_servo/CMakeLists.txt": [
+      "ament_cmake",
+      "mr2_can_bus_core",
+      "hardware_interface",
+      "pluginlib",
+      "rclcpp"
+    ],
+    "rover/ros2_ws/src/mr2_devices_output_actuator/CMakeLists.txt": [
+      "ament_cmake",
+      "rosidl_default_generators",
+      "builtin_interfaces",
+      "mr2_can_bus_core",
+      "hardware_interface",
+      "pluginlib",
+      "rclcpp"
+    ],
+    "rover/ros2_ws/src/mr2_led/CMakeLists.txt": [
+      "ament_cmake",
+      "rosidl_default_generators",
+      "rclcpp",
+      "mr2_can_bus_core",
+      "mr2_action_interface"
+    ],
+    "rover/ros2_ws/src/mr2_moveit/CMakeLists.txt": [
+      "ament_cmake"
+    ],
+    "rover/ros2_ws/src/mr2_nav2_plugins/CMakeLists.txt": [
+      "ament_cmake",
+      "rclcpp",
+      "nav2_costmap_2d",
+      "pluginlib",
+      "grid_map_ros",
+      "grid_map_core",
+      "grid_map_msgs",
+      "tf2",
+      "tf2_ros",
+      "tf2_geometry_msgs",
+      "geometry_msgs",
+      "nav2_util",
+      "ament_lint_auto"
+    ],
+    "rover/ros2_ws/src/mr2_panorama/CMakeLists.txt": [
+      "ament_cmake",
+      "ament_index_cpp",
+      "camera_calibration_parsers",
+      "mr2_action_interface",
+      "OpenCV",
+      "rclcpp",
+      "rclcpp_action",
+      "sensor_msgs",
+      "tf2",
+      "tf2_geometry_msgs",
+      "tf2_ros"
+    ],
+    "rover/ros2_ws/src/mr2_rover_auto/CMakeLists.txt": [
+      "ament_cmake",
+      "rosidl_default_generators",
+      "rclcpp",
+      "rclcpp_action",
+      "geometry_msgs",
+      "nav2_bringup",
+      "nav2_msgs",
+      "nav2_behavior_tree",
+      "tf2",
+      "tf2_ros",
+      "tf2_geometry_msgs",
+      "tf2_eigen",
+      "ament_index_cpp",
+      "std_msgs",
+      "sensor_msgs",
+      "nav_msgs",
+      "geographic_msgs",
+      "GeographicLib",
+      "robot_localization",
+      "aruco_opencv_msgs",
+      "ublox_ubx_msgs",
+      "Eigen3",
+      "mr2_action_interface",
+      "behaviortree_cpp_v3",
+      "grid_map_ros",
+      "grid_map_core",
+      "grid_map_msgs",
+      "grid_map_filters",
+      "filters",
+      "pluginlib",
+      "pcl_conversions",
+      "PCL",
+      "OpenCV"
+    ],
+    "rover/ros2_ws/src/mr2_rover_control/CMakeLists.txt": [
+      "ament_cmake",
+      "rclcpp",
+      "rclcpp_lifecycle",
+      "controller_interface",
+      "pluginlib",
+      "geometry_msgs",
+      "nav_msgs",
+      "mr2_action_interface",
+      "ament_lint_auto"
+    ],
+    "rover/ros2_ws/src/mr2_science_module/CMakeLists.txt": [
+      "ament_cmake",
+      "builtin_interfaces",
+      "mr2_can_bus_core",
+      "rclcpp",
+      "rosidl_default_generators"
+    ],
+    "rover/ros2_ws/src/mr2_spectrophotometer_msgs/CMakeLists.txt": [
+      "ament_cmake",
+      "rosidl_default_generators",
+      "std_msgs"
+    ],
+    "rover/ros2_ws/src/mr2_video_streaming/CMakeLists.txt": [
+      "ament_cmake",
+      "nlohmann_json",
+      "PkgConfig",
+      "rclcpp",
+      "sensor_msgs",
+      "std_srvs",
+      "ament_lint_auto"
+    ],
+    "rover/ros2_ws/src/mr2_xbee_bridge/CMakeLists.txt": [
+      "ament_cmake",
+      "rclcpp",
+      "control_msgs",
+      "geometry_msgs",
+      "nav_msgs",
+      "sensor_msgs",
+      "std_msgs",
+      "mr2_action_interface",
+      "mr2_battery_monitor",
+      "ublox_ubx_msgs",
+      "rtcm_msgs"
+    ]
+  },
+  "video_config": {
+    "version": 1,
+    "streams": [
+      {
+        "stream_id": "rgbd_camera",
+        "source": {
+          "type": "v4l2",
+          "device": "/dev/videoRGBD",
+          "pixel_format": "YUY2",
+          "capture_width": 640,
+          "capture_height": 480
+        },
+        "udp_port": 5022,
+        "width": 320,
+        "height": 240,
+        "framerate": 30,
+        "encoder": {
+          "type": "nvv4l2h264enc",
+          "bitrate_kbps": 1800,
+          "keyframe_interval": 30,
+          "speed_preset": "ultrafast",
+          "tune": "zerolatency"
+        },
+        "display": {
+          "label": "RGB-D Cam",
+          "panel": "autonomy",
+          "order": 1
+        }
+      },
+      {
+        "stream_id": "top_cam",
+        "source": {
+          "type": "v4l2",
+          "device": "/dev/videoTOP",
+          "pixel_format": "MJPG",
+          "capture_width": 640,
+          "capture_height": 360
+        },
+        "udp_port": 5008,
+        "width": 320,
+        "height": 180,
+        "framerate": 30,
+        "encoder": {
+          "type": "nvv4l2h264enc",
+          "bitrate_kbps": 1800,
+          "keyframe_interval": 30,
+          "speed_preset": "ultrafast",
+          "tune": "zerolatency"
+        },
+        "display": {
+          "label": "Top Cam",
+          "panel": "delivery",
+          "order": 3
+        }
+      },
+      {
+        "stream_id": "front_left_cam",
+        "source": {
+          "type": "v4l2",
+          "device": "/dev/videoFL",
+          "pixel_format": "MJPG",
+          "capture_width": 640,
+          "capture_height": 360
+        },
+        "udp_port": 5010,
+        "width": 320,
+        "height": 180,
+        "framerate": 30,
+        "encoder": {
+          "type": "nvv4l2h264enc",
+          "bitrate_kbps": 1800,
+          "keyframe_interval": 30,
+          "speed_preset": "ultrafast",
+          "tune": "zerolatency"
+        },
+        "display": {
+          "label": "Front Left",
+          "panel": "delivery",
+          "order": 4
+        }
+      },
+      {
+        "stream_id": "front_right_cam",
+        "source": {
+          "type": "v4l2",
+          "device": "/dev/videoFR",
+          "pixel_format": "MJPG",
+          "capture_width": 640,
+          "capture_height": 360
+        },
+        "udp_port": 5012,
+        "width": 320,
+        "height": 180,
+        "framerate": 30,
+        "encoder": {
+          "type": "nvv4l2h264enc",
+          "bitrate_kbps": 1800,
+          "keyframe_interval": 30,
+          "speed_preset": "ultrafast",
+          "tune": "zerolatency"
+        },
+        "display": {
+          "label": "Front Right",
+          "panel": "delivery",
+          "order": 5
+        }
+      },
+      {
+        "stream_id": "left_cam",
+        "source": {
+          "type": "v4l2",
+          "device": "/dev/videoLEFT",
+          "pixel_format": "MJPG",
+          "capture_width": 640,
+          "capture_height": 360
+        },
+        "udp_port": 5014,
+        "width": 320,
+        "height": 180,
+        "framerate": 30,
+        "encoder": {
+          "type": "nvv4l2h264enc",
+          "bitrate_kbps": 1800,
+          "keyframe_interval": 30,
+          "speed_preset": "ultrafast",
+          "tune": "zerolatency"
+        },
+        "display": {
+          "label": "Left",
+          "panel": "delivery",
+          "order": 6
+        }
+      },
+      {
+        "stream_id": "right_cam",
+        "source": {
+          "type": "v4l2",
+          "device": "/dev/videoRIGHT",
+          "pixel_format": "MJPG",
+          "capture_width": 640,
+          "capture_height": 360
+        },
+        "udp_port": 5016,
+        "width": 320,
+        "height": 180,
+        "framerate": 30,
+        "encoder": {
+          "type": "nvv4l2h264enc",
+          "bitrate_kbps": 1800,
+          "keyframe_interval": 30,
+          "speed_preset": "ultrafast",
+          "tune": "zerolatency"
+        },
+        "display": {
+          "label": "Right",
+          "panel": "delivery",
+          "order": 7
+        }
+      },
+      {
+        "stream_id": "arm_cam",
+        "source": {
+          "type": "v4l2",
+          "device": "/dev/videoARM",
+          "pixel_format": "MJPG",
+          "capture_width": 640,
+          "capture_height": 360
+        },
+        "udp_port": 5018,
+        "width": 320,
+        "height": 180,
+        "framerate": 30,
+        "encoder": {
+          "type": "nvv4l2h264enc",
+          "bitrate_kbps": 1800,
+          "keyframe_interval": 30,
+          "speed_preset": "ultrafast",
+          "tune": "zerolatency"
+        },
+        "display": {
+          "label": "Arm",
+          "panel": "delivery",
+          "order": 8
+        }
+      },
+      {
+        "stream_id": "gripper_cam",
+        "source": {
+          "type": "v4l2",
+          "device": "/dev/videoGRIPPER",
+          "pixel_format": "MJPG",
+          "capture_width": 640,
+          "capture_height": 360
+        },
+        "udp_port": 5020,
+        "width": 320,
+        "height": 180,
+        "framerate": 30,
+        "encoder": {
+          "type": "nvv4l2h264enc",
+          "bitrate_kbps": 1800,
+          "keyframe_interval": 30,
+          "speed_preset": "ultrafast",
+          "tune": "zerolatency"
+        },
+        "display": {
+          "label": "Gripper",
+          "panel": "delivery",
+          "order": 9
+        }
+      },
+      {
+        "stream_id": "science_left_cam",
+        "source": {
+          "type": "v4l2",
+          "device": "/dev/videoSCIENCELEFT",
+          "pixel_format": "MJPG",
+          "capture_width": 640,
+          "capture_height": 360
+        },
+        "udp_port": 5026,
+        "width": 320,
+        "height": 180,
+        "framerate": 30,
+        "encoder": {
+          "type": "nvv4l2h264enc",
+          "bitrate_kbps": 1800,
+          "keyframe_interval": 30,
+          "speed_preset": "ultrafast",
+          "tune": "zerolatency"
+        },
+        "display": {
+          "label": "Science Left",
+          "panel": "science",
+          "order": 11
+        }
+      },
+      {
+        "stream_id": "left_beaker_cam",
+        "source": {
+          "type": "v4l2",
+          "device": "/dev/videoLEFTBEAKER",
+          "pixel_format": "MJPG",
+          "capture_width": 640,
+          "capture_height": 360
+        },
+        "udp_port": 5030,
+        "width": 320,
+        "height": 180,
+        "framerate": 30,
+        "encoder": {
+          "type": "nvv4l2h264enc",
+          "bitrate_kbps": 1800,
+          "keyframe_interval": 30,
+          "speed_preset": "ultrafast",
+          "tune": "zerolatency"
+        },
+        "display": {
+          "label": "Left Beaker",
+          "panel": "science",
+          "order": 13
+        }
+      },
+      {
+        "stream_id": "microscope_cam",
+        "source": {
+          "type": "v4l2",
+          "device": "/dev/videoMICROSCOPE",
+          "pixel_format": "YUY2",
+          "capture_width": 640,
+          "capture_height": 480
+        },
+        "udp_port": 5032,
+        "width": 320,
+        "height": 240,
+        "framerate": 30,
+        "encoder": {
+          "type": "nvv4l2h264enc",
+          "bitrate_kbps": 1800,
+          "keyframe_interval": 30,
+          "speed_preset": "ultrafast",
+          "tune": "zerolatency"
+        },
+        "display": {
+          "label": "Microscope",
+          "panel": "science",
+          "order": 14
+        }
+      },
+      {
+        "stream_id": "science_right_cam",
+        "source": {
+          "type": "v4l2",
+          "device": "/dev/videoSCIENCERIGHT",
+          "pixel_format": "MJPG",
+          "capture_width": 640,
+          "capture_height": 360
+        },
+        "udp_port": 5034,
+        "width": 320,
+        "height": 180,
+        "framerate": 30,
+        "encoder": {
+          "type": "nvv4l2h264enc",
+          "bitrate_kbps": 1800,
+          "keyframe_interval": 30,
+          "speed_preset": "ultrafast",
+          "tune": "zerolatency"
+        },
+        "display": {
+          "label": "Science Right",
+          "panel": "science",
+          "order": 15
+        }
+      },
+      {
+        "stream_id": "right_beaker_cam",
+        "source": {
+          "type": "v4l2",
+          "device": "/dev/videoRIGHTBEAKER",
+          "pixel_format": "MJPG",
+          "capture_width": 640,
+          "capture_height": 360
+        },
+        "udp_port": 5036,
+        "width": 320,
+        "height": 180,
+        "framerate": 30,
+        "encoder": {
+          "type": "nvv4l2h264enc",
+          "bitrate_kbps": 1800,
+          "keyframe_interval": 30,
+          "speed_preset": "ultrafast",
+          "tune": "zerolatency"
+        },
+        "display": {
+          "label": "Right Beaker",
+          "panel": "science",
+          "order": 16
+        }
+      }
+    ]
+  }
+}

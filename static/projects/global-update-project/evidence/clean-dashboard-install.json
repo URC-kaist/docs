@@ -1,0 +1,13 @@
+{
+  "name": "clean-dashboard-install",
+  "argv": [
+    "npm",
+    "ci",
+    "--no-audit",
+    "--no-fund"
+  ],
+  "exit_code": 0,
+  "stdout": "\nadded 284 packages in 4s\n",
+  "stderr": "",
+  "scope": "Clean tracked dashboard snapshot and lockfile, Node 24.13.0, amd64 Ubuntu 22.04; no ROS or hardware validation."
+}
