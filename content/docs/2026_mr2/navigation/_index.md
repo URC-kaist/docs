@@ -9,10 +9,18 @@ bookCollapseSection: true
 
 ## Detailed Explanations
 
+The four explanatory chapters below preserve Jaeuk Kim's March 2026 account,
+with targeted factual corrections added in November. See Implementation Notes
+for later committed behavior and unresolved design questions; the full narrative
+has not yet been jointly human-reviewed. Maps describes the regenerated pipeline
+separately.
+
 - [Introduction]({{< ref "docs/2026_mr2/navigation/introduction.md" >}})
 - [Sensor Fusion]({{< ref "docs/2026_mr2/navigation/sensor_fusion.md" >}})
 - [Traversability Pipeline]({{< ref "docs/2026_mr2/navigation/traversability_pipeline.md" >}})
 - [Mission Master and Vision]({{< ref "docs/2026_mr2/navigation/mission_master_and_vision.md" >}})
+- [Maps]({{< ref "docs/2026_mr2/navigation/maps.md" >}})
+- [Implementation Notes]({{< ref "docs/2026_mr2/navigation/implementation_notes.md" >}})
 
 The 2026 navigation stack is implemented in `mr2-stack/rover/ros2_ws/src` and
 centers on the `mr2_rover_auto` and `mr2_nav2_plugins` ROS 2 packages. It

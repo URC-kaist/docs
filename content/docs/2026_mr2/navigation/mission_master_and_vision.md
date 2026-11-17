@@ -9,6 +9,13 @@ bookCollapseSection: true
 
 *Written by Jaeuk Kim in 2026. 03*
 
+> **Revision context:** This is the March 2026 explanation, with targeted
+> factual corrections added with Codex on 18 November 2026. The full narrative
+> has not yet been jointly human-reviewed. In particular, the facing behavior
+> below describes the historical design; the later implementation removes that
+> turn. See [Implementation Notes]({{< ref "docs/2026_mr2/navigation/implementation_notes.md" >}})
+> for current behavior and the URC display requirement.
+
 ## Behavior Trees and Actions: Governing Over Navigation Pipeline
 
 That is a bold title, but it is never brash. Navigation is merely a submodule for *Autonomous* Navigation.
@@ -95,7 +102,7 @@ Please refer to full implementation of GnssOnly action node for full detail.
 
 CoverVision recieves a goal coordinate, search method, search radius, and object type.
 It first invokes NavigateToPose, generates a goal in spiral pattern, and then invokes NavigateThroughPoses.
-During the spiral search, when it recieves a pose from the *vision adapter*, it halts NavigateThroughPoses and orients the rover to face the object by invoking NavigateToPose.
+During the spiral search, when it recieves a pose from the *vision adapter*, the March implementation halts NavigateThroughPoses and attempts to orient the rover to face the object using FollowPath. The later implementation completes without this turn, as noted above.
 The following is the action interface definition, `CoverVision.action`:
 
 ```text
@@ -147,7 +154,7 @@ uint32 waypoint_count
 ```
 
 MissionControl is a command interface. It is implemented as topic and not a service, since we monitor its state with MissionStatus.
-MissionControl topic uses SiK bridge for most reliable command and control.
+MissionControl was carried by the SiK bridge in this March design; the later stack uses the XBee bridge. This transport choice is separate from the mission-topic interface.
 
 ```text
 # Command channel for Mission Master
@@ -186,8 +193,8 @@ float32 distance_remaining
 string detail
 ```
 
-Mission Master executes either GnssOnly or CoverVision going through the MissionList; It passes the mission details for each action servers to work. Mission Master can resume or pause, and send additional commands such as clearing costmaps.
-It reports `arrival == true` for ten seconds when it finishes a mission, and reports COMPLETED when the mission list is exhausted.
+Mission Master executes either GnssOnly or CoverVision going through the MissionList; It passes the mission details for each action servers to work. Before dispatch, it asks the cropper to prepare and load the mission map; preparation failure can prevent dispatch. Mission Master can resume or pause, and send additional commands such as clearing costmaps.
+It normally reports `arrival == true` for ten seconds when it finishes a mission; `waypoint_count == 1` marks a via point that skips this dwell. It reports COMPLETED when the mission list is exhausted.
 PAUSED is reserved for manual teleoperation, and FAILED is invoked when we send ABORT command, or when the navigation stack fails.
 
 ## Object Position Estimation with Vision
@@ -216,9 +223,9 @@ For YOLO and depth (and IMU), we use `realsense_rgbd.launch.py` to launch `reals
 Here we get `/color/image_raw` topic for bbox inference, and  `/aligned_depth_to_color/image_raw` topic for depth map as input.
 
 Fine-tuned YOLO11 is used for 2D object detection.
-But this will only give us the bounding box in projected camera frame, so we also incorporate the depth map data. By polling the center pixel of the bounding box, we estimate the depth of the object. (Since the object will surely occupy the center. Even if not, the object will be layed on the ground, so no problem.)
+But this will only give us the bounding box in projected camera frame, so we also incorporate the depth map data. The implementation takes the median of finite positive depth samples in a 5×5 window around the bounding-box center, clipped to the image bounds. This estimates the object's depth, but the center region is not guaranteed to lie on its surface; background and occlusion can still give a wrong estimate.
 
-If full localization is available, the object position is published in sensor frame. Since there are three types of objects, the node publishes three types of topic per object.
+The object position can be published in sensor frame without global localization when no target-frame transform is requested. Producing the map-frame position later requires the appropriate TF. Since there are three types of objects, the node publishes three types of topic per object.
 This is gated and processed by the `cover_vision_yolo_adapter` node.
 
 ### Integration to CoverVision: Adapter Nodes
@@ -227,7 +234,7 @@ The role of each adapter node is to unpack, gate and filter the incoming topics,
 The two can be configured independently. They support:
 
 1. Distance gating: If the object is too far away, we ignore the input because it is likely that it was noise.
-2. Jump gating: If the object position jumps more than threshold, ignore the previous position.
+2. Jump gating: If the smoothed object position jumps more than threshold from the previous published position, suppress the new publication. This is a heuristic against false positives, and can also reject a real changed target.
 3. Smoothing: The position is window-smoothed.
 
 ## Wrapup
@@ -237,5 +244,5 @@ Now let's see everything in a hierarchical manner, from the base station to the 
 1. The base station directly communicates to MissionMaster to send mission lists, commands. The MissionMaster publishes the mission state.
 2. The MissionMaster goes through the mission list, and invokes GnssOnly or CoverVision depending on mission type, and passes arguments.
 3. GnssOnly invokes NavigateToPose to navigate to the coordinate. It reports SUCCESS when it reaches the goal.
-4. CoverVision invokes NavigateToPose to move to the site, create goals in spiral pattern, and invokes NavigateThroughPoses. It aborts the navigation when vision adapter reports the filtered object position, and invokes NavigateToPose to orient the rover toward the object. It reports SUCCESS when the rover orients to the object, or when the rover completes the spiral pattern.
-5. The MissionMaster reports `arrival==true` per mission SUCCESS, and reports SUCCESS by itself when the mission list is exhausted.
+4. In the March design, CoverVision invokes NavigateToPose to move to the site, creates goals in spiral pattern, and invokes NavigateThroughPoses. It cancels coverage when the vision adapter reports an accepted object position, then attempts the facing turn using FollowPath. The later implementation removes this turn and can accept detections during the approach; completion of coverage without detection still counts as action SUCCESS. Action success alone is not proof of URC object recognition.
+5. The MissionMaster normally reports `arrival==true` per mission SUCCESS (with the via-point exception above), and reports COMPLETED when the mission list is exhausted.

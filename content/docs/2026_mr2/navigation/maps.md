@@ -1,11 +1,15 @@
 ---
 title: "Maps"
 weight: 3
-draft: true
+draft: false
 bookCollapseSection: true
 ---
 
 # Maps
+
+*Prepared with Codex in November 2026. This page follows the regenerated pipeline,
+including its newer coverage for 2027 preparation; it is separate from the
+March 2026 explanatory chapters.*
 
 Navigation and the operator dashboard use two different kinds of maps. The
 navigation stack needs terrain costs to plan a path. The dashboard needs RGB
@@ -46,8 +50,15 @@ simply assign a new CRS label to unchanged coordinates.
 ## Terrain grid and the local map origin
 
 The default terrain profile keeps its projected coordinates in the GeoTIFFs.
-Its output grid covers easting 518000–522000 m and northing 4248000–4253000 m,
-at 0.5 m per cell: 8000 columns by 10000 rows, or 4 km by 5 km.
+Its current output grid covers easting 518000–522000 m and northing
+4248000–4253500 m, at 0.5 m per cell: 8000 columns by 11000 rows, or 4 km by
+5.5 km. This supersedes the original 4 km by 5 km profile. The
+[expanded-coverage record](https://github.com/URC-kaist/map-pipeline/blob/becb193b8067719e2cfe73acfd0aa54e5ee8b028/docs/EXPANDED-COVERAGE.md)
+distinguishes the approximate operating area from URC 2027 rules and the chosen
+500 m northern extension. Neither is an additional URC 2026 requirement.
+
+The mosaic combines 0.5 m and 1 m sources with deterministic priorities; a
+0.5 m output grid does not turn the latter into finer source measurements.
 
 To produce local coordinates for Nav2, the pipeline projects the configured
 anchor into that same CRS and subtracts its projected position:
@@ -96,10 +107,12 @@ The pipeline also provides a WGS84-centered azimuthal equidistant (AEQD) example
 for the historical 1 km workflow. AEQD is another projection choice; it should
 not be called ENU or treated as an exact recreation of the original crop.
 
-The default DEM's vertical datum is recorded as unknown. Source elevations stay
-in their original metre units; no vertical datum conversion is applied. A
-horizontal reprojection does not, by itself, reconcile ellipsoidal and other
-height references.
+The expanded DEM combines source years whose vertical metadata differs. The
+2022 sources identify NAVD88/Geoid18; the inspected 2018/2020 CRS metadata does
+not establish their vertical datum. Provider elevations are retained without
+vertical conversion. Small overlap differences do not prove datum equivalence
+or a seam-free slope field. A horizontal reprojection does not, by itself,
+reconcile ellipsoidal and other height references.
 
 ## Slope products and the Nav2 loading contract
 
@@ -168,7 +181,7 @@ From the map-pipeline root, the prepared sequence is:
 /usr/bin/python3 download_sources.py
 /usr/bin/python3 prepare_sources.py
 /usr/bin/python3 mosaic_dem.py
-/usr/bin/python3 Lidar-pipeline/pipeline.py --output Lidar-pipeline/output/mdrs-east
+/usr/bin/python3 Lidar-pipeline/pipeline.py --output Lidar-pipeline/output/mdrs-expanded
 /usr/bin/python3 RGB-pipeline/generate.py
 /usr/bin/python3 RGB-pipeline/serve.py
 ```
@@ -178,8 +191,10 @@ executed configuration, projection metadata and output hashes are part of the
 result. MapLibre assets are needed only for the optional graphical viewer, not
 for generating or serving tiles.
 
-The release records verify fresh-checkout regeneration, terrain decoding by the
-native Nav2 library, tile placement arithmetic and the standalone viewer. These
+The original release records verify fresh-checkout regeneration and terrain
+decoding by the native Nav2 library. The later expanded-coverage record verifies
+the new DEM, terrain and RGB products, full operating-area coverage, tile
+placement and standalone viewer. These
 checks establish reproducibility and coordinate consistency within the selected
 operations; they do not establish field registration. The documented environment
 uses approximate datum transformations without a verified precise grid/epoch
@@ -187,9 +202,10 @@ correction. A tiny numerical roundtrip error is not an estimate of rover-to-imag
 accuracy. Verify registration using surveyed controls or live runtime transforms
 before relying on the alignment in the field.
 
-This draft follows map-pipeline revision `188d41e`. Consult its
-[terrain contract](https://github.com/URC-kaist/map-pipeline/blob/188d41e3b5262a03fdd7a5f23720e4fb616f8906/Lidar-pipeline/README.md),
-[RGB contract](https://github.com/URC-kaist/map-pipeline/blob/188d41e3b5262a03fdd7a5f23720e4fb616f8906/RGB-pipeline/README.md),
-[supported environment](https://github.com/URC-kaist/map-pipeline/blob/188d41e3b5262a03fdd7a5f23720e4fb616f8906/ENVIRONMENT.md)
-and [release verification](https://github.com/URC-kaist/map-pipeline/blob/188d41e3b5262a03fdd7a5f23720e4fb616f8906/RELEASE-REVIEW.md)
+This page follows map-pipeline revision `becb193`, verified against the remote
+on 18 November 2026. Consult its
+[terrain contract](https://github.com/URC-kaist/map-pipeline/blob/becb193b8067719e2cfe73acfd0aa54e5ee8b028/Lidar-pipeline/README.md),
+[RGB contract](https://github.com/URC-kaist/map-pipeline/blob/becb193b8067719e2cfe73acfd0aa54e5ee8b028/RGB-pipeline/README.md),
+[supported environment](https://github.com/URC-kaist/map-pipeline/blob/becb193b8067719e2cfe73acfd0aa54e5ee8b028/ENVIRONMENT.md)
+and [release verification](https://github.com/URC-kaist/map-pipeline/blob/becb193b8067719e2cfe73acfd0aa54e5ee8b028/RELEASE-REVIEW.md)
 for the authoritative commands, profiles and tested boundaries.

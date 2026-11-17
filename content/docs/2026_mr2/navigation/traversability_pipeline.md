@@ -9,11 +9,17 @@ bookCollapseSection: true
 
 *Written by Jaeuk Kim in 2026. 03*
 
+> **Revision context:** This is the March 2026 explanation, with targeted
+> factual corrections added with Codex on 18 November 2026. The full narrative
+> has not yet been jointly human-reviewed. See
+> [Implementation Notes]({{< ref "docs/2026_mr2/navigation/implementation_notes.md" >}})
+> for the gravity/TF dependency and later real-mode localization settings.
+
 Traversability is a quantized measure to describe if the region is safe to traverse.
 So it could be thought as a fancier way to describe "obstacle cost", but the definition is more subtle since "traversability" depends on platform type. For instance, our 4WS4WD platform can safely traverse a slope up to 0.5 radians, and rough obstacle up to 0.1 meters high, without supervision.
 
 In that, the pipeline must:
-1. Acquire local terrain information in non-tilted frame. (`pc2_to_heightmap_node`)
+1. Acquire local terrain information in the rover's `base_link` frame. (`pc2_to_heightmap_node`)
 2. Filter the data into traversability, tailored to our platform. (`traversability_filter_node`)
 3. Incorporate the result into Nav2 costmap. (`mr2_nav2_plugins::TraversabilityLayer`)
 
@@ -47,7 +53,7 @@ The full implementation can be seen in `trav_pipeline.yaml`.
 
 To explain the gist, we compute the following:
 1. Inpainting: This fills nan values (cells with no points) by referencing the neighbor cells (so it is quite risky).
-2. Geoidal Slope: You may notice that this node subscribes to filtered pose estimation. This is for gravity direction; We transform the heightmap in *geoidal* frame for absolute slope. This is one of the reasons why we need 3D pose estimation in localization pipeline.
+2. Gravity-referenced Slope: On a slope, the rover and its depth camera tilt together; the camera alone does not tell us which direction is vertical. We therefore need the gravity-up direction in the same frame as the surface normals. With `gravity_source: tf`, the node transforms `map`'s up vector into `base_link` and supplies the `gravity_x/y/z` layers; the filter computes the angle from the normals' dot product with that vector. The heightmap stays in `base_link`. An IMU-topic source is also supported, but is not the configured source. This requires a tilt-aware reference transform; see the unresolved dependency in the Implementation Notes.
 3. Roughness: It is a positive measure of deviation from average of local patch. If this value is high, it means the region is lumpy.
 
 With slope and roughness, the traversability is finally computed as a smooth step function.
@@ -94,7 +100,7 @@ The traversability is first drawn on the private costmap, and then it is combine
 This allows local cartography with persistance, since private costmap is not redrawn from scratch.
 
 The combination method between GridMap to private costmap, and private to public costmap, can be customized by tweaking parameters.
-Currently, we are using "maximum" for persistance, so the TraversabilityLayer maps anything and will never forget, until it is shifted out.
+Currently, we are using "maximum" for persistance, so the TraversabilityLayer maps anything and will never forget, until it is shifted out. Here, "never forget" contrasts with EMA decay: a lower later measurement does not gradually erase the retained maximum. Explicit clearing, resets and footprint clearing can still remove data.
 
 For full detail, please refer to the source implementation.
 
@@ -106,4 +112,4 @@ I think the pipeline can be further optimized without the help of beefy computer
 
 - In that, improve binning method in `pc2_to_heightmap_node`.
 
-- Maybe increase voxel resolution from 0.05 to 0.01; 0.05 feels too coarse for angle computation...
+The launched configuration already sets `voxel_size_m: 0.01` m; the node's fallback default is 0.05 m. The old TODO to move to 0.01 m is therefore resolved, rather than a remaining optimization task.

@@ -9,6 +9,14 @@ bookCollapseSection: true
 
 *Written by Jaeuk Kim in 2026. 03*
 
+> **Revision context:** The substantial explanation was last revised in March
+> 2026 (private documentation snapshot: 2 March). Targeted factual corrections
+> were added with Codex on 18 November 2026; the full narrative has not yet been
+> jointly human-reviewed. Later implementation changes are recorded separately
+> in [Implementation Notes]({{< ref "docs/2026_mr2/navigation/implementation_notes.md" >}}).
+> Read this as the design explanation from that period, rather than a complete
+> description of the latest running configuration.
+
 The **Autonomous Navigation** stack -- often dismissively dubbed "navigation" --
 is one of the complex components with heavy design consideratios of
 logic and decision, control frequency, dependence, consistency, and fine-tuning.
@@ -41,14 +49,14 @@ This is the brief summary of core pipeline; The position turns into a path, and 
 
 **To localize is to fix your coordinate in some frame.**
 For instance, with GNSS data, you can localize your 3D position with (1) latitude, (2) longitude, and (3) height (from epllipsoid);
-This kind of system is also known as **WGS84**. The origin of this system will be the Null Island.
+These are geodetic coordinates referenced to **WGS84**. Null Island denotes latitude 0, longitude 0; it is not the origin of the Earth-centered coordinate system.
 
 However, WGS84 is not suitable in a local sense; We would prefer cartesian system with intuitive units like meters.
 So to measure deviation from the known origin with convenience (ex: deploying position), we use **`map`** frame.
 
-`map` is a cartesian frame with meter as its unit. The frame's origin -- or *datum* -- is defined in WGS84, and its orientation is (X, Y, Z) = (East, North, Up), a.k.a ENU convention. More formally, it is a local tangent plane (LTP) description given datum on the ellipsoid.
+`map` is a cartesian frame with meter as its unit. The frame's origin -- or *datum* -- is defined geographically, and the intended orientation is (X, Y, Z) = (East, North, Up), a.k.a ENU convention. The exact projection and alignment depend on the configured coordinate conversion; see [Maps]({{< ref "docs/2026_mr2/navigation/maps.md" >}}).
 
-(There is another LTP frame called **`utm`**; Where the map frame can be set with any datum we prefer, `utm` has a fixed convention for its datum. We also use this frame for path visualization on dashboard's MapLibre, but this is not important for now. Refer to "path_to_geopath" launch in the source code to track the usage.)
+(There is also a projected coordinate frame called **`utm`**, using a zone-based easting/northing convention. UTM is not itself a local tangent plane, and a zone does not specify the geodetic datum. We also use this frame for path visualization on dashboard's MapLibre. Refer to "path_to_geopath" launch in the source code to track the usage.)
 
 By informing the GNSS with real-time kinematics (RTK), we can estimate the rover's position with centimeter-level accuracy.
 And by using dual-antenna setup, we can compute the absolute orientation (yaw) of the rover with simple geometry.
@@ -60,8 +68,8 @@ While GNSS can give us absolute position and absolute yaw, we can also estimate 
 This is strictly necessary considering that typical GNSS data only ticks in 1 Hz frequency.
 
 Luckily, we have wheel encoder odometry for local velocity, and IMU for acceleration and angular velocity.
-These sensors can be polled much frequently, at 20 to 30 Hz.
-By fusing these differential data, we can estimate the rover's position with higher frequency.
+These sensors can provide updates more frequently than GNSS. Their input rates and the EKF output frequency can be configured separately; changing the latter does not itself change the sensor rates.
+By fusing these differential data, we can estimate the rover's position between GNSS updates. The fusion masks determine which available quantities are actually used; the audited real configuration does not fuse IMU linear acceleration.
 
 The whole procedure is done by **dual-EKF** setup with the help of `robot_localization` and `imu_filter_madgwick` node.
 I omit the implementation detail for now.
@@ -134,13 +142,13 @@ Inflation is to smoothly bloat the obstacle from its original occupancy. Inflati
 
 The second property is the most important aspect when you try to tune the inflation of the costmap.
 *Planner does not, and cannot consider rover geometry on its own.*
-In our implementation, the rover is considered as a circle with a diameter of 1.2 meters.
+In our implementation, the rover is considered as a circle enclosing a 1.2 m by 1.2 m square footprint: its diameter is 1.2 × √2 ≈ 1.697 m, corresponding to the configured collision radius of 0.8485 m. This is distinct from the inflation radius and wheel radius. The URC 2026 1.2 m box restriction applies at weigh-in; it is not a guarantee of the deployed footprint.
 
 ### Static Map
 
 The static map for the global slope cost is hosted by a map server.
-The 2500 x 2500 (1km x 1km) grayscale png is generated and saved for use.
-Here I will omit the detail on the process to acquire this slope map and how it is aligned with correct datum.
+The original startup map is a 2500 x 2500 (1km x 1km) grayscale png. Mission preparation can replace it with a terrain crop; the later implementation can also load a blank free-space map outside the source coverage.
+The regenerated terrain and dashboard imagery products, their frames and projections, and the remaining runtime-consumer adaptation are described in [Maps]({{< ref "docs/2026_mr2/navigation/maps.md" >}}).
 
 ### Traversability
 
