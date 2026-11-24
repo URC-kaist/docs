@@ -9,6 +9,10 @@ bookCollapseSection: true
 
 ## Detailed Explanations
 
+These chapters were written by Jaeuk Kim around March 2026, before he left the team. They may not reflect later implementation changes. This publication preserves the original explanation with minor factual and conceptual corrections.
+
+[한국어 설명]({{< ref "docs/2026_mr2/navigation/ko/_index.md" >}})
+
 - [Introduction]({{< ref "docs/2026_mr2/navigation/introduction.md" >}})
 - [Sensor Fusion]({{< ref "docs/2026_mr2/navigation/sensor_fusion.md" >}})
 - [Traversability Pipeline]({{< ref "docs/2026_mr2/navigation/traversability_pipeline.md" >}})

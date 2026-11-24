@@ -9,15 +9,21 @@ bookCollapseSection: true
 
 *Written by Jaeuk Kim in 2026. 03*
 
+[한국어]({{< ref "docs/2026_mr2/navigation/ko/introduction.md" >}})
+
+> These explanations were written by Jaeuk Kim around March 2026, before he left the team. They describe the design at that time and may not reflect later implementation changes. Only minor factual and conceptual corrections have been made for this publication; these chapters have not been updated to match the current implementation.
+
+*Minor corrections: November 25, 2026.*
+
 The **Autonomous Navigation** stack -- often dismissively dubbed "navigation" --
-is one of the complex components with heavy design consideratios of
+is one of the complex components with heavy design considerations of
 logic and decision, control frequency, dependence, consistency, and fine-tuning.
 
 A good autonomy will not need supervision; But to build so, you will be considerate in every level designing its machinations.
 In Navigation section, I will go through the major and peripheral system implementations and their wirings.
 This could be either in software-level, sensor-level, or conceptual level.
 
-Whenever I omit an implemnetation, it means either of following:
+Whenever I omit an implementation, it means either of following:
 1. I was lazy.
 2. I am planning to create a separate page dedicated to that topic.
 
@@ -40,21 +46,21 @@ This is the brief summary of core pipeline; The position turns into a path, and 
 ### GNSS and Frames
 
 **To localize is to fix your coordinate in some frame.**
-For instance, with GNSS data, you can localize your 3D position with (1) latitude, (2) longitude, and (3) height (from epllipsoid);
-This kind of system is also known as **WGS84**. The origin of this system will be the Null Island.
+For instance, with GNSS data, you can localize your 3D position with (1) latitude, (2) longitude, and (3) height (from ellipsoid);
+These coordinates can be expressed using **WGS84**, a global reference system. Latitude and longitude zero identify Null Island, not the origin of its Earth-centered coordinate frame.
 
 However, WGS84 is not suitable in a local sense; We would prefer cartesian system with intuitive units like meters.
 So to measure deviation from the known origin with convenience (ex: deploying position), we use **`map`** frame.
 
 `map` is a cartesian frame with meter as its unit. The frame's origin -- or *datum* -- is defined in WGS84, and its orientation is (X, Y, Z) = (East, North, Up), a.k.a ENU convention. More formally, it is a local tangent plane (LTP) description given datum on the ellipsoid.
 
-(There is another LTP frame called **`utm`**; Where the map frame can be set with any datum we prefer, `utm` has a fixed convention for its datum. We also use this frame for path visualization on dashboard's MapLibre, but this is not important for now. Refer to "path_to_geopath" launch in the source code to track the usage.)
+(There is another projected coordinate system called **`utm`**, divided into zones with easting and northing in meters; it is not another local tangent plane. We also use this frame for path visualization on dashboard's MapLibre, but this is not important for now. Refer to "path_to_geopath" launch in the source code to track the usage.)
 
 By informing the GNSS with real-time kinematics (RTK), we can estimate the rover's position with centimeter-level accuracy.
 And by using dual-antenna setup, we can compute the absolute orientation (yaw) of the rover with simple geometry.
 From now on, every global information for navigation is in `map` frame.
 
-### Odometry Sensor Fusion (robot_localizaiton)
+### Odometry Sensor Fusion (robot_localization) {#odometry-sensor-fusion-robot_localizaiton}
 
 While GNSS can give us absolute position and absolute yaw, we can also estimate our position with other, differential sensors.
 This is strictly necessary considering that typical GNSS data only ticks in 1 Hz frequency.
@@ -85,9 +91,9 @@ The role of controller is to command linear velocity and angular velocity to the
 These values are derived *geometrically*, so the rover MUST obey to follow these values, or it will certainly deviate from the path and fail to progress properly.
 There are many options to choose, but I stripped them down to regulated pure pursuit (**RPP**) and model predictive path integral (**MPPI**).
 
-RPP is attractive for its faithfulness; When a path is given, it surely follows the path, always.
-However, this means the rover will be only aware of the global path generation, and less robust to local obstacles.
-So this is only good when the rover can fully trust the path planner, which may not always be the case when you should counter unforceen obstacles.
+RPP is attractive for its faithfulness to the supplied path, although successful tracking is not guaranteed.
+It supports local collision checking and speed regulation, but does not itself plan a new path around obstacles.
+So it needs a path planner that supplies a feasible path, including replanning when unforeseen obstacles block it.
 
 MPPI is more self-govenring but costly.
 With numerous cost functions, it samples hundreads of trajectories to find the optimum in a stochastic manner.
@@ -133,8 +139,8 @@ Inflation is to smoothly bloat the obstacle from its original occupancy. Inflati
 2. Add a patch of rover radius so the rover can be considered as a dot for the planner.
 
 The second property is the most important aspect when you try to tune the inflation of the costmap.
-*Planner does not, and cannot consider rover geometry on its own.*
-In our implementation, the rover is considered as a circle with a diameter of 1.2 meters.
+*In this point-based planning setup, inflation accounts for the rover's size; this is not a limitation of every planner.*
+In our implementation, the rover is considered as a circle enclosing a 1.2 m square, with a diameter of 1.2 × √2 ≈ 1.697 meters (radius ≈ 0.8485 m). This collision radius is distinct from the inflation radius.
 
 ### Static Map
 
@@ -145,7 +151,7 @@ Here I will omit the detail on the process to acquire this slope map and how it 
 ### Traversability
 
 Traversability is computed and processed by the traversability layer of each costmap.
-**This new layer is a custom implemnetation to take data in GridMap format.**
+**This new layer is a custom implementation to take data in GridMap format.**
 Here I will omit the detail on the process on the traversability pipeline for now.
 The gist is that it transforms depth camera pointclouds to heightmap and then traversability map.
 

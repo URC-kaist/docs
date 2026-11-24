@@ -9,6 +9,12 @@ bookCollapseSection: true
 
 *Written by Jaeuk Kim in 2026. 03*
 
+[한국어]({{< ref "docs/2026_mr2/navigation/ko/mission_master_and_vision.md" >}})
+
+> These explanations were written by Jaeuk Kim around March 2026, before he left the team. They describe the design at that time and may not reflect later implementation changes. Only minor factual and conceptual corrections have been made for this publication; these chapters have not been updated to match the current implementation.
+
+*Minor corrections: November 25, 2026.*
+
 ## Behavior Trees and Actions: Governing Over Navigation Pipeline
 
 That is a bold title, but it is never brash. Navigation is merely a submodule for *Autonomous* Navigation.
@@ -40,7 +46,7 @@ But why the distinction in the first place?
 
 Topics are simple. One publishes and other subscribes. This is to broadcast information for others to process.
 
-Service is more like function calls. One calls a service, and other who hosts that service does its thing and optionally returns.
+Service is more like function calls. One sends a request, and the service server processes it and returns a response, whose fields may be empty. The client can handle the response asynchronously.
 These kind of implementation can be seen in our CAN interface for LED, or in navsat_transform node, for `toLL` or `fromLL` frame conversions.
 They are used in more episodic, instantaneous, and discontinuous scenarios. Their message detail is defined by `.srv` files.
 
@@ -49,7 +55,7 @@ Actions are also like function calls, but they are more suitable when the proces
 When the action server hosts the action, the process can be invoked, monitored, and intervened by an action client.
 Their message detail is defined by `.action` files.
 
-Nav2 components (or 'servers') are all implemented as action servers. (This is not an important detail as they are already exposed as BT nodes for our development.) While so, we implement the mastering, rule-based modules with action servers.
+Nav2 exposes tasks such as planning and path following through action servers; other components also use services and topics. (The navigation actions are already exposed as BT nodes for our development.) While so, we implement the mastering, rule-based modules with action servers.
 
 ## Behavior Tree Setup
 
@@ -122,7 +128,7 @@ Please refer to full implementation of CoverVision action node for full detail.
 ### MissionMaster Node
 
 The MissionMaster governs over the GnssOnly and CoverVision action servers as an action client.
-Wwe will look through its interface between base station and MissionMaster.
+We will look through its interface between base station and MissionMaster.
 For effective control and command, we created custom message types: MissionList, MissionControl, and MissionStatus.
 
 MissionList is an array of MissionSpec for each Autonomous Mission.
@@ -216,7 +222,7 @@ For YOLO and depth (and IMU), we use `realsense_rgbd.launch.py` to launch `reals
 Here we get `/color/image_raw` topic for bbox inference, and  `/aligned_depth_to_color/image_raw` topic for depth map as input.
 
 Fine-tuned YOLO11 is used for 2D object detection.
-But this will only give us the bounding box in projected camera frame, so we also incorporate the depth map data. By polling the center pixel of the bounding box, we estimate the depth of the object. (Since the object will surely occupy the center. Even if not, the object will be layed on the ground, so no problem.)
+But this will only give us the bounding box in projected camera frame, so we also incorporate the depth map data. By polling the center pixel of the bounding box, we estimate the depth of the object. This assumes the sampled depth belongs to the object; the center may instead fall on the background or ground and give an incorrect object distance.
 
 If full localization is available, the object position is published in sensor frame. Since there are three types of objects, the node publishes three types of topic per object.
 This is gated and processed by the `cover_vision_yolo_adapter` node.
@@ -227,7 +233,7 @@ The role of each adapter node is to unpack, gate and filter the incoming topics,
 The two can be configured independently. They support:
 
 1. Distance gating: If the object is too far away, we ignore the input because it is likely that it was noise.
-2. Jump gating: If the object position jumps more than threshold, ignore the previous position.
+2. Jump gating: If the new smoothed object position is farther than the threshold from the previous published position, suppress the new publication and retain the previous published position as the reference. This is an imperfect heuristic against false positives.
 3. Smoothing: The position is window-smoothed.
 
 ## Wrapup

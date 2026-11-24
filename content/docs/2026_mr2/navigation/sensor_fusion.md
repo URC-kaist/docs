@@ -9,6 +9,12 @@ bookCollapseSection: true
 
 *Written by Jaeuk Kim in 2026. 03*
 
+[한국어]({{< ref "docs/2026_mr2/navigation/ko/sensor_fusion.md" >}})
+
+> These explanations were written by Jaeuk Kim around March 2026, before he left the team. They describe the design at that time and may not reflect later implementation changes. Only minor factual and conceptual corrections have been made for this publication; these chapters have not been updated to match the current implementation.
+
+*Minor corrections: November 25, 2026.*
+
 In this page, I will talk about sensor fusion for localization.
 
 Even with centimeter-level localization with the help of RTK-informed dual-GNSS, since GNSS data only arrives every second, the rover pose will be jumpy discontinuous. In that, we need to fuse differential sensors for intermediate times.
@@ -38,13 +44,13 @@ In that, every input is not described as their pure value, but with covariance t
 
 ## What is Kalman Filter and What does it mean to Extend It?
 
-The Kalman Filter is a recurrent computation that converges to the 'best' estimate of the state vector, given noisy inputs (and with known covariance).
+The Kalman Filter repeatedly predicts and corrects a state estimate using noisy measurements and their covariance. Its optimality depends on the model and noise assumptions; it is not an unconditional guarantee of convergence to the true state.
 
-To Extend the Kalman Filter is to linearize non-linear dynamics via Jacobian matrix. The Earth's curvature and 3D orientation and acceleration kinematics are some examples of non-linear dynamics. Although they are not linear, we can assume linearity in local scale.
+To Extend the Kalman Filter is to locally linearize nonlinear motion and measurement models via Jacobian matrices. In robot_localization, 3D orientation and motion kinematics introduce nonlinear relationships; geographic coordinate conversion is handled separately. Although these relationships are not linear, we approximate them locally around the current estimate.
 
 It is very hard to explain the concepts without a blackboard and a chalk, so I am sorry.
 
-The gist is, Kalman Filter estimates the uncertainty of the internal state (P), Based on the uncertainty information of sensor inputs (from sensor) (R) and known uncertainty of sensor inputs (configured) (Q). You have to give covariance matrix Q to the Kalman Filter as a preset.
+The gist is, Kalman Filter estimates the state and its uncertainty (P), using measurement uncertainty (R) and process uncertainty in the prediction model (Q). In robot_localization, Q is configured as the process-noise covariance; it is not another configured sensor-noise covariance. R comes from the measurement covariance, and P describes uncertainty in the state estimate.
 
 After everything, EKF will work as a sensor fusion setup, giving us continuous localization.
 
@@ -67,8 +73,8 @@ That is, `map` -> `base_link` can be jumpy, but `odom` -> `base_link` will not. 
 
 ## Dual-Antenna: Heading Injection
 
-Navsat Transform is only here to convert the WGS84 coordinate into `map` frame, when given datum, either initialized or set by service call.
-Basically, it takes GNSS information to localize, and IMU for global heading. With this, it gives us the full global pose, derived from /gps/fix.
+Navsat Transform converts the WGS84 position into the world frame (`map` here), using a datum that is either initialized or set by service call.
+It uses GNSS position, heading information, and odometry to establish the coordinate transform. Its output expresses the GNSS position in that world frame; /gps/fix alone does not supply a full orientation measurement.
 
 The problem is, IMU is not very reliable for global yaw. Some may contain magnetometers, but it is very easy to disturb them.
 So instead, we inject dual-antenna heading, hijacking the result of navsat transform; We overwrite the yaw value for the orientation with the geometrically computed global yaw, so the EKF Global can consume it with no discrepancy.
@@ -79,4 +85,4 @@ More on "geometrical computation":
 
 When we have two GNSS recievers, we get two coordinates, in WGS84 system.
 By sending these coordinates in *ECEF* frame, we can represent them as a 3D vector, for their difference vector.
-By [reprojecting the difference back to the ENU frame](https://gssc.esa.int/navipedia/index.php/Transformations_between_ECEF_and_ENU_coordinates), we can calculate the offset from North as global yaw.
+By [reprojecting the difference back to the ENU frame](https://gssc.esa.int/navipedia/index.php/Transformations_between_ECEF_and_ENU_coordinates), we can calculate ROS global yaw counterclockwise from East, then apply the antenna mounting offset to obtain the rover's yaw.

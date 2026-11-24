@@ -9,6 +9,10 @@ bookCollapseSection: true
 
 *Written by Jaeuk Kim in 2026. 03*
 
+[한국어]({{< ref "docs/2026_mr2/navigation/ko/traversability_pipeline.md" >}})
+
+> These explanations were written by Jaeuk Kim around March 2026, before he left the team. They describe the design at that time and may not reflect later implementation changes. Only minor factual and conceptual corrections have been made for this publication; these chapters have not been updated to match the current implementation.
+
 Traversability is a quantized measure to describe if the region is safe to traverse.
 So it could be thought as a fancier way to describe "obstacle cost", but the definition is more subtle since "traversability" depends on platform type. For instance, our 4WS4WD platform can safely traverse a slope up to 0.5 radians, and rough obstacle up to 0.1 meters high, without supervision.
 
