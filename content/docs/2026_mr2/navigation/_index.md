@@ -18,6 +18,10 @@ These chapters were written by Jaeuk Kim around March 2026, before he left the t
 - [Traversability Pipeline]({{< ref "docs/2026_mr2/navigation/traversability_pipeline.md" >}})
 - [Mission Master and Vision]({{< ref "docs/2026_mr2/navigation/mission_master_and_vision.md" >}})
 
+### Map generation
+
+[Maps]({{< ref "docs/2026_mr2/navigation/maps.md" >}}) covers the separate map-pipeline work documented in November 2026, including terrain maps, dashboard tiles and runtime integration boundaries.
+
 The 2026 navigation stack is implemented in `mr2-stack/rover/ros2_ws/src` and
 centers on the `mr2_rover_auto` and `mr2_nav2_plugins` ROS 2 packages. It
 combines GNSS/IMU/wheel localization, Nav2 planning and control, a depth-based
