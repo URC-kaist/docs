@@ -1,0 +1,22 @@
+{
+  "issues": [
+    {
+      "url": "https://github.com/URC-kaist/mr2-stack/pull/81",
+      "title": "Add rover-direct operation without base station",
+      "issue_number": 81,
+      "body": "Closes #80\r\n\r\n  ## Summary\r\n\r\n  Adds rover-direct operation without a separate base-station computer.\r\n\r\n  - Runs the gateway, dashboard, rosbridge, XBEE simulation, and video relay on the\r\n  Jetson\r\n  - Uses the Jetson AP at `192.168.2.102`\r\n  - Supports driving, steering, arm, gripper, video, and multiple browsers\r\n  - Excludes GPS, autonomy, science, and Rocket M2\r\n  - Adds a laptop-only Docker development environment\r\n\r\n  ## Validation\r\n\r\n  - Gateway tests: 52/52 passed\r\n  - Dashboard typecheck, lint, and build passed\r\n  - ROS build: 22 packages passed\r\n  - ROS checks: 47 tests, 0 failures, 2 skipped\r\n\r\n  ## Remaining\r\n\r\n  - [ ] Validate video, driving, steering, arm, and gripper on the Jetson\r\n  - [ ] Validate AP and systemd restart recovery",
+      "state": null,
+      "user": null,
+      "assignees": null,
+      "labels": null,
+      "milestone": null,
+      "state_reason": null,
+      "comments": null,
+      "created_at": null,
+      "updated_at": null,
+      "closed_at": null,
+      "display_url": "https://github.com/URC-kaist/mr2-stack/pull/81",
+      "display_title": "Add rover-direct operation without base station"
+    }
+  ]
+}
